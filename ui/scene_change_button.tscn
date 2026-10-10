@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dhn5bb6wsu3fv"]
+
+[ext_resource type="PackedScene" uid="uid://dynic8aip3myr" path="res://ui/sfx_button.tscn" id="1_6s8p3"]
+[ext_resource type="Script" uid="uid://bco76hl6uyidb" path="res://ui/scripts/scene_change_button.gd" id="2_skoc2"]
+[ext_resource type="Texture2D" uid="uid://cyhyuaxj0px8e" path="res://assets/menu/material-icons.png" id="2_srwos"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wyxj"]
+atlas = ExtResource("2_srwos")
+region = Rect2(0, 16, 16, 16)
+
+[node name="SceneChangeButton" unique_id=722404897 instance=ExtResource("1_6s8p3")]
+icon = SubResource("AtlasTexture_8wyxj")
+icon_alignment = 1
+script = ExtResource("2_skoc2")
+scene_link = null
+to_back_stack = false
+play_transition = true

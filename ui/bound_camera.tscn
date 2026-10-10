@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://cd6hjqjtlew8v"]
+
+[ext_resource type="Script" uid="uid://butdvyqc6ow1r" path="res://ui/scripts/bound_camera.gd" id="1_xfg3d"]
+
+[sub_resource type="Gradient" id="Gradient_xfg3d"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w2rw5"]
+gradient = SubResource("Gradient_xfg3d")
+width = 960
+height = 32
+fill = 2
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xfg3d"]
+gradient = SubResource("Gradient_xfg3d")
+width = 32
+height = 704
+fill = 2
+fill_from = Vector2(1, 0.5)
+fill_to = Vector2(0, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_jqpnu"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_og4cl"]
+gradient = SubResource("Gradient_jqpnu")
+width = 32
+height = 32
+fill = 2
+fill_to = Vector2(1, 1)
+
+[node name="BoundCamera" type="Camera2D" unique_id=1760976908]
+script = ExtResource("1_xfg3d")
+scroll_speed = 600.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=645223380]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1483526646]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopScrollRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=385369761]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031000001
+anchor_right = 0.952
+anchor_bottom = 0.042000003
+offset_left = 0.06399965
+offset_right = 4.2879944
+offset_bottom = -0.06400108
+grow_horizontal = 2
+texture = SubResource("GradientTexture2D_w2rw5")
+stretch_mode = 2
+
+[node name="RightScrollRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=187582465]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.96900004
+anchor_top = 0.042000003
+anchor_right = 1.0
+anchor_bottom = 0.95800006
+offset_left = -0.06401062
+offset_top = -0.06400108
+offset_bottom = 0.06399536
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_xfg3d")
+stretch_mode = 2
+
+[node name="BotScrollRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=49899080]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031000001
+anchor_top = 0.95800006
+anchor_right = 0.96900004
+anchor_bottom = 1.0
+offset_left = 0.06399965
+offset_top = 0.06399536
+offset_right = -0.06401062
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_w2rw5")
+stretch_mode = 2
+flip_v = true
+
+[node name="LeftScrollRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=215091003]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.042000003
+anchor_right = 0.031000001
+anchor_bottom = 0.95800006
+offset_top = -0.06400108
+offset_right = 0.06399965
+offset_bottom = 0.06399536
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_xfg3d")
+stretch_mode = 2
+flip_h = true
+
+[node name="TopLeftScrollRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=870904547]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 8.0
+offset_bottom = 8.0
+texture = SubResource("GradientTexture2D_og4cl")
+stretch_mode = 2
+
+[node name="TopRightScrollRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1997173601]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+texture = SubResource("GradientTexture2D_og4cl")
+stretch_mode = 2
+flip_h = true
+
+[node name="BotLeftScrollRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1652657238]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_og4cl")
+stretch_mode = 2
+flip_v = true
+
+[node name="BotRightScrollRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=101784379]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_og4cl")
+stretch_mode = 2
+flip_h = true
+flip_v = true
+
+[connection signal="mouse_entered" from="CanvasLayer/Control/TopScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [true, 0]]
+[connection signal="mouse_exited" from="CanvasLayer/Control/TopScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [false, 0]]
+[connection signal="mouse_entered" from="CanvasLayer/Control/RightScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [true, 1]]
+[connection signal="mouse_exited" from="CanvasLayer/Control/RightScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [false, 1]]
+[connection signal="mouse_entered" from="CanvasLayer/Control/BotScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [true, 2]]
+[connection signal="mouse_exited" from="CanvasLayer/Control/BotScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [false, 2]]
+[connection signal="mouse_entered" from="CanvasLayer/Control/LeftScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [true, 3]]
+[connection signal="mouse_exited" from="CanvasLayer/Control/LeftScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [false, 3]]
+[connection signal="mouse_entered" from="CanvasLayer/Control/TopLeftScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [true, 4]]
+[connection signal="mouse_exited" from="CanvasLayer/Control/TopLeftScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [false, 4]]
+[connection signal="mouse_entered" from="CanvasLayer/Control/TopRightScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [true, 5]]
+[connection signal="mouse_exited" from="CanvasLayer/Control/TopRightScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [false, 5]]
+[connection signal="mouse_entered" from="CanvasLayer/Control/BotLeftScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [true, 6]]
+[connection signal="mouse_exited" from="CanvasLayer/Control/BotLeftScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [false, 6]]
+[connection signal="mouse_entered" from="CanvasLayer/Control/BotRightScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [true, 7]]
+[connection signal="mouse_exited" from="CanvasLayer/Control/BotRightScrollRect" to="." method="_on_scroll_rect_mouse_event" binds= [false, 7]]

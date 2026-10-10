@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dlus41dea6h08"]
+
+[ext_resource type="Theme" uid="uid://dxyu51du6xt8k" path="res://resources/ui/menu_theme.tres" id="1_pscy7"]
+[ext_resource type="Script" uid="uid://b3y54ybh7go0i" path="res://main_scenes/menus/scripts/splash.gd" id="1_sgpox"]
+[ext_resource type="PackedScene" uid="uid://peucu42da8pc" path="res://ui/title_container.tscn" id="3_e3ffy"]
+[ext_resource type="PackedScene" uid="uid://bmjhjsstxqdyg" path="res://ui/menu_bg_rect.tscn" id="3_ljax6"]
+[ext_resource type="PackedScene" uid="uid://c18qfne8f4xr5" path="res://ui/footer_container.tscn" id="6_pscy7"]
+
+[node name="Splash" type="Control" unique_id=1964828285 node_paths=PackedStringArray("hide_for_mobile")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pscy7")
+script = ExtResource("1_sgpox")
+hide_for_mobile = [NodePath("CenterContainer/VBoxContainer/FooterContainer")]
+song = ""
+
+[node name="MenuBgRect" parent="." unique_id=1389212552 instance=ExtResource("3_ljax6")]
+layout_mode = 1
+
+[node name="PauseTimer" type="Timer" parent="." unique_id=1016216947]
+unique_name_in_owner = true
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1865300858]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1051475556]
+layout_mode = 2
+
+[node name="TitleContainer" parent="CenterContainer/VBoxContainer" unique_id=495309048 instance=ExtResource("3_e3ffy")]
+layout_mode = 2
+
+[node name="FooterContainer" parent="CenterContainer/VBoxContainer" unique_id=636837887 instance=ExtResource("6_pscy7")]
+layout_mode = 2
+
+[connection signal="timeout" from="PauseTimer" to="." method="_on_pause_timer_timeout"]

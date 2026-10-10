@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bmjhjsstxqdyg"]
+
+[ext_resource type="Texture2D" uid="uid://dy6wuhqt3vw5n" path="res://assets/menu/panel.png" id="1_d5gnt"]
+
+[sub_resource type="Gradient" id="Gradient_e3ffy"]
+colors = PackedColorArray(0.14117648, 0.14117648, 0.14117648, 1, 0.43137255, 0.43137255, 0.43137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1by8w"]
+gradient = SubResource("Gradient_e3ffy")
+width = 256
+height = 192
+fill_to = Vector2(1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1by8w"]
+atlas = ExtResource("1_d5gnt")
+region = Rect2(0, 16, 16, 16)
+
+[node name="MenuBgRect" type="TextureRect" unique_id=1389212552]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_1by8w")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=372430461]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1by8w")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

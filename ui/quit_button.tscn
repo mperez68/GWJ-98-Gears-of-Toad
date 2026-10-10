@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1iwfo7rduuxg"]
+
+[ext_resource type="PackedScene" uid="uid://dynic8aip3myr" path="res://ui/sfx_button.tscn" id="1_7mrdu"]
+[ext_resource type="Script" uid="uid://5nk0sx6tkink" path="res://ui/scripts/quit_button.gd" id="2_4huft"]
+[ext_resource type="Texture2D" uid="uid://cyhyuaxj0px8e" path="res://assets/menu/material-icons.png" id="2_g5uny"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mrdu"]
+atlas = ExtResource("2_g5uny")
+region = Rect2(48, 32, 16, 16)
+
+[node name="QuitButton" unique_id=1970711352 instance=ExtResource("1_7mrdu")]
+text = "Back"
+icon = SubResource("AtlasTexture_7mrdu")
+script = ExtResource("2_4huft")
+type = 0
+save = false
+show_text = true

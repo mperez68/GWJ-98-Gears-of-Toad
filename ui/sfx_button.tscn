@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dynic8aip3myr"]
+
+[ext_resource type="Script" uid="uid://ctvxct2chu33b" path="res://ui/scripts/sfx_button.gd" id="1_chgxa"]
+
+[node name="SfxButton" type="Button" unique_id=674043170]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_chgxa")

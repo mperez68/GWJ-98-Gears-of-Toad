@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://peucu42da8pc"]
+
+[ext_resource type="Texture2D" uid="uid://ddtsygwpmxle0" path="res://assets/icons/logo_bg.png" id="1_7b302"]
+[ext_resource type="LabelSettings" uid="uid://x6yphufd1ppd" path="res://resources/ui/header_settings.tres" id="2_ecsbo"]
+[ext_resource type="Script" uid="uid://dkfgbvo05f8o2" path="res://ui/scripts/title_label.gd" id="3_x4mtl"]
+
+[node name="TitleContainer" type="PanelContainer" unique_id=495309048]
+offset_right = 128.0
+offset_bottom = 179.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=352804097]
+layout_mode = 2
+texture = ExtResource("1_7b302")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1552058132]
+custom_minimum_size = Vector2(512, 256)
+layout_mode = 2
+text = "Boilerplate Template"
+label_settings = ExtResource("2_ecsbo")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_x4mtl")
+min_width = 512.0
