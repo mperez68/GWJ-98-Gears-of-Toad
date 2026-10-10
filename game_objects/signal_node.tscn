@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://vt11thqacf13"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1by8w"]
+albedo_color = Color(0.9019608, 0.6901961, 0.32156864, 1)
+metallic_specular = 1.0
+roughness = 0.6
+
+[node name="SignalNode" type="Node3D" unique_id=504689857]
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="." unique_id=1183528712]
+inner_radius = 0.8
+outer_radius = 1.2
+sides = 16
+material = SubResource("StandardMaterial3D_1by8w")

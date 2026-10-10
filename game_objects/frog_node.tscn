@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dtx5x6uxdok4h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e85mq"]
+albedo_color = Color(0.9019608, 0.6901961, 0.32156864, 1)
+metallic = 0.2
+
+[node name="FrogNode" type="Node3D" unique_id=194496005]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=162269673]
+material = SubResource("StandardMaterial3D_e85mq")
