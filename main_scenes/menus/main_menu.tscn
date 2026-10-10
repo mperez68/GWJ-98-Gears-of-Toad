@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://peucu42da8pc" path="res://ui/title_container.tscn" id="3_g8byo"]
 [ext_resource type="PackedScene" uid="uid://dhn5bb6wsu3fv" path="res://ui/scene_change_button.tscn" id="4_vb3i7"]
 [ext_resource type="PackedScene" uid="uid://c1iwfo7rduuxg" path="res://ui/quit_button.tscn" id="5_vb3i7"]
+[ext_resource type="PackedScene" uid="uid://doni24eqeb5w1" path="res://level_scenes/debug_3d_scene.tscn" id="6_38vm8"]
 [ext_resource type="PackedScene" uid="uid://b27xpmt51ajfg" path="res://main_scenes/menus/options_menu.tscn" id="7_g8byo"]
 [ext_resource type="Script" uid="uid://b4jy0dhl1u7ls" path="res://resources/scripts/packed_scene_link.gd" id="8_38vm8"]
 [ext_resource type="PackedScene" uid="uid://c3njtoyv7xfje" path="res://main_scenes/menus/credits_menu.tscn" id="9_38vm8"]
@@ -13,6 +14,7 @@
 
 [sub_resource type="Resource" id="Resource_clqb2"]
 script = ExtResource("8_38vm8")
+packed_scene = ExtResource("6_38vm8")
 button_text = "Play"
 metadata/_custom_type_script = "uid://b4jy0dhl1u7ls"
 
@@ -99,7 +101,6 @@ alignment = 1
 [node name="SceneChangeButton" parent="MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer/BodyContainer/VBoxContainer/HBoxContainer" unique_id=871362439 instance=ExtResource("4_vb3i7")]
 layout_mode = 2
 size_flags_horizontal = 3
-disabled = true
 text = "Play"
 icon_alignment = 0
 scene_link = SubResource("Resource_clqb2")

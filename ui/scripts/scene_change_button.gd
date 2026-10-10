@@ -25,7 +25,6 @@ class_name SceneChangeButton extends SfxButton
 func _update_text():
 	if scene_link:
 		text = scene_link.button_text
-		print("updated")
 	else:
 		text = ""
 	super()
