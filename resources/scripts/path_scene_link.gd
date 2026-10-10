@@ -1,3 +1,4 @@
+@tool
 class_name PathSceneLink extends SceneLink
 
 @export var location_override: String

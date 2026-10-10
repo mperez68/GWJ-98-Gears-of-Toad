@@ -1,3 +1,4 @@
+@tool
 class_name PackedSceneLink extends SceneLink
 
 @export var packed_scene: PackedScene

@@ -3,10 +3,14 @@ class_name SceneChangeButton extends SfxButton
 
 @export var scene_link: SceneLink:
 	set(value):
+		if scene_link:
+			scene_link.changed.disconnect(_update_text)
 		scene_link = value
+		if scene_link:
+			scene_link.changed.connect(_update_text)
 		_update_text()
 @warning_ignore("unused_private_class_variable")
-@export_tool_button("Update Text", "RotateRight") var _update_button = _update_text
+#@export_tool_button("Update Text", "RotateRight") var _update_button = _update_text
 @export var to_back_stack: bool = false
 @export var play_transition: bool = true
 
@@ -21,6 +25,7 @@ class_name SceneChangeButton extends SfxButton
 func _update_text():
 	if scene_link:
 		text = scene_link.button_text
+		print("updated")
 	else:
 		text = ""
 	super()
