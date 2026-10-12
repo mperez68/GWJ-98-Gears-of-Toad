@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dtx5x6uxdok4h"]
+
+[ext_resource type="Script" uid="uid://5uvjaireuwqm" path="res://game_objects/frog_node/frog_node.gd" id="1_kyjp0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e85mq"]
+albedo_color = Color(0.9019608, 0.6901961, 0.32156864, 1)
+metallic = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kyjp0"]
+albedo_color = Color(0.9019608, 0, 0.32156864, 1)
+metallic = 0.2
+
+[node name="FrogNode" type="Node3D" unique_id=194496005]
+script = ExtResource("1_kyjp0")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=162269673]
+material = SubResource("StandardMaterial3D_e85mq")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGBox3D" unique_id=511193856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+radius = 0.25
+material = SubResource("StandardMaterial3D_e85mq")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGBox3D" unique_id=2060506927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+radius = 0.25
+material = SubResource("StandardMaterial3D_kyjp0")

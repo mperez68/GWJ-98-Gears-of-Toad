@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://cqbwpkaj3bqo6"]
-
-[ext_resource type="MeshLibrary" uid="uid://b643ljwv2vtkb" path="res://resources/temp_voxel_mesh_lib.meshlib" id="1_hkjfy"]
-
-[node name="GameBoardNode" type="GridMap" unique_id=1228068689]
-mesh_library = ExtResource("1_hkjfy")
-cell_size = Vector3(2, 0.5, 2)
