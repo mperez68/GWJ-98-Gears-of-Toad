@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://doni24eqeb5w1"]
 
 [ext_resource type="PackedScene" uid="uid://cqbwpkaj3bqo6" path="res://game_objects/game_board_node/game_board_node.tscn" id="1_bq8r2"]
-[ext_resource type="PackedScene" uid="uid://dtx5x6uxdok4h" path="res://game_objects/frog_node/frog_node.tscn" id="1_kr500"]
+[ext_resource type="PackedScene" uid="uid://bhnc2mbnr3ivp" path="res://game_objects/frog_node/frog_node.tscn" id="1_kr500"]
 [ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="3_47hky"]
 [ext_resource type="PackedScene" uid="uid://bqdx7bv3piuj0" path="res://game_objects/camera_holder_node/camera_holder_node.tscn" id="4_h27hn"]
+[ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="5_8roc5"]
 
 [node name="DebugScene" type="Node3D" unique_id=1623255497]
 
@@ -14,9 +15,6 @@ transform = Transform3D(0.8660254, -0.28678834, -0.40957603, -7.161255e-08, -0.8
 data = {
 "cells": PackedInt32Array(65533, 2, 0, 65534, 1, 0, 65535, 0, 3, 0, 65535, 3, 2, 65534, 0, 1, 65534, 0, 2, 65533, 0, 2, 65535, 0, 2, 0, 0, 2, 1, 0, 2, 2, 0, 65534, 2, 0, 65535, 2, 0, 1, 1, 0, 1, 2, 0, 65535, 1, 0, 65533, 1, 0, 65534, 0, 0, 65533, 0, 3, 65533, 65535, 0, 65533, 65534, 0, 65533, 65533, 0, 65534, 65533, 0, 65535, 65533, 0, 0, 65533, 3, 1, 65533, 0, 0, 65534, 0, 65535, 65534, 0, 65534, 65534, 0, 65534, 65535, 0, 65535, 65535, 0, 1, 65535, 0, 1, 0, 3, 2, 3, 0, 3, 3, 0, 3, 2, 0, 3, 1, 0, 3, 0, 3, 3, 65535, 0, 3, 65534, 0, 3, 65533, 0, 1, 3, 0, 0, 3, 3, 65535, 3, 0, 65534, 3, 0, 65533, 3, 0, 0, 2, 0, 0, 1, 3, 0, 0, 4, 65533, 4, 1, 65532, 4, 2, 65532, 3, 1, 65532, 2, 1, 65532, 1, 1, 65532, 0, 1, 65532, 65535, 1, 65532, 65534, 1, 65532, 65533, 1, 65532, 65532, 2, 65533, 65532, 1, 65534, 65532, 1, 65535, 65532, 1, 0, 65532, 1, 1, 65532, 1, 2, 65532, 1, 3, 65532, 1, 4, 65532, 2, 4, 65533, 1, 4, 65534, 1, 4, 65535, 1, 4, 0, 1, 4, 1, 1, 4, 2, 1, 4, 3, 1, 4, 4, 2, 3, 4, 1, 2, 4, 1, 1, 4, 1, 0, 4, 1, 65535, 4, 1, 65534, 4, 1)
 }
-
-[node name="FrogNode" parent="." unique_id=194496005 instance=ExtResource("1_kr500")]
-transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 0.9999999, 0, -0.99999994, 0, -4.3711385e-08, 1, 1, 1)
 
 [node name="SignalNode" parent="." unique_id=504689857 instance=ExtResource("3_47hky")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 1)
@@ -37,3 +35,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 7)
 transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0)
 pan_speed = 15.0
 rotate_speed = 2.5
+
+[node name="GridNode3D" parent="." unique_id=1462055501 instance=ExtResource("5_8roc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.75, 1)
+grid_position = Vector3i(0, 1, 0)
+
+[node name="FrogNode" parent="." unique_id=1352624681 instance=ExtResource("1_kr500")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.75, 1)
+grid_position = Vector3i(0, 1, 0)
