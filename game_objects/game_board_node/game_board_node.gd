@@ -16,17 +16,6 @@ var _y_floor: int = INT64_MAX
 @export var test_position: Vector3i:
 	set(value):
 		test_position = value
-		_print_debug()
-
-@warning_ignore("unused_private_class_variable")
-@export_tool_button("print", "3D") var _test = _print_debug
-
-func _print_debug():
-	print("\n%s :: %s" % [test_position, can_stand(test_position)])
-	print(Util.get_facing_vector(Util.Facing.NORTH), " == ", can_jump(test_position, Util.Facing.NORTH))
-	print(Util.get_facing_vector(Util.Facing.EAST), " == ",can_jump(test_position, Util.Facing.EAST))
-	print(Util.get_facing_vector(Util.Facing.SOUTH), " == ",can_jump(test_position, Util.Facing.SOUTH))
-	print(Util.get_facing_vector(Util.Facing.WEST), " == ",can_jump(test_position, Util.Facing.WEST))
 
 
 # ENGINE
@@ -41,24 +30,38 @@ func get_cells(force_refresh: bool = false) -> Array[Vector3i]:
 
 func get_y_floor(force_refresh: bool = false) -> int:
 	if _y_floor == INT64_MAX or force_refresh:
+		_y_floor = INT64_MAX
 		for cell in get_cells(true):
-			_y_floor = INT64_MAX
 			_y_floor = min(cell.y, _y_floor)
 	return _y_floor
 
 func can_stand(pos: Vector3i) -> bool:
 	if !get_cells().has(pos + Vector3i.DOWN):
 		return false
+	return !is_blocked(pos)
+
+func is_blocked(pos: Vector3i) -> bool:
 	for vert_offset in range(0, VERTICAL_CLEARANCE):
 		if get_cells().has(pos + Vector3i(0, vert_offset, 0)):
-			return false
-	return true
-
-func can_jump(start: Vector3i, facing: Util.Facing) -> bool:
-	for v_offset in range(JUMP_HEIGHT, -JUMP_HEIGHT - 1, -1):
-		if can_stand(start + Vector3i(0, v_offset, 0) + Util.get_facing_vector(facing)):
 			return true
 	return false
+
+func get_leap_position(frog: FrogNode) -> Vector3i:
+	var ret = frog.grid_position + Vector3i(0, JUMP_HEIGHT, 0) + (Util.get_facing_vector(frog.facing) * frog.leap_distance)
+	if is_blocked(ret):
+		ret = frog.grid_position
+	return ret
+
+func get_fall_position(frog: FrogNode) -> Vector3i:
+	var ret = frog.grid_position
+	while !can_stand(ret):
+		ret += Vector3i.DOWN
+		if ret.y <= get_y_floor():
+			return ret
+	return ret
+
+func kills_frog(pos: Vector3i) -> bool:
+	return pos.y == get_y_floor()
 
 
 # PRIVATE
