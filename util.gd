@@ -10,6 +10,7 @@ const FACING_MAP: Dictionary[Facing, Vector3i] = {
 }
 
 const EXIT_NODE_KEY: String = "exit_nodes"
+const FROG_NODE_KEY: String = "frogs"
 
 static func get_facing_vector(facing: Facing) -> Vector3i:
 	return FACING_MAP[facing] if FACING_MAP.has(facing) else FACING_MAP[Facing.NORTH]
