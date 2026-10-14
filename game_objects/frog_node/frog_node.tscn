@@ -3,21 +3,13 @@
 [ext_resource type="Script" uid="uid://5uvjaireuwqm" path="res://game_objects/frog_node/frog_node.gd" id="1_kyjp0"]
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_yhxja"]
 [ext_resource type="PackedScene" uid="uid://dumrwu5ga2s18" path="res://game_objects/frog_node/frog_setup.tscn" id="3_2s3if"]
-[ext_resource type="AudioStream" uid="uid://dg3oll2r22u27" path="res://assets/sfx/death.wav" id="4_qtudw"]
 
 [node name="FrogNode" unique_id=1462055501 instance=ExtResource("1_yhxja")]
 script = ExtResource("1_kyjp0")
 color = Color(0.69803923, 0.13333334, 0.13333334, 1)
-facing = 0
 leap_distance = 1
 
 [node name="Node3D" parent="." index="0" unique_id=2129936302 instance=ExtResource("3_2s3if")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="DeathSfx" type="AudioStreamPlayer3D" parent="." index="1" unique_id=1488288066 groups=["blocking_node"]]
-unique_name_in_owner = true
-stream = ExtResource("4_qtudw")
-bus = &"Sfx"
-
 [connection signal="color_changed" from="." to="Node3D" method="_on_frog_node_color_changed"]
-[connection signal="finished" from="DeathSfx" to="." method="_on_death_sfx_finished"]

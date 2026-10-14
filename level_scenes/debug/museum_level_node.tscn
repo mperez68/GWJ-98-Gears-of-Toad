@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b06fhm7xo2n1h" path="res://level_scenes/level_node/level_node.tscn" id="1_hgnjb"]
 [ext_resource type="PackedScene" uid="uid://bhnc2mbnr3ivp" path="res://game_objects/frog_node/frog_node.tscn" id="2_s7vtt"]
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="3_2b5s2"]
+[ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="4_t3ufj"]
 
 [node name="LevelNode" unique_id=410290877 instance=ExtResource("1_hgnjb")]
 
@@ -57,3 +58,7 @@ facing = 1
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0.75, -0.5)
 grid_position = Vector3i(0, 1, -1)
 facing = 1
+
+[node name="ExitNode" parent="." index="16" unique_id=115794724 instance=ExtResource("4_t3ufj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.75, -0.5)
+grid_position = Vector3i(5, 1, -1)

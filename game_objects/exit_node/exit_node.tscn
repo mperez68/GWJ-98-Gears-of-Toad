@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://csuy1bjgotcmg"]
+
+[ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_m4wlq"]
+[ext_resource type="PackedScene" uid="uid://d0n6mshkfqay3" path="res://assets/models/EXIT_NODE.FBX" id="2_7ud4h"]
+
+[node name="ExitNode" unique_id=1462055501 groups=["exit_nodes"] instance=ExtResource("1_m4wlq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.75, 0.5)
+grid_position = Vector3i(0, 1, 0)
+
+[node name="EXIT_NODE" parent="." index="0" unique_id=1561070 instance=ExtResource("2_7ud4h")]

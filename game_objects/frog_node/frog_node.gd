@@ -3,8 +3,6 @@ class_name FrogNode extends GridNode3D
 
 signal color_changed(new_color: Color)
 
-@onready var death_sfx: AudioStreamPlayer3D = %DeathSfx
-
 @export var color: Color = Color.FIREBRICK:
 	set(value):
 		color = value
@@ -29,6 +27,10 @@ func fall_stage(game_board_node: GameBoardNode):
 func cleanup_stage(game_board_node: GameBoardNode):
 	if game_board_node.kills_frog(grid_position):
 		kill()
+	for node in get_tree().get_nodes_in_group(Util.EXIT_NODE_KEY):
+		if node.grid_position == grid_position:
+			kill()
+			print("Redeem!")
 
 func turn(increment: Util.RotateIncrement):
 	var ret: int = facing + increment
@@ -37,13 +39,10 @@ func turn(increment: Util.RotateIncrement):
 	facing = (ret % Util.Facing.size()) as Util.Facing
 
 func kill():
-	hide()
-	death_sfx.play()
+	queue_free()
 
 
 # PRIVATE
 
 
 # SIGNALS
-func _on_death_sfx_finished() -> void:
-	queue_free()
