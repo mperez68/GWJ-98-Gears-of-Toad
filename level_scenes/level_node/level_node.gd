@@ -16,6 +16,8 @@ var nodes: Array[GridNode3D] = []
 
 
 # ENGINE
+func _ready() -> void:
+	SignalBus.frog_scored.connect(_on_frog_scored)
 
 
 # PUBLIC
@@ -42,6 +44,9 @@ func _on_stage_pass_timer_timeout() -> void:
 		Stage.CLEANUP:
 			for node in nodes:
 				node.cleanup_stage(game_board_node)
+
+func _on_frog_scored(frog_type: FrogType):
+	print("%s redeemed!" % frog_type.display_name)
 
 func _on_child_entered_tree(node: Node) -> void:
 	if node is GridNode3D:

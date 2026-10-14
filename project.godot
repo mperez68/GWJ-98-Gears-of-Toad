@@ -27,6 +27,7 @@ SceneManager="*res://global/scene_manager.tscn"
 SfxManager="*res://global/sfx_manager.tscn"
 SettingsManager="*res://global/settings_manager.tscn"
 SaveStateManager="*uid://chrchktrakx3e"
+SignalBus="*uid://d1se80vwjhm3l"
 
 [display]
 
