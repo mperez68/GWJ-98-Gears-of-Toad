@@ -1,6 +1,7 @@
 class_name Util extends RefCounted
 
 enum Facing{ NORTH, EAST, SOUTH, WEST }
+enum RotateIncrement{ LEFT = -1, RIGHT = 1, FLIP = 2 }
 const FACING_MAP: Dictionary[Facing, Vector3i] = {
 	Facing.NORTH: Vector3i.FORWARD, 
 	Facing.EAST: Vector3i.RIGHT,

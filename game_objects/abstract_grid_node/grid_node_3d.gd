@@ -24,6 +24,7 @@ signal moved
 func _ready():
 	if Engine.is_editor_hint():
 		set_notify_transform(true)
+	grid_position = grid_position
 
 func _notification(what):
 	if what == NOTIFICATION_TRANSFORM_CHANGED and snap_to_grid:

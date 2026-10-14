@@ -2,32 +2,17 @@
 
 [ext_resource type="Script" uid="uid://5uvjaireuwqm" path="res://game_objects/frog_node/frog_node.gd" id="1_kyjp0"]
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_yhxja"]
-[ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="2_yhxja"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2s3if"]
-albedo_color = Color(0.9019608, 0.6901961, 0.32156864, 1)
-metallic = 0.2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtudw"]
-albedo_color = Color(0.69803923, 0.13333334, 0.13333334, 1)
-metallic = 0.2
+[ext_resource type="PackedScene" uid="uid://dcrs03uxsrdf3" path="res://assets/models/FROG.FBX" id="3_2s3if"]
 
 [node name="FrogNode" unique_id=1462055501 instance=ExtResource("1_yhxja")]
 script = ExtResource("1_kyjp0")
 color = Color(0.69803923, 0.13333334, 0.13333334, 1)
 facing = 0
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." index="0" unique_id=1087549484]
-size = Vector3(1, 0.5, 1)
-material = SubResource("StandardMaterial3D_2s3if")
+[node name="FROG" parent="." index="0" unique_id=2123467260 instance=ExtResource("3_2s3if")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGBox3D" index="0" unique_id=1009913910]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-radius = 0.25
-material = SubResource("StandardMaterial3D_2s3if")
+[node name="Rectangle002" parent="FROG" index="8" unique_id=1796210241]
+visible = false
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGBox3D" index="1" unique_id=1133586070]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
-radius = 0.25
-material = SubResource("StandardMaterial3D_qtudw")
-script = ExtResource("2_yhxja")
+[editable path="FROG"]
