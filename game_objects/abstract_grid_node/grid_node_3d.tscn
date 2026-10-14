@@ -3,6 +3,6 @@
 [ext_resource type="Script" uid="uid://cl80aqcd3i2pm" path="res://game_objects/abstract_grid_node/grid_node_3d.gd" id="1_832h5"]
 
 [node name="GridNode3D" type="Node3D" unique_id=1462055501]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.25, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.25, 0.5)
 script = ExtResource("1_832h5")
 grid_size = Vector3(1, 0.5, 1)

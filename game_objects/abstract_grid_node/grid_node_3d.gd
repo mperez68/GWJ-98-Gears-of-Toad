@@ -11,6 +11,11 @@ signal moved
 		if position != new_pos:
 			position = new_pos
 		moved.emit()
+@export var facing: Util.Facing:
+	set(value):
+		facing = value
+		if is_node_ready():
+			look_at(position + Vector3(Util.get_facing_vector(facing)))
 @export_group("Editor")
 @export var snap_to_grid: bool = true:
 	set(value):
@@ -32,6 +37,17 @@ func _notification(what):
 
 
 # PUBLIC
+func move_stage(_game_board_node: GameBoardNode):
+	pass
+
+func fall_stage(_game_board_node: GameBoardNode):
+	pass
+
+func place_stage(_game_board_node: GameBoardNode):
+	pass
+
+func cleanup_stage(_game_board_node: GameBoardNode):
+	pass
 
 
 # PRIVATE

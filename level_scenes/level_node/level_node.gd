@@ -12,7 +12,7 @@ var stage: Stage = Stage.CLEANUP:
 		stage = value
 		sfx[stage].play()
 		stage_changed.emit(stage)
-var frogs: Array[FrogNode] = []
+var nodes: Array[GridNode3D] = []
 
 
 # ENGINE
@@ -31,21 +31,22 @@ func _on_stage_pass_timer_timeout() -> void:
 	_pass_stage()
 	match stage:
 		Stage.MOVE:
-			for frog in frogs:
-				frog.leap(game_board_node)
+			for node in nodes:
+				node.move_stage(game_board_node)
 		Stage.FALL:
-			for frog in frogs:
-				frog.fall(game_board_node)
+			for node in nodes:
+				node.fall_stage(game_board_node)
+		Stage.PLACE:
+			for node in nodes:
+				node.place_stage(game_board_node)
 		Stage.CLEANUP:
-			for frog in frogs:
-				if game_board_node.kills_frog(frog.grid_position):
-					frog.kill()
-					frogs.erase(frog)
+			for node in nodes:
+				node.cleanup_stage(game_board_node)
 
 func _on_child_entered_tree(node: Node) -> void:
-	if node is FrogNode:
-		frogs.push_back(node)
+	if node is GridNode3D:
+		nodes.push_back(node)
 
 func _on_child_exiting_tree(node: Node) -> void:
-	if node is FrogNode:
-		frogs.erase(node)
+	if node is GridNode3D:
+		nodes.erase(node)

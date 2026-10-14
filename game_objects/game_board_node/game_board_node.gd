@@ -49,7 +49,7 @@ func is_blocked(pos: Vector3i) -> bool:
 func get_leap_position(frog: FrogNode) -> Vector3i:
 	var ret = frog.grid_position + Vector3i(0, JUMP_HEIGHT, 0) + (Util.get_facing_vector(frog.facing) * frog.leap_distance)
 	if is_blocked(ret):
-		ret = frog.grid_position
+		ret = frog.grid_position if is_blocked(frog.grid_position + Vector3i.UP) else (frog.grid_position + Vector3i.UP)
 	return ret
 
 func get_fall_position(frog: FrogNode) -> Vector3i:

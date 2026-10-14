@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://blv31j1jlmjbn"]
+
+[ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_tuc66"]
+[ext_resource type="Script" uid="uid://tkbkx8pvncbv" path="res://game_objects/spawn_node/spawn_node.gd" id="2_4cfjl"]
+[ext_resource type="PackedScene" uid="uid://mdtmr2r2da2o" path="res://assets/models/ENTRANCE_NODE.FBX" id="3_b0bek"]
+
+[node name="SpawnNode" unique_id=1462055501 instance=ExtResource("1_tuc66")]
+script = ExtResource("2_4cfjl")
+
+[node name="ENTRANCE_NODE" parent="." index="0" unique_id=1518047766 instance=ExtResource("3_b0bek")]
