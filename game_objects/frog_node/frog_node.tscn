@@ -3,13 +3,15 @@
 [ext_resource type="Script" uid="uid://5uvjaireuwqm" path="res://game_objects/frog_node/frog_node.gd" id="1_kyjp0"]
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_yhxja"]
 [ext_resource type="PackedScene" uid="uid://dumrwu5ga2s18" path="res://game_objects/frog_node/frog_setup.tscn" id="3_2s3if"]
+[ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_qtudw"]
 
 [node name="FrogNode" unique_id=1462055501 groups=["frogs"] instance=ExtResource("1_yhxja")]
 script = ExtResource("1_kyjp0")
-color = Color(0.69803923, 0.13333334, 0.13333334, 1)
 leap_distance = 1
+color = Color(0.98039216, 0.92156863, 0.84313726, 1)
+frog_type = ExtResource("3_qtudw")
 
 [node name="Node3D" parent="." index="0" unique_id=2129936302 instance=ExtResource("3_2s3if")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[connection signal="color_changed" from="." to="Node3D" method="_on_frog_node_color_changed"]
+[connection signal="color_changed" from="." to="Node3D" method="_on_node_color_changed"]

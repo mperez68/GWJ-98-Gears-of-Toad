@@ -22,5 +22,5 @@ func _ready() -> void:
 
 
 # SIGNALS
-func _on_frog_node_color_changed(new_color: Color) -> void:
+func _on_node_color_changed(new_color: Color) -> void:
 	color = new_color

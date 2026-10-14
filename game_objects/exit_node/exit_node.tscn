@@ -2,9 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_m4wlq"]
 [ext_resource type="PackedScene" uid="uid://d0n6mshkfqay3" path="res://assets/models/EXIT_NODE.FBX" id="2_7ud4h"]
+[ext_resource type="Script" uid="uid://s11o8af8r60r" path="res://game_objects/exit_node/exit_node.gd" id="2_skleo"]
+[ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_4ko7c"]
+[ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="5_03t48"]
 
 [node name="ExitNode" unique_id=1462055501 groups=["exit_nodes"] instance=ExtResource("1_m4wlq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.75, 0.5)
-grid_position = Vector3i(0, 1, 0)
+script = ExtResource("2_skleo")
+color = Color(0.98039216, 0.92156863, 0.84313726, 1)
+frog_type = ExtResource("3_4ko7c")
 
 [node name="EXIT_NODE" parent="." index="0" unique_id=1561070 instance=ExtResource("2_7ud4h")]
+script = ExtResource("5_03t48")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="EXIT_NODE" index="2" unique_id=499062528]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.022904217, 0)
+omni_range = 0.8
+
+[connection signal="color_changed" from="." to="EXIT_NODE" method="_on_node_color_changed"]

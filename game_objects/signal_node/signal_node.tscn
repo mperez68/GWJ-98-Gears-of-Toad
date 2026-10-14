@@ -2,11 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_svfxf"]
 [ext_resource type="Script" uid="uid://de6l7c4e3na08" path="res://game_objects/signal_node/signal_node.gd" id="2_xd5gi"]
+[ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_wqhub"]
+[ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="4_jnhnn"]
 
 [node name="SignalNode" unique_id=1462055501 instance=ExtResource("1_svfxf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.25, 1)
 script = ExtResource("2_xd5gi")
+color = Color(0.98039216, 0.92156863, 0.84313726, 1)
+frog_type = ExtResource("3_wqhub")
 
 [node name="CSGTorus3D" type="CSGTorus3D" parent="." index="0" unique_id=746330404]
 inner_radius = 0.25
 outer_radius = 0.5
+script = ExtResource("4_jnhnn")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGTorus3D" index="0" unique_id=1843574025]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23819959, 0)
+omni_range = 0.8
+
+[connection signal="color_changed" from="." to="CSGTorus3D" method="_on_node_color_changed"]
