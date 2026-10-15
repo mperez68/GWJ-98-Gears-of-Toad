@@ -1,20 +1,5 @@
 [gd_scene format=3 uid="uid://dumrwu5ga2s18"]
 
-[ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="1_2w7kv"]
 [ext_resource type="PackedScene" uid="uid://dcrs03uxsrdf3" path="res://assets/models/FROG.FBX" id="1_qkys5"]
 
-[node name="Node3D" type="Node3D" unique_id=2129936302]
-script = ExtResource("1_2w7kv")
-
-[node name="FROG" parent="." unique_id=24469067 instance=ExtResource("1_qkys5")]
-
-[node name="Rectangle002" parent="FROG" index="8" unique_id=1796210241]
-visible = false
-
-[node name="OmniLight3D" type="OmniLight3D" parent="FROG" unique_id=548207112]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7215576, 0)
-light_color = Color(1, 0, 0, 1)
-omni_range = 0.8
-
-[editable path="FROG"]
+[node name="FROG" unique_id=1351867661 instance=ExtResource("1_qkys5")]
