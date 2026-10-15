@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FrogType" format=3 uid="uid://dh580adg7wrr6"]
+
+[ext_resource type="Script" uid="uid://btdvqte0w4hye" path="res://game_objects/frog_node/frog_type.gd" id="1_r5tpm"]
+
+[resource]
+script = ExtResource("1_r5tpm")
+display_name = "Blue"
+_color = 2
+metadata/_custom_type_script = "uid://btdvqte0w4hye"

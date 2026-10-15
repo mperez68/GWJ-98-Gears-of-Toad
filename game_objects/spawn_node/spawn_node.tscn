@@ -2,9 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_tuc66"]
 [ext_resource type="Script" uid="uid://tkbkx8pvncbv" path="res://game_objects/spawn_node/spawn_node.gd" id="2_4cfjl"]
+[ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_anxab"]
 [ext_resource type="PackedScene" uid="uid://mdtmr2r2da2o" path="res://assets/models/ENTRANCE_NODE.FBX" id="3_b0bek"]
+[ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="5_3hxqs"]
 
 [node name="SpawnNode" unique_id=1462055501 instance=ExtResource("1_tuc66")]
 script = ExtResource("2_4cfjl")
+charges = -1
+color = Color(0.98039216, 0.92156863, 0.84313726, 1)
+frog_type = ExtResource("3_anxab")
 
 [node name="ENTRANCE_NODE" parent="." index="0" unique_id=1518047766 instance=ExtResource("3_b0bek")]
+script = ExtResource("5_3hxqs")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="ENTRANCE_NODE" index="1" unique_id=676087757]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2211716, 0)
+omni_range = 1.954
+
+[connection signal="color_changed" from="." to="ENTRANCE_NODE" method="_on_node_color_changed"]
