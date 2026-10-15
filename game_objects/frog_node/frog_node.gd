@@ -34,3 +34,5 @@ func kill():
 
 
 # SIGNALS
+func _on_frog_collider_collision_occurred() -> void:
+	kill()

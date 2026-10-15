@@ -4,6 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_yhxja"]
 [ext_resource type="PackedScene" uid="uid://dumrwu5ga2s18" path="res://game_objects/frog_node/frog_setup.tscn" id="3_2s3if"]
 [ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_qtudw"]
+[ext_resource type="Script" uid="uid://17a5q0yuvl45" path="res://game_objects/frog_node/frog_collider.gd" id="5_b1p2o"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1by8w"]
+radius = 0.4
 
 [node name="FrogNode" unique_id=1462055501 groups=["frogs"] instance=ExtResource("1_yhxja")]
 script = ExtResource("1_kyjp0")
@@ -14,4 +18,13 @@ frog_type = ExtResource("3_qtudw")
 [node name="Node3D" parent="." index="0" unique_id=2129936302 instance=ExtResource("3_2s3if")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
+[node name="FrogCollider" type="Area3D" parent="." index="1" unique_id=1613541246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+script = ExtResource("5_b1p2o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrogCollider" index="0" unique_id=20886794]
+shape = SubResource("SphereShape3D_1by8w")
+
 [connection signal="color_changed" from="." to="Node3D" method="_on_node_color_changed"]
+[connection signal="area_entered" from="FrogCollider" to="FrogCollider" method="_on_area_entered"]
+[connection signal="collision_occurred" from="FrogCollider" to="." method="_on_frog_collider_collision_occurred"]
