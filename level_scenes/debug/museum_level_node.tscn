@@ -178,113 +178,118 @@ grid_position = Vector3i(3, 1, -1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.75, -1.5)
 grid_position = Vector3i(5, 1, -2)
 
-[node name="SignalNode8" parent="." index="36" unique_id=1549718584 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode16" parent="." index="36" unique_id=433065177 instance=ExtResource("5_1bfdq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.75, -1.5)
+signal_type = null
+grid_position = Vector3i(1, 1, -2)
+
+[node name="SignalNode8" parent="." index="37" unique_id=1549718584 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.75, -1.5)
 color = Color(0.8039216, 0.36078432, 0.36078432, 1)
 frog_type = ExtResource("6_ag7g0")
 grid_position = Vector3i(2, 1, -2)
 
-[node name="SignalNode9" parent="." index="37" unique_id=1249984462 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode9" parent="." index="38" unique_id=1249984462 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.75, -1.5)
 color = Color(0, 0, 0.54509807, 1)
 frog_type = ExtResource("7_05k3r")
 grid_position = Vector3i(3, 1, -2)
 
-[node name="SignalNode10" parent="." index="38" unique_id=1314364098 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode10" parent="." index="39" unique_id=1314364098 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.75, -1.5)
 color = Color(0.18039216, 0.54509807, 0.34117648, 1)
 frog_type = ExtResource("8_xiu4y")
 grid_position = Vector3i(4, 1, -2)
 
-[node name="SignalNode2" parent="." index="39" unique_id=1161796004 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode2" parent="." index="40" unique_id=1161796004 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, -2.5)
 grid_position = Vector3i(-3, 1, -3)
 
-[node name="SignalNode5" parent="." index="40" unique_id=1322869743 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode5" parent="." index="41" unique_id=1322869743 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.75, -2.5)
 color = Color(0.8039216, 0.36078432, 0.36078432, 1)
 frog_type = ExtResource("6_ag7g0")
 grid_position = Vector3i(-2, 1, -3)
 
-[node name="SignalNode3" parent="." index="41" unique_id=395397386 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode3" parent="." index="42" unique_id=395397386 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, 2.5)
 grid_position = Vector3i(-3, 1, 2)
 
-[node name="SignalNode6" parent="." index="42" unique_id=2134918365 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode6" parent="." index="43" unique_id=2134918365 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.75, 2.5)
 color = Color(0.18039216, 0.54509807, 0.34117648, 1)
 frog_type = ExtResource("8_xiu4y")
 grid_position = Vector3i(-2, 1, 2)
 
-[node name="SignalNode4" parent="." index="43" unique_id=745867628 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode4" parent="." index="44" unique_id=745867628 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, 7.5)
 grid_position = Vector3i(-3, 1, 7)
 
-[node name="SignalNode7" parent="." index="44" unique_id=1761900261 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode7" parent="." index="45" unique_id=1761900261 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.75, 7.5)
 color = Color(0, 0, 0.54509807, 1)
 frog_type = ExtResource("7_05k3r")
 grid_position = Vector3i(-2, 1, 7)
 
-[node name="SignalNode11" parent="." index="45" unique_id=800422304 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode11" parent="." index="46" unique_id=800422304 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.75, 5.5)
 grid_position = Vector3i(5, 1, 5)
 
-[node name="SignalNode14" parent="." index="46" unique_id=2069896030 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode14" parent="." index="47" unique_id=2069896030 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0.75, 6.5)
 grid_position = Vector3i(7, 1, 6)
 
-[node name="SignalNode15" parent="." index="47" unique_id=1370260703 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode15" parent="." index="48" unique_id=1370260703 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.75, 6.5)
 signal_type = ExtResource("9_t5der")
 grid_position = Vector3i(9, 1, 6)
 
-[node name="SignalNode12" parent="." index="48" unique_id=1261340449 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode12" parent="." index="49" unique_id=1261340449 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.75, 7.5)
 signal_type = ExtResource("10_t512t")
 grid_position = Vector3i(5, 1, 7)
 
-[node name="SignalNode13" parent="." index="49" unique_id=2005468380 instance=ExtResource("5_1bfdq")]
+[node name="SignalNode13" parent="." index="50" unique_id=2005468380 instance=ExtResource("5_1bfdq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0.75, 7.5)
 signal_type = ExtResource("10_t512t")
 grid_position = Vector3i(7, 1, 7)
 
-[node name="ExitNode3" parent="." index="50" unique_id=1717632515 instance=ExtResource("4_t3ufj")]
+[node name="ExitNode3" parent="." index="51" unique_id=1717632515 instance=ExtResource("4_t3ufj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, 1.5)
 color = Color(0.8039216, 0.36078432, 0.36078432, 1)
 frog_type = ExtResource("6_ag7g0")
 grid_position = Vector3i(-3, 1, 1)
 
-[node name="ExitNode4" parent="." index="51" unique_id=1526124397 instance=ExtResource("4_t3ufj")]
+[node name="ExitNode4" parent="." index="52" unique_id=1526124397 instance=ExtResource("4_t3ufj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, -0.5)
 color = Color(0, 0, 0.54509807, 1)
 frog_type = ExtResource("7_05k3r")
 grid_position = Vector3i(-3, 1, -1)
 
-[node name="ExitNode5" parent="." index="52" unique_id=1423231209 instance=ExtResource("4_t3ufj")]
+[node name="ExitNode5" parent="." index="53" unique_id=1423231209 instance=ExtResource("4_t3ufj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, 6.5)
 color = Color(0.18039216, 0.54509807, 0.34117648, 1)
 frog_type = ExtResource("8_xiu4y")
 grid_position = Vector3i(-3, 1, 6)
 
-[node name="ExitNode6" parent="." index="53" unique_id=1426978194 instance=ExtResource("4_t3ufj")]
+[node name="ExitNode6" parent="." index="54" unique_id=1426978194 instance=ExtResource("4_t3ufj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, 4.5)
 color = Color(0.8039216, 0.36078432, 0.36078432, 1)
 frog_type = ExtResource("6_ag7g0")
 grid_position = Vector3i(-3, 1, 4)
 
-[node name="ExitNode7" parent="." index="54" unique_id=2055636244 instance=ExtResource("4_t3ufj")]
+[node name="ExitNode7" parent="." index="55" unique_id=2055636244 instance=ExtResource("4_t3ufj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, -3.5)
 color = Color(0, 0, 0.54509807, 1)
 frog_type = ExtResource("7_05k3r")
 grid_position = Vector3i(-3, 1, -4)
 
-[node name="ExitNode8" parent="." index="55" unique_id=760419963 instance=ExtResource("4_t3ufj")]
+[node name="ExitNode8" parent="." index="56" unique_id=760419963 instance=ExtResource("4_t3ufj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, -5.5)
 color = Color(0.18039216, 0.54509807, 0.34117648, 1)
 frog_type = ExtResource("8_xiu4y")
 grid_position = Vector3i(-3, 1, -6)
 
-[node name="ExitNode12" parent="." index="56" unique_id=259747726 instance=ExtResource("4_t3ufj")]
+[node name="ExitNode12" parent="." index="57" unique_id=259747726 instance=ExtResource("4_t3ufj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0.75, 5.5)
 grid_position = Vector3i(7, 1, 5)

@@ -1,7 +1,12 @@
 @tool
 class_name SignalNode extends ColoredGridNode
 
-@export var signal_type: SignalType
+signal signal_type_changed(new_type: SignalType)
+
+@export var signal_type: SignalType:
+	set(value):
+		signal_type = value
+		signal_type_changed.emit(signal_type)
 
 
 # ENGINE
@@ -19,3 +24,5 @@ func place_stage(_game_board_node: GameBoardNode):
 
 
 # SIGNALS
+func _on_signal_type_changed(new_type: SignalType) -> void:
+	scale = Vector3.ONE if new_type else Vector3(0.5, 0.5, 0.5)

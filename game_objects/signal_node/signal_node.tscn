@@ -23,3 +23,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23819959, 0)
 omni_range = 0.8
 
 [connection signal="color_changed" from="." to="CSGTorus3D" method="_on_node_color_changed"]
+[connection signal="signal_type_changed" from="." to="." method="_on_signal_type_changed"]
