@@ -4,3 +4,7 @@ extends Node
 signal frog_scored(frog_type: FrogType)
 @warning_ignore("unused_signal")
 signal change_hovered_signal(new_signal_type: SignalType)
+@warning_ignore("unused_signal")
+signal level_success
+@warning_ignore("unused_signal")
+signal set_next_level(next_scene: PackedScene)

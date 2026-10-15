@@ -2,10 +2,11 @@ class_name Hud extends Control
 
 const SIGNAL_BUTTON: PackedScene = preload("res://ui/signal_button.tscn")
 
-enum Page{ IN_GAME, OPTIONS }
+enum Page{ IN_GAME, OPTIONS, GAME_END }
 @onready var page_map: Dictionary[Page, Control] = {
 	Page.IN_GAME: %InGameControl,
-	Page.OPTIONS: %OptionsControl
+	Page.OPTIONS: %OptionsControl,
+	Page.GAME_END: %GameEndControl
 }
 @onready var signal_setter_container: HBoxContainer = %SignalSetterContainer
 
@@ -26,6 +27,8 @@ func _ready() -> void:
 		btn.signal_type = option
 		btn.change_pending_signal_type.connect(_on_change_pending_signal_type)
 		signal_setter_container.add_child(btn)
+	SignalBus.level_success.connect(_on_level_completed)
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -41,6 +44,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 # SIGNALS
 func _on_new_control_requested(new_page: Page) -> void:
+	if page_map[new_page].visible:
+		return
 	for key in page_map.keys():
 		if key == new_page:
 			page_map[key].show()
@@ -49,3 +54,6 @@ func _on_new_control_requested(new_page: Page) -> void:
 
 func _on_change_pending_signal_type(new_signal_type: SignalType):
 	queued_signal_type = new_signal_type
+
+func _on_level_completed():
+	_on_new_control_requested(Page.GAME_END)

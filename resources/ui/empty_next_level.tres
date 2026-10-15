@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PackedSceneLink" format=3 uid="uid://vd20r1qrr2sn"]
+
+[ext_resource type="Script" uid="uid://b4jy0dhl1u7ls" path="res://resources/scripts/packed_scene_link.gd" id="1_637ah"]
+
+[resource]
+script = ExtResource("1_637ah")
+button_text = "Next Level"
+metadata/_custom_type_script = "uid://b4jy0dhl1u7ls"

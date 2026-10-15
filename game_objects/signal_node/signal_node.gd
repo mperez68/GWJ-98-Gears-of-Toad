@@ -41,11 +41,9 @@ func _on_signal_type_changed(new_type: SignalType) -> void:
 
 func _on_mouse_area_mouse_entered() -> void:
 	hovering = true
-	print("%s entered" % name)
 
 func _on_mouse_area_mouse_exited() -> void:
 	hovering = false
-	print("%s exited" % name)
 
 func _on_change_hovered_signal(new_signal_type: SignalType):
 	if hovering:

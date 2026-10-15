@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://csa1hrk3xdr26"]
+
+[ext_resource type="Script" uid="uid://cyckcxb48sopc" path="res://ui/scripts/game_end_control.gd" id="1_afvg8"]
+[ext_resource type="PackedScene" uid="uid://dhn5bb6wsu3fv" path="res://ui/scene_change_button.tscn" id="1_axg02"]
+[ext_resource type="Script" uid="uid://b4jy0dhl1u7ls" path="res://resources/scripts/packed_scene_link.gd" id="2_afvg8"]
+[ext_resource type="PackedScene" uid="uid://c1iwfo7rduuxg" path="res://ui/quit_button.tscn" id="3_8hujq"]
+[ext_resource type="PackedScene" uid="uid://c3njtoyv7xfje" path="res://main_scenes/menus/credits_menu.tscn" id="3_glyw1"]
+
+[sub_resource type="Resource" id="Resource_mqm3w"]
+script = ExtResource("2_afvg8")
+packed_scene = ExtResource("3_glyw1")
+button_text = "Credits"
+metadata/_custom_type_script = "uid://b4jy0dhl1u7ls"
+
+[node name="GameEndControl" type="CenterContainer" unique_id=999137055]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_afvg8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=218252096]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=1656464389]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer" unique_id=801418373]
+layout_mode = 2
+text = "Success!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer" unique_id=1552404431]
+layout_mode = 2
+
+[node name="BoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer2" unique_id=101747560]
+layout_mode = 2
+alignment = 1
+
+[node name="NextLevelButton" parent="VBoxContainer/PanelContainer2/BoxContainer" unique_id=722404897 instance=ExtResource("1_axg02")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+text = "Credits"
+icon_alignment = 0
+scene_link = SubResource("Resource_mqm3w")
+
+[node name="QuitButton" parent="VBoxContainer/PanelContainer2/BoxContainer" unique_id=1970711352 instance=ExtResource("3_8hujq")]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+text = "Quit"
+type = 1

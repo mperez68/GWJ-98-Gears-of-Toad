@@ -7,6 +7,7 @@
 [ext_resource type="LabelSettings" uid="uid://bgghdhgj1v8uh" path="res://resources/ui/sub_header_settings.tres" id="3_q43x7"]
 [ext_resource type="PackedScene" uid="uid://c1iwfo7rduuxg" path="res://ui/quit_button.tscn" id="5_q43x7"]
 [ext_resource type="Texture2D" uid="uid://cyhyuaxj0px8e" path="res://assets/menu/material-icons.png" id="7_q43x7"]
+[ext_resource type="PackedScene" uid="uid://csa1hrk3xdr26" path="res://ui/game_end_control.tscn" id="8_srpbi"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q43x7"]
 load_path = "res://.godot/imported/material-icons.png-d2af55576610f08f8e6fde4f65db10db.ctex"
@@ -101,6 +102,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
+
+[node name="GameEndControl" parent="MarginContainer" unique_id=1668600715 instance=ExtResource("8_srpbi")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
 
 [connection signal="pressed" from="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer/ReturnButton" to="." method="_on_new_control_requested" binds= [0]]
 [connection signal="pressed" from="MarginContainer/InGameControl/MenuButton" to="." method="_on_new_control_requested" binds= [1]]
