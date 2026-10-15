@@ -8,16 +8,21 @@ signal signal_type_changed(new_type: SignalType)
 		signal_type = value
 		signal_type_changed.emit(signal_type)
 
+var hovering: bool = false
+
 
 # ENGINE
+func _ready():
+	super()
+	SignalBus.change_hovered_signal.connect(_on_change_hovered_signal)
+
+
+# PUBLIC
 func place_stage(_game_board_node: GameBoardNode):
 	for node in get_tree().get_nodes_in_group(Util.FROG_NODE_KEY):
 		if grid_position == node.grid_position and is_frog_compatible(node):
 			if signal_type:
 				signal_type.do(node)
-
-
-# PUBLIC
 
 
 # PRIVATE
@@ -26,3 +31,15 @@ func place_stage(_game_board_node: GameBoardNode):
 # SIGNALS
 func _on_signal_type_changed(new_type: SignalType) -> void:
 	scale = Vector3.ONE if new_type else Vector3(0.5, 0.5, 0.5)
+
+func _on_mouse_area_mouse_entered() -> void:
+	hovering = true
+	print("%s entered" % name)
+
+func _on_mouse_area_mouse_exited() -> void:
+	hovering = false
+	print("%s exited" % name)
+
+func _on_change_hovered_signal(new_signal_type: SignalType):
+	if hovering:
+		signal_type = new_signal_type

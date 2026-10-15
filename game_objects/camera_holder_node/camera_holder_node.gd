@@ -2,7 +2,7 @@ class_name CameraHolderNode extends Node3D
 
 var movement_vector: Vector2 = Vector2.ZERO
 var turn_angle: float = 0.0
-@export var pan_speed: float = 25
+@export var pan_speed: float = 20
 @export var rotate_speed: float = 5
 
 

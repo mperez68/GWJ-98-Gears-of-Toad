@@ -6,6 +6,10 @@
 [ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_wqhub"]
 [ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="4_jnhnn"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1kvqs"]
+margin = 0.5
+size = Vector3(1, 0.2, 1)
+
 [node name="SignalNode" unique_id=1462055501 instance=ExtResource("1_svfxf")]
 script = ExtResource("2_xd5gi")
 signal_type = ExtResource("3_1kvqs")
@@ -20,7 +24,18 @@ script = ExtResource("4_jnhnn")
 [node name="OmniLight3D" type="OmniLight3D" parent="CSGTorus3D" index="0" unique_id=1843574025]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23819959, 0)
+light_color = Color(0.98039216, 0.92156863, 0.84313726, 1)
 omni_range = 0.8
+
+[node name="MouseArea" type="Area3D" parent="." index="1" unique_id=1740442658]
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MouseArea" index="0" unique_id=1418065070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+shape = SubResource("BoxShape3D_1kvqs")
 
 [connection signal="color_changed" from="." to="CSGTorus3D" method="_on_node_color_changed"]
 [connection signal="signal_type_changed" from="." to="." method="_on_signal_type_changed"]
+[connection signal="mouse_entered" from="MouseArea" to="." method="_on_mouse_area_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea" to="." method="_on_mouse_area_mouse_exited"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cbw1oarrirp20" path="res://level_scenes/level_node/level_node.gd" id="1_pfapb"]
 [ext_resource type="PackedScene" uid="uid://bqdx7bv3piuj0" path="res://game_objects/camera_holder_node/camera_holder_node.tscn" id="2_bvr5f"]
+[ext_resource type="PackedScene" uid="uid://c55sp3jjtraie" path="res://ui/hud.tscn" id="2_kld2m"]
 [ext_resource type="PackedScene" uid="uid://cqbwpkaj3bqo6" path="res://game_objects/game_board_node/game_board_node.tscn" id="3_2qtaq"]
 [ext_resource type="AudioStream" uid="uid://cepeksdtqad8f" path="res://assets/sfx/hit.wav" id="5_405cw"]
 [ext_resource type="AudioStream" uid="uid://i6mpitoql1iv" path="res://assets/sfx/click.wav" id="6_74w53"]
@@ -13,6 +14,10 @@ stereo = true
 
 [node name="LevelNode" type="Node3D" unique_id=410290877]
 script = ExtResource("1_pfapb")
+
+[node name="PlayerController" type="CanvasLayer" parent="." unique_id=1791836392]
+
+[node name="HUD" parent="PlayerController" unique_id=27375061 instance=ExtResource("2_kld2m")]
 
 [node name="CameraHolderNode" parent="." unique_id=2113383026 instance=ExtResource("2_bvr5f")]
 

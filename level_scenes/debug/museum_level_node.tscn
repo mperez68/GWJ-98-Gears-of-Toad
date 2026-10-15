@@ -13,7 +13,7 @@
 
 [node name="LevelNode" unique_id=410290877 instance=ExtResource("1_hgnjb")]
 
-[node name="GameBoardNode" parent="." index="2" unique_id=1228068689]
+[node name="GameBoardNode" parent="." index="3" unique_id=1228068689]
 data = {
 "cells": PackedInt32Array(0, 5, 1114112, 0, 4, 1114112, 0, 3, 1114112, 0, 2, 1114112, 0, 1, 1114112, 0, 0, 1114112, 1, 1, 1114112, 65537, 2, 1114112, 131073, 3, 1114112, 196609, 4, 1114112, 262145, 5, 1114112, 0, 6, 786432, 65537, 6, 1376256, 131074, 6, 1376256, 0, 65535, 262144, 1, 65535, 1376256, 2, 65535, 1376256, 1, 65534, 786432, 2, 65534, 786432, 3, 65534, 786432, 0, 65534, 262144, 0, 65533, 1507328, 1, 65533, 1114112, 65533, 65533, 786432, 65534, 65533, 786432, 65535, 65533, 262144, 65533, 65532, 262144, 65533, 65531, 786432, 65533, 65530, 262144, 65533, 65535, 262144, 65533, 0, 786432, 65533, 1, 262144, 65533, 2, 786432, 65534, 2, 786432, 65535, 2, 262144, 65533, 4, 262144, 65533, 5, 786432, 65533, 6, 262144, 65533, 7, 786432, 65534, 7, 786432, 65535, 7, 262144, 3, 65535, 262144, 4, 65534, 786432, 5, 65534, 786432, 5, 65535, 262144, 0, 65532, 262144, 1, 65532, 786432, 0, 65530, 262144, 0, 65531, 262144, 1, 65531, 786432, 1, 65530, 786432, 8, 65530, 786432, 8, 65531, 786432, 8, 65532, 786432, 7, 65531, 786432, 9, 65531, 786432, 10, 65531, 262144, 8, 65533, 262144, 4, 3, 262144, 4, 2, 262144, 4, 1, 262144, 5, 1, 786432, 5, 2, 786432, 5, 3, 786432, 2, 65530, 262144, 2, 65531, 262144, 2, 65532, 262144, 6, 1, 786432, 6, 2, 786432, 6, 3, 786432, 7, 3, 786432, 7, 2, 786432, 7, 1, 786432, 8, 1, 786432, 8, 2, 786432, 8, 3, 786432, 9, 3, 786432, 9, 2, 786432, 9, 1, 786432, 10, 1, 786432, 10, 2, 786432, 10, 3, 786432, 4, 5, 262144, 5, 5, 786432, 5, 6, 786432, 5, 7, 786432, 6, 7, 786432, 7, 7, 786432, 7, 6, 786432, 8, 6, 786432, 9, 6, 786432, 7, 5, 262144, 12, 65533, 262144, 14, 65531, 262144, 12, 65532, 786432, 12, 65531, 786432, 13, 65531, 786432)
 }
@@ -55,7 +55,7 @@ facing = 1
 
 [node name="SpawnNode" parent="." index="15" unique_id=449556021 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0.75, -0.5)
-recharge = null
+recharge = 0
 delay = 0
 grid_position = Vector3i(0, 1, -1)
 facing = 1
@@ -83,7 +83,7 @@ facing = 1
 
 [node name="SpawnNode10" parent="." index="19" unique_id=1463276471 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0.75, -2.5)
-recharge = null
+recharge = 0
 delay = 0
 grid_position = Vector3i(8, 1, -3)
 
@@ -95,7 +95,7 @@ grid_position = Vector3i(12, 1, -3)
 
 [node name="SpawnNode11" parent="." index="21" unique_id=1826933081 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.5, 0.75, -4.5)
-recharge = null
+recharge = 0
 delay = 0
 grid_position = Vector3i(10, 1, -5)
 facing = 3
@@ -109,21 +109,21 @@ facing = 3
 
 [node name="SpawnNode2" parent="." index="23" unique_id=1934783400 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0.75, -1.5)
-recharge = null
+recharge = 0
 delay = 0
 grid_position = Vector3i(0, 1, -2)
 facing = 1
 
 [node name="SpawnNode3" parent="." index="24" unique_id=2105105684 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0.75, -2.5)
-recharge = null
+recharge = 0
 delay = 0
 grid_position = Vector3i(0, 1, -3)
 facing = 1
 
 [node name="SpawnNode7" parent="." index="25" unique_id=1785080866 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0.75, -3.5)
-recharge = null
+recharge = 0
 delay = 0
 color = Color(0, 0, 0.54509807, 1)
 frog_type = ExtResource("7_05k3r")
@@ -132,7 +132,7 @@ facing = 1
 
 [node name="SpawnNode8" parent="." index="26" unique_id=1829670188 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0.75, -4.5)
-recharge = null
+recharge = 0
 delay = 0
 color = Color(0.18039216, 0.54509807, 0.34117648, 1)
 frog_type = ExtResource("8_xiu4y")
@@ -141,7 +141,7 @@ facing = 1
 
 [node name="SpawnNode9" parent="." index="27" unique_id=1664126518 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0.75, -5.5)
-recharge = null
+recharge = 0
 delay = 0
 color = Color(0.8039216, 0.36078432, 0.36078432, 1)
 frog_type = ExtResource("6_ag7g0")
@@ -150,7 +150,7 @@ facing = 1
 
 [node name="SpawnNode4" parent="." index="28" unique_id=114317779 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 0.75, -2.5)
-recharge = null
+recharge = 0
 delay = 0
 color = Color(0.18039216, 0.54509807, 0.34117648, 1)
 frog_type = ExtResource("8_xiu4y")
@@ -159,7 +159,7 @@ facing = 3
 
 [node name="SpawnNode5" parent="." index="29" unique_id=632582832 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 0.75, 2.5)
-recharge = null
+recharge = 0
 delay = 0
 color = Color(0, 0, 0.54509807, 1)
 frog_type = ExtResource("7_05k3r")
@@ -168,7 +168,7 @@ facing = 3
 
 [node name="SpawnNode6" parent="." index="30" unique_id=646532317 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 0.75, 7.5)
-recharge = null
+recharge = 0
 delay = 0
 color = Color(0.8039216, 0.36078432, 0.36078432, 1)
 frog_type = ExtResource("6_ag7g0")

@@ -8,6 +8,11 @@ enum Page{ IN_GAME, OPTIONS }
 
 
 # ENGINE
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			SignalBus.change_hovered_signal.emit(null)
+
 
 
 # PUBLIC
