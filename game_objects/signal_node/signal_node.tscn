@@ -5,6 +5,7 @@
 [ext_resource type="Resource" uid="uid://b00xnhcxfv8og" path="res://game_objects/signal_node/presets/right_turn.tres" id="3_1kvqs"]
 [ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_wqhub"]
 [ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="4_jnhnn"]
+[ext_resource type="Texture2D" uid="uid://dn4g84oyxdx0d" path="res://assets/icons/signal_icons/rotate_right.jpg" id="6_6h4dx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1kvqs"]
 margin = 0.5
@@ -34,6 +35,11 @@ collision_mask = 32768
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MouseArea" index="0" unique_id=1418065070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
 shape = SubResource("BoxShape3D_1kvqs")
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="2" unique_id=37099105]
+unique_name_in_owner = true
+transform = Transform3D(0.3, 0, 0, 0, -1.3113417e-08, 0.3, 0, -0.3, -1.3113417e-08, 0, 0.015544325, 0)
+texture = ExtResource("6_6h4dx")
 
 [connection signal="color_changed" from="." to="CSGTorus3D" method="_on_node_color_changed"]
 [connection signal="signal_type_changed" from="." to="." method="_on_signal_type_changed"]

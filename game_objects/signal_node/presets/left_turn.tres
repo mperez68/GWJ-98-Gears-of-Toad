@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="TurnSignal" format=3 uid="uid://ba4ojteioap41"]
 
 [ext_resource type="Script" uid="uid://b8clydkff215k" path="res://game_objects/signal_node/signal_types/turn_signal.gd" id="1_7fgjo"]
+[ext_resource type="Texture2D" uid="uid://n4yxndqxyu1r" path="res://assets/icons/signal_icons/rotate_left.jpg" id="2_kdi3k"]
 
 [resource]
 script = ExtResource("1_7fgjo")
 rotate_increment = -1
 display_name = "-90 deg."
+sprite = ExtResource("2_kdi3k")
 metadata/_custom_type_script = "uid://b8clydkff215k"

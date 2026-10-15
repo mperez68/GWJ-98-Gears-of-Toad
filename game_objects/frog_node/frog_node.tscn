@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://17a5q0yuvl45" path="res://game_objects/frog_node/frog_collider.gd" id="5_b1p2o"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1by8w"]
-radius = 0.4
+radius = 0.2
 
 [node name="FrogNode" unique_id=1462055501 groups=["frogs"] instance=ExtResource("1_yhxja")]
 script = ExtResource("1_kyjp0")

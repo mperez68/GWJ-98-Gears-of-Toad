@@ -91,7 +91,8 @@ offset_bottom = 24.0
 icon = SubResource("AtlasTexture_1cp1y")
 icon_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/InGameControl" unique_id=1582494723]
+[node name="SignalSetterContainer" type="HBoxContainer" parent="MarginContainer/InGameControl" unique_id=1582494723]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -100,26 +101,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
-
-[node name="SfxButton" parent="MarginContainer/InGameControl/HBoxContainer" unique_id=674043170 instance=ExtResource("2_276te")]
-layout_mode = 2
-icon_alignment = 1
-
-[node name="SfxButton2" parent="MarginContainer/InGameControl/HBoxContainer" unique_id=1891851120 instance=ExtResource("2_276te")]
-layout_mode = 2
-icon_alignment = 1
-
-[node name="SfxButton3" parent="MarginContainer/InGameControl/HBoxContainer" unique_id=912710270 instance=ExtResource("2_276te")]
-layout_mode = 2
-icon_alignment = 1
-
-[node name="SfxButton4" parent="MarginContainer/InGameControl/HBoxContainer" unique_id=1823131659 instance=ExtResource("2_276te")]
-layout_mode = 2
-icon_alignment = 1
-
-[node name="SfxButton5" parent="MarginContainer/InGameControl/HBoxContainer" unique_id=1544058123 instance=ExtResource("2_276te")]
-layout_mode = 2
-icon_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer/ReturnButton" to="." method="_on_new_control_requested" binds= [0]]
 [connection signal="pressed" from="MarginContainer/InGameControl/MenuButton" to="." method="_on_new_control_requested" binds= [1]]

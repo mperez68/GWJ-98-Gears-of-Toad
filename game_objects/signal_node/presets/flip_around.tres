@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="TurnSignal" format=3 uid="uid://cjf6fqruuofwo"]
 
 [ext_resource type="Script" uid="uid://b8clydkff215k" path="res://game_objects/signal_node/signal_types/turn_signal.gd" id="1_p2isx"]
+[ext_resource type="Texture2D" uid="uid://c1nspfuhs1kr2" path="res://assets/icons/signal_icons/flip.jpg" id="2_lcku5"]
 
 [resource]
 script = ExtResource("1_p2isx")
 rotate_increment = 2
 display_name = "Flip"
+sprite = ExtResource("2_lcku5")
 metadata/_custom_type_script = "uid://b8clydkff215k"

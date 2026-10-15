@@ -3,6 +3,8 @@ class_name SignalNode extends ColoredGridNode
 
 signal signal_type_changed(new_type: SignalType)
 
+@onready var sprite_3d: Sprite3D = %Sprite3D
+
 @export var signal_type: SignalType:
 	set(value):
 		signal_type = value
@@ -14,7 +16,10 @@ var hovering: bool = false
 # ENGINE
 func _ready():
 	super()
-	SignalBus.change_hovered_signal.connect(_on_change_hovered_signal)
+	if !Engine.is_editor_hint():
+		SignalBus.change_hovered_signal.connect(_on_change_hovered_signal)
+	_on_signal_type_changed(signal_type)
+	
 
 
 # PUBLIC
@@ -31,6 +36,8 @@ func place_stage(_game_board_node: GameBoardNode):
 # SIGNALS
 func _on_signal_type_changed(new_type: SignalType) -> void:
 	scale = Vector3.ONE if new_type else Vector3(0.5, 0.5, 0.5)
+	if sprite_3d:
+		sprite_3d.texture = new_type.sprite if new_type else null
 
 func _on_mouse_area_mouse_entered() -> void:
 	hovering = true

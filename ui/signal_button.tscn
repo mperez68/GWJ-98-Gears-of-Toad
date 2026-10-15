@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dn3nag64gwlr5"]
+
+[ext_resource type="PackedScene" uid="uid://dynic8aip3myr" path="res://ui/sfx_button.tscn" id="1_kpxai"]
+[ext_resource type="Texture2D" uid="uid://dn4g84oyxdx0d" path="res://assets/icons/signal_icons/rotate_right.jpg" id="2_5plua"]
+[ext_resource type="Script" uid="uid://dqd73qhyv5ooi" path="res://ui/scripts/signal_button.gd" id="2_nebo5"]
+[ext_resource type="Resource" uid="uid://b00xnhcxfv8og" path="res://game_objects/signal_node/presets/right_turn.tres" id="4_5j4ys"]
+
+[node name="SignalButton" unique_id=674043170 instance=ExtResource("1_kpxai")]
+icon = ExtResource("2_5plua")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_nebo5")
+signal_type = ExtResource("4_5j4ys")
+icon_side = 1
