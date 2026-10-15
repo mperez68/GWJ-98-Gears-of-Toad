@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btvmojfydxtkl"]
+
+[ext_resource type="Texture2D" uid="uid://csj3pyjyxco2k" path="res://assets/models/EXIT_NODE_0.png" id="1_v1vc3"]
+
+[resource]
+resource_name = "SPRITES"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_v1vc3")
+emission_enabled = true
+emission_energy_multiplier = 0.0
