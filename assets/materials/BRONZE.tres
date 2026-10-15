@@ -3,6 +3,6 @@
 [resource]
 resource_name = "BRONZE"
 albedo_color = Color(0.759381, 0.6796897, 0.5494939, 1)
-metallic = 1.0
+metallic = 0.78
 roughness = 0.26
 emission_energy_multiplier = 0.0

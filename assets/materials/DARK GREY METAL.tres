@@ -2,7 +2,7 @@
 
 [resource]
 resource_name = "DARK GREY METAL"
-albedo_color = Color(0.11489672, 0.11489683, 0.11489678, 1)
+albedo_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
 metallic = 0.29
 metallic_specular = 0.67
 roughness = 0.31

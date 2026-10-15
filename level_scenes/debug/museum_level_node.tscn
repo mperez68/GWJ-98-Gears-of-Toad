@@ -11,7 +11,30 @@
 [ext_resource type="Resource" uid="uid://cjf6fqruuofwo" path="res://game_objects/signal_node/presets/flip_around.tres" id="9_t5der"]
 [ext_resource type="Resource" uid="uid://ba4ojteioap41" path="res://game_objects/signal_node/presets/left_turn.tres" id="10_t512t"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3qbqj"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.7882353, 0.49019608, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.7882353, 0.49019608, 0, 1)
+use_debanding = false
+
+[sub_resource type="Sky" id="Sky_p6jxr"]
+sky_material = SubResource("ProceduralSkyMaterial_3qbqj")
+
+[sub_resource type="Environment" id="Environment_fp4ho"]
+background_mode = 1
+sky = SubResource("Sky_p6jxr")
+ambient_light_source = 2
+ambient_light_color = Color(0.73300546, 0.7330054, 0.7330054, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 3.61
+
 [node name="LevelNode" unique_id=410290877 instance=ExtResource("1_hgnjb")]
+
+[node name="DirectionalLight3D" parent="." index="2" unique_id=1870912355]
+transform = Transform3D(0.8660254, -0.28678834, -0.40957606, -7.161255e-08, -0.81915206, 0.57357645, -0.5000001, -0.49673173, -0.70940644, -3.1583197, 4.422959, -5.4703703)
+light_bake_mode = 1
+shadow_enabled = true
 
 [node name="GameBoardNode" parent="." index="3" unique_id=1228068689]
 data = {
@@ -62,21 +85,21 @@ facing = 1
 
 [node name="SpawnNode12" parent="." index="16" unique_id=974633825 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5, 0.75, 1.5)
-recharge = 1
+recharge = 0
 delay = 0
 grid_position = Vector3i(4, 1, 1)
 facing = 1
 
 [node name="SpawnNode13" parent="." index="17" unique_id=1450849278 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5, 0.75, 2.5)
-recharge = 2
+recharge = 0
 delay = 0
 grid_position = Vector3i(4, 1, 2)
 facing = 1
 
 [node name="SpawnNode14" parent="." index="18" unique_id=2113557 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5, 0.75, 3.5)
-recharge = 2
+recharge = 0
 delay = 0
 grid_position = Vector3i(4, 1, 3)
 facing = 1
@@ -89,7 +112,7 @@ grid_position = Vector3i(8, 1, -3)
 
 [node name="SpawnNode16" parent="." index="20" unique_id=1669895526 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0.75, -2.5)
-recharge = 1
+recharge = 0
 delay = 0
 grid_position = Vector3i(12, 1, -3)
 
@@ -102,8 +125,8 @@ facing = 3
 
 [node name="SpawnNode17" parent="." index="22" unique_id=1105012568 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.5, 0.75, -4.5)
-recharge = 1
-delay = 1
+recharge = 0
+delay = 0
 grid_position = Vector3i(14, 1, -5)
 facing = 3
 
@@ -177,7 +200,7 @@ facing = 3
 
 [node name="SpawnNode15" parent="." index="31" unique_id=333125379 instance=ExtResource("3_2b5s2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5, 0.75, 5.5)
-recharge = 4
+recharge = 0
 delay = 0
 grid_position = Vector3i(4, 1, 5)
 facing = 1
@@ -321,3 +344,10 @@ grid_position = Vector3i(-3, 1, -6)
 [node name="ExitNode12" parent="." index="59" unique_id=259747726 instance=ExtResource("4_t3ufj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0.75, 5.5)
 grid_position = Vector3i(7, 1, 5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="61" unique_id=518879139]
+environment = SubResource("Environment_fp4ho")
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="WorldEnvironment" index="0" unique_id=1723822725]
+blend_distance = 0.0
+size = Vector3(30, 30, 30)
