@@ -26,6 +26,7 @@ var nodes: Array[GridNode3D] = []
 
 # ENGINE
 func _ready() -> void:
+	MusicManager.play("Game")
 	SignalBus.frog_scored.connect(_on_frog_scored)
 	if next_level_scene:
 		SignalBus.set_next_level.emit(next_level_scene)
