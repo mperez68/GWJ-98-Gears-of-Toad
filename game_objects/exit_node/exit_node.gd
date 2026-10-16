@@ -3,6 +3,10 @@ class_name ExitNode extends ColoredGridNode
 
 
 # ENGINE
+func _ready():
+	super()
+	if !Engine.is_editor_hint():
+		SignalBus.set_invisible_tile.emit(grid_position + Vector3i.DOWN)
 
 
 # PUBLIC
@@ -11,6 +15,7 @@ func cleanup_stage(_game_board_node: GameBoardNode):
 		if node.grid_position == grid_position and is_frog_compatible(node):
 			SignalBus.frog_scored.emit(node.frog_type)
 			node.kill()	# TODO fall through chute
+
 
 # PRIVATE
 

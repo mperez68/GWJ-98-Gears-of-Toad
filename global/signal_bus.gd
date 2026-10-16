@@ -8,3 +8,5 @@ signal change_hovered_signal(new_signal_type: SignalType)
 signal level_success
 @warning_ignore("unused_signal")
 signal set_next_level(next_scene: PackedScene)
+@warning_ignore("unused_signal")
+signal set_invisible_tile(pos: Vector3i)

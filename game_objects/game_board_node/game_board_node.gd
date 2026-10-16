@@ -7,6 +7,7 @@ const MAX_COORDINATE_SIZE: int = 3
 const VERTICAL_CLEARANCE: int = 2
 ## Maximum height between tiles for a frog to jump up the distance vertically.
 const JUMP_HEIGHT: int = 1
+const INVISIBLE_ITEM_INDEX: int = 1
 
 #var nav: AStar3D
 var _cached_cells: Array[Vector3i]
@@ -19,6 +20,8 @@ var _y_floor: int = INT64_MAX
 
 
 # ENGINE
+func _ready() -> void:
+	SignalBus.set_invisible_tile.connect(_on_set_invisible_tile)
 
 
 # PUBLIC
@@ -68,3 +71,5 @@ func kills_frog(pos: Vector3i) -> bool:
 
 
 # SIGNALS
+func _on_set_invisible_tile(pos: Vector3i):
+	set_cell_item(pos, INVISIBLE_ITEM_INDEX)

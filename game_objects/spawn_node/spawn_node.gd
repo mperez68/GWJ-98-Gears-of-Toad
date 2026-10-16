@@ -14,6 +14,10 @@ const FROG: PackedScene = preload("res://game_objects/frog_node/frog_node.tscn")
 
 
 # ENGINE
+func _ready():
+	super()
+	if !Engine.is_editor_hint():
+		SignalBus.set_invisible_tile.emit(grid_position + Vector3i.DOWN)
 
 
 # PUBLIC

@@ -29,27 +29,31 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="StagePassTimer" type="Timer" parent="." unique_id=78576898]
-wait_time = 0.5
+wait_time = 0.25
 autostart = true
 
 [node name="TickSfx0" type="AudioStreamPlayer" parent="." unique_id=691705538]
 unique_name_in_owner = true
 stream = ExtResource("5_405cw")
+volume_db = -10.0
 bus = &"Sfx"
 
 [node name="TickSfx1" type="AudioStreamPlayer" parent="." unique_id=667423739]
 unique_name_in_owner = true
 stream = ExtResource("6_74w53")
+volume_db = -10.0
 bus = &"Sfx"
 
 [node name="TickSfx2" type="AudioStreamPlayer" parent="." unique_id=258097636]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamWAV_f3xmn")
+volume_db = -10.0
 bus = &"Sfx"
 
 [node name="TickSfx3" type="AudioStreamPlayer" parent="." unique_id=1775114815]
 unique_name_in_owner = true
 stream = ExtResource("6_74w53")
+volume_db = -10.0
 bus = &"Sfx"
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
