@@ -4,13 +4,17 @@ class_name SignalNode extends ColoredGridNode
 signal signal_type_changed(new_type: SignalType)
 
 @onready var sprite_3d: Sprite3D = %Sprite3D
+@onready var highlight: AreaLight3D = %Highlight
 
 @export var signal_type: SignalType:
 	set(value):
 		signal_type = value
 		signal_type_changed.emit(signal_type)
 
-var hovering: bool = false
+var hovering: bool = false:
+	set(value):
+		hovering = value
+		highlight.visible = hovering
 
 
 # ENGINE

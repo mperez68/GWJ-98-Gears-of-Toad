@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://da5uishuvnw26"]
+
+[ext_resource type="PackedScene" uid="uid://b06fhm7xo2n1h" path="res://level_scenes/level_node/level_node.tscn" id="1_1orxg"]
+[ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="2_1idg0"]
+[ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="3_h2h6a"]
+[ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="6_8y7up"]
+
+[node name="Level_02" unique_id=410290877 instance=ExtResource("1_1orxg")]
+
+[node name="GameBoardNode" parent="." index="3" unique_id=1228068689]
+data = {
+"cells": PackedInt32Array(65535, 65535, 786434, 65535, 0, 786434, 0, 65535, 786434, 65535, 65533, 786434, 65535, 65534, 786434, 65535, 65532, 786434, 65534, 65535, 786434, 65533, 65535, 786434, 65532, 65535, 786434, 65534, 0, 786434, 65534, 1, 786434, 65535, 1, 786434, 0, 1, 786434, 1, 1, 786434, 1, 0, 786434, 1, 65535, 786434, 0, 0, 786434, 1, 65534, 786434, 0, 65534, 786434, 65534, 65534, 786434, 65534, 2, 786434, 65534, 3, 786434, 65535, 3, 786434, 0, 3, 786434, 1, 3, 786434, 2, 3, 786434, 3, 3, 786434, 3, 2, 786434, 3, 1, 786434, 3, 0, 786434, 3, 65535, 786434, 2, 0, 786434, 2, 1, 786434, 2, 2, 786434, 1, 2, 786434, 0, 2, 786434, 3, 65534, 786434, 2, 65534, 786434, 65531, 65535, 786434, 65535, 65531, 786434)
+}
+
+[node name="SpawnNode" parent="." index="9" unique_id=1462055501 instance=ExtResource("2_1idg0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 0.75, -0.5)
+charges = 8
+recharge = 1
+delay = 1
+grid_position = Vector3i(-6, 1, -1)
+facing = 1
+
+[node name="@Node3D@70959" parent="." index="10" unique_id=1248905522 instance=ExtResource("2_1idg0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, 0.75, -5.5)
+charges = 8
+recharge = 1
+delay = 1
+grid_position = Vector3i(-1, 1, -6)
+facing = 2
+
+[node name="ExitNode" parent="." index="11" unique_id=1920147080 instance=ExtResource("3_h2h6a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.75, -0.5)
+grid_position = Vector3i(2, 1, -1)
+
+[node name="@Node3D@73185" parent="." index="12" unique_id=1140612370 instance=ExtResource("3_h2h6a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.75, 2.5)
+grid_position = Vector3i(-1, 1, 2)
+
+[node name="SignalNode" parent="." index="13" unique_id=636414415 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -0.5)
+grid_position = Vector3i(-1, 1, -1)
+
+[node name="SignalNode2" parent="." index="14" unique_id=476413623 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0.75, -0.5)
+grid_position = Vector3i(-2, 1, -1)
+
+[node name="SignalNode3" parent="." index="15" unique_id=1636474806 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -1.5)
+grid_position = Vector3i(-1, 1, -2)
+
+[node name="SignalNode4" parent="." index="16" unique_id=1603091709 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0.75, 3.5)
+grid_position = Vector3i(-2, 1, 3)
+
+[node name="SignalNode5" parent="." index="17" unique_id=1602158181 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, -1.5)
+grid_position = Vector3i(3, 1, -2)
+
+[node name="SignalNode6" parent="." index="18" unique_id=890866901 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, 3.5)
+grid_position = Vector3i(3, 1, 3)
+
+[node name="SignalNode7" parent="." index="19" unique_id=922910544 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, 2.5)
+grid_position = Vector3i(3, 1, 2)
+
+[node name="SignalNode8" parent="." index="20" unique_id=1188347492 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0.75, 3.5)
+grid_position = Vector3i(2, 1, 3)

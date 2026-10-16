@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dlkkvovpsyg3e"]
 
 [ext_resource type="PackedScene" uid="uid://b06fhm7xo2n1h" path="res://level_scenes/level_node/level_node.tscn" id="1_mqm3w"]
+[ext_resource type="PackedScene" uid="uid://da5uishuvnw26" path="res://level_scenes/levels/level_02.tscn" id="2_p7jyx"]
 [ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="2_wfde1"]
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="3_p7jyx"]
 [ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="4_ikh20"]
 
 [node name="LevelNode" unique_id=410290877 instance=ExtResource("1_mqm3w")]
 passing_score = 5
+next_level_scene = ExtResource("2_p7jyx")
 
 [node name="GameBoardNode" parent="." index="3" unique_id=1228068689]
 data = {
@@ -19,6 +21,7 @@ grid_position = Vector3i(-3, 1, -4)
 
 [node name="SpawnNode" parent="." index="10" unique_id=682698074 instance=ExtResource("3_p7jyx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.5, 0.75, -2.5)
+charges = 10
 recharge = 1
 delay = 1
 grid_position = Vector3i(-3, 1, -3)
@@ -26,15 +29,12 @@ facing = 2
 
 [node name="SignalNode" parent="." index="11" unique_id=1522478757 instance=ExtResource("4_ikh20")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 0.75, -0.5)
-signal_type = null
 grid_position = Vector3i(-3, 1, -1)
 
 [node name="SignalNode2" parent="." index="12" unique_id=439211986 instance=ExtResource("4_ikh20")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -0.5)
-signal_type = null
 grid_position = Vector3i(-1, 1, -1)
 
 [node name="SignalNode3" parent="." index="13" unique_id=1549801255 instance=ExtResource("4_ikh20")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -3.5)
-signal_type = null
 grid_position = Vector3i(-1, 1, -4)

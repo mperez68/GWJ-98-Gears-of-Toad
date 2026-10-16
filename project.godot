@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Gears of Toad"
 config/tags=PackedStringArray("framework")
-run/main_scene="uid://dlus41dea6h08"
+run/main_scene="uid://b06fhm7xo2n1h"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

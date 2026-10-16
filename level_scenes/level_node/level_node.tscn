@@ -12,6 +12,24 @@ data = PackedByteArray("cW9hZgABOwACAKxEFAAQKAAAAAAAAAAAAAAAAOAAQAAAAAAAAAAAAAAA
 format = 3
 stereo = true
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kld2m"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.7882353, 0.49019608, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.7882353, 0.49019608, 0, 1)
+use_debanding = false
+
+[sub_resource type="Sky" id="Sky_p6jxr"]
+sky_material = SubResource("ProceduralSkyMaterial_kld2m")
+
+[sub_resource type="Environment" id="Environment_405cw"]
+background_mode = 1
+sky = SubResource("Sky_p6jxr")
+ambient_light_source = 2
+ambient_light_color = Color(0.73300546, 0.7330054, 0.7330054, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 3.61
+
 [node name="LevelNode" type="Node3D" unique_id=410290877]
 script = ExtResource("1_pfapb")
 
@@ -55,6 +73,13 @@ unique_name_in_owner = true
 stream = ExtResource("6_74w53")
 volume_db = -10.0
 bus = &"Sfx"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1698499869]
+environment = SubResource("Environment_405cw")
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="WorldEnvironment" unique_id=102011247]
+blend_distance = 0.0
+size = Vector3(30, 30, 30)
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
