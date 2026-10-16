@@ -11,6 +11,7 @@ const FROG: PackedScene = preload("res://game_objects/frog_node/frog_node.tscn")
 @export var delay: int = 0
 
 @onready var recharge_count: int = recharge
+@onready var highlight: AreaLight3D = %Highlight
 
 
 # ENGINE
@@ -21,6 +22,9 @@ func _ready():
 
 
 # PUBLIC
+func move_stage(_game_board_node: GameBoardNode):
+	highlight.visible = delay == 0 and charges != 0
+
 func place_stage(_game_board_node: GameBoardNode):
 	if delay > 0:
 		delay -= 1

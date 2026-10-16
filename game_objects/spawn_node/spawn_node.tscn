@@ -6,9 +6,20 @@
 [ext_resource type="PackedScene" uid="uid://mdtmr2r2da2o" path="res://assets/models/ENTRANCE_NODE.FBX" id="3_b0bek"]
 [ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="5_3hxqs"]
 
+[sub_resource type="Gradient" id="Gradient_3hxqs"]
+offsets = PackedFloat32Array(0.4599156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3hxqs"]
+gradient = SubResource("Gradient_3hxqs")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
 [node name="SpawnNode" unique_id=1462055501 instance=ExtResource("1_tuc66")]
 script = ExtResource("2_4cfjl")
 charges = -1
+recharge = 0
+delay = 0
 color = Color(0.98039216, 0.92156863, 0.84313726, 1)
 frog_type = ExtResource("3_anxab")
 
@@ -17,7 +28,18 @@ script = ExtResource("5_3hxqs")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="ENTRANCE_NODE" index="1" unique_id=676087757]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2211716, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.042909265, 0)
+light_color = Color(0.98039216, 0.92156863, 0.84313726, 1)
 omni_range = 1.954
+
+[node name="Highlight" type="AreaLight3D" parent="." index="1" unique_id=1375613281]
+unique_name_in_owner = true
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 0, 0.28270888, 0)
+visible = false
+light_color = Color(0.7294118, 0.7372549, 0, 1)
+light_energy = 2.225
+area_range = 0.1
+area_attenuation = 2.972
+area_texture = SubResource("GradientTexture2D_3hxqs")
 
 [connection signal="color_changed" from="." to="ENTRANCE_NODE" method="_on_node_color_changed"]

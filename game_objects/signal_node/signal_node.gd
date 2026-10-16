@@ -1,18 +1,28 @@
 @tool
 class_name SignalNode extends ColoredGridNode
 
+const DISABLED_MATERIAL: Material = preload("res://resources/disabled_material.tres")
+
 signal signal_type_changed(new_type: SignalType)
 
 @onready var sprite_3d: Sprite3D = %Sprite3D
 @onready var highlight: AreaLight3D = %Highlight
+@onready var model: ColorMesh = %CSGTorus3D
 
 @export var signal_type: SignalType:
 	set(value):
 		signal_type = value
 		signal_type_changed.emit(signal_type)
+@export var player_settable: bool = true:
+	set(value):
+		player_settable = value
+		if model:
+			model.material = null if player_settable else DISABLED_MATERIAL
 
 var hovering: bool = false:
 	set(value):
+		if hovering == value:
+			return
 		hovering = value
 		highlight.visible = hovering
 
@@ -23,6 +33,7 @@ func _ready():
 	if !Engine.is_editor_hint():
 		SignalBus.change_hovered_signal.connect(_on_change_hovered_signal)
 	_on_signal_type_changed(signal_type)
+	player_settable = player_settable
 	
 
 
@@ -44,7 +55,7 @@ func _on_signal_type_changed(new_type: SignalType) -> void:
 		sprite_3d.texture = new_type.sprite if new_type else null
 
 func _on_mouse_area_mouse_entered() -> void:
-	hovering = true
+	hovering = true and player_settable
 
 func _on_mouse_area_mouse_exited() -> void:
 	hovering = false

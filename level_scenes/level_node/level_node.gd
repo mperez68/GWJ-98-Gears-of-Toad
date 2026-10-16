@@ -13,7 +13,8 @@ enum Stage{ MOVE, FALL, PLACE, CLEANUP }
 @onready var sfx: Array[AudioStreamPlayer] = [ %TickSfx0, %TickSfx1, %TickSfx2, %TickSfx3 ]
 @onready var game_board_node: GameBoardNode = %GameBoardNode
 
-@export var passing_score: int = 10
+@export var passing_score: int = 8
+@export var perfect_score: int = 12	#TODO holdout game end until this is hit or all frogs spawned
 @export var next_level_scene: PackedScene
 @export_category("Editor")
 @export_tool_button("Spawn Pipe") var spawn = _generate_spawn
