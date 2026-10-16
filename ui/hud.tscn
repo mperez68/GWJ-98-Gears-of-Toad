@@ -73,6 +73,11 @@ layout_mode = 2
 text = "Return"
 icon = SubResource("AtlasTexture_srpbi")
 
+[node name="ResetButton" parent="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer" unique_id=674043170 instance=ExtResource("2_276te")]
+layout_mode = 2
+text = "Restart Level"
+icon_alignment = 1
+
 [node name="QuitButton" parent="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer" unique_id=1986256228 instance=ExtResource("5_q43x7")]
 layout_mode = 2
 text = "Quit"
@@ -109,4 +114,5 @@ visible = false
 layout_mode = 2
 
 [connection signal="pressed" from="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer/ReturnButton" to="." method="_on_new_control_requested" binds= [0]]
+[connection signal="pressed" from="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="MarginContainer/InGameControl/MenuButton" to="." method="_on_new_control_requested" binds= [1]]

@@ -21,7 +21,8 @@ var _y_floor: int = INT64_MAX
 
 # ENGINE
 func _ready() -> void:
-	SignalBus.set_invisible_tile.connect(_on_set_invisible_tile)
+	if !Engine.is_editor_hint():
+		SignalBus.set_invisible_tile.connect(_on_set_invisible_tile)
 
 
 # PUBLIC

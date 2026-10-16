@@ -57,3 +57,6 @@ func _on_change_pending_signal_type(new_signal_type: SignalType):
 
 func _on_level_completed():
 	_on_new_control_requested(Page.GAME_END)
+
+func _on_reset_button_pressed() -> void:
+	get_tree().reload_current_scene()
