@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqbwpkaj3bqo6"]
 
-[ext_resource type="MeshLibrary" uid="uid://bbrtdkbs0qrf4" path="res://resources/mesh_lib.meshlib" id="1_otlfk"]
+[ext_resource type="MeshLibrary" uid="uid://86gu5uskwcu2" path="res://resources/mesh_lib.tres" id="1_otlfk"]
 [ext_resource type="Script" uid="uid://c67hjapu8jqb7" path="res://game_objects/game_board_node/game_board_node.gd" id="2_jm5ql"]
 
 [node name="GameBoardNode" type="GridMap" unique_id=1228068689]

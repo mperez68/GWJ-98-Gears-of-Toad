@@ -12,6 +12,7 @@ enum Stage{ MOVE, FALL, PLACE, CLEANUP }
 
 @onready var sfx: Array[AudioStreamPlayer] = [ %TickSfx0, %TickSfx1, %TickSfx2, %TickSfx3 ]
 @onready var game_board_node: GameBoardNode = %GameBoardNode
+@onready var stage_pass_timer: Timer = %StagePassTimer
 
 @export var passing_score: int = 8
 @export var perfect_score: int = 12	#TODO holdout game end until this is hit or all frogs spawned
@@ -44,9 +45,12 @@ func _ready() -> void:
 	SignalBus.frog_scored.connect(_on_frog_scored)
 	if next_level_scene:
 		SignalBus.set_next_level.emit(next_level_scene)
+	start_level()
 
 
 # PUBLIC
+func start_level():
+	stage_pass_timer.start(Util.turn_speed)
 
 
 # PRIVATE

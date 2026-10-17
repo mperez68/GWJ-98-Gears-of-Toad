@@ -56,8 +56,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh_library = ExtResource("5_74w53")
 
 [node name="StagePassTimer" type="Timer" parent="." unique_id=78576898]
+unique_name_in_owner = true
 wait_time = 0.5
-autostart = true
 
 [node name="TickSfx0" type="AudioStreamPlayer" parent="." unique_id=691705538]
 unique_name_in_owner = true
