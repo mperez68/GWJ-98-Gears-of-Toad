@@ -58,7 +58,6 @@ func _on_change_pending_signal_type(new_signal_type: SignalType):
 	queued_signal_type = new_signal_type
 
 func _on_level_completed(perfect_score_passed: bool):
-	print("perfect_score_passed == %s" % perfect_score_passed)
 	_on_new_control_requested(Page.GAME_END)
 
 func _on_reset_button_pressed() -> void:
