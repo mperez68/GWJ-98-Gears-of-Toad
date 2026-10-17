@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bqdx7bv3piuj0" path="res://game_objects/camera_holder_node/camera_holder_node.tscn" id="2_bvr5f"]
 [ext_resource type="PackedScene" uid="uid://c55sp3jjtraie" path="res://ui/hud.tscn" id="2_kld2m"]
 [ext_resource type="PackedScene" uid="uid://cqbwpkaj3bqo6" path="res://game_objects/game_board_node/game_board_node.tscn" id="3_2qtaq"]
-[ext_resource type="MeshLibrary" uid="uid://86gu5uskwcu2" path="res://resources/mesh_lib.tres" id="5_74w53"]
 [ext_resource type="AudioStream" uid="uid://cepeksdtqad8f" path="res://assets/sfx/hit.wav" id="5_405cw"]
 [ext_resource type="AudioStream" uid="uid://i6mpitoql1iv" path="res://assets/sfx/click.wav" id="6_74w53"]
 
@@ -53,7 +52,6 @@ size = Vector3(30, 30, 30)
 [node name="GameBoardNode" parent="." unique_id=1228068689 instance=ExtResource("3_2qtaq")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh_library = ExtResource("5_74w53")
 
 [node name="StagePassTimer" type="Timer" parent="." unique_id=78576898]
 unique_name_in_owner = true
@@ -85,4 +83,5 @@ bus = &"Sfx"
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
+[connection signal="stage_changed" from="." to="." method="_on_stage_changed"]
 [connection signal="timeout" from="StagePassTimer" to="." method="_on_stage_pass_timer_timeout"]

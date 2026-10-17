@@ -20,6 +20,17 @@ region = Rect2(0, 32, 16, 16)
 atlas = ExtResource("7_q43x7")
 region = Rect2(32, 48, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvoxt"]
+atlas = ExtResource("7_q43x7")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_srpbi"]
+load_path = "res://.godot/imported/material-icons.png-d2af55576610f08f8e6fde4f65db10db.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spcu4"]
+atlas = SubResource("CompressedTexture2D_srpbi")
+region = Rect2(48, 32, 16, 16)
+
 [node name="HUD" type="Control" unique_id=27375061]
 layout_mode = 3
 anchors_preset = 15
@@ -73,11 +84,6 @@ layout_mode = 2
 text = "Return"
 icon = SubResource("AtlasTexture_srpbi")
 
-[node name="ResetButton" parent="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer" unique_id=674043170 instance=ExtResource("2_276te")]
-layout_mode = 2
-text = "Restart Level"
-icon_alignment = 1
-
 [node name="QuitButton" parent="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer" unique_id=1986256228 instance=ExtResource("5_q43x7")]
 layout_mode = 2
 text = "Quit"
@@ -108,11 +114,44 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
+[node name="ResetButton" parent="MarginContainer/InGameControl" unique_id=674043170 instance=ExtResource("2_276te")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 0.0
+grow_vertical = 0
+icon = SubResource("AtlasTexture_tvoxt")
+icon_alignment = 1
+expand_icon = true
+
+[node name="EndLevelButton" parent="MarginContainer/InGameControl" unique_id=1108437839 instance=ExtResource("2_276te")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+disabled = true
+icon = SubResource("AtlasTexture_spcu4")
+icon_alignment = 1
+expand_icon = true
+
 [node name="GameEndControl" parent="MarginContainer" unique_id=1668600715 instance=ExtResource("8_srpbi")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
 [connection signal="pressed" from="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer/ReturnButton" to="." method="_on_new_control_requested" binds= [0]]
-[connection signal="pressed" from="MarginContainer/OptionsControl/VBoxContainer/ReturnPanel/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="MarginContainer/InGameControl/MenuButton" to="." method="_on_new_control_requested" binds= [1]]
+[connection signal="pressed" from="MarginContainer/InGameControl/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="MarginContainer/InGameControl/EndLevelButton" to="." method="_on_end_level_button_pressed"]

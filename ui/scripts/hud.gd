@@ -9,6 +9,7 @@ enum Page{ IN_GAME, OPTIONS, GAME_END }
 	Page.GAME_END: %GameEndControl
 }
 @onready var signal_setter_container: HBoxContainer = %SignalSetterContainer
+@onready var end_level_button: SfxButton = %EndLevelButton
 
 @export var signal_options: Array[SignalType] = [
 	null,
@@ -28,6 +29,7 @@ func _ready() -> void:
 		btn.change_pending_signal_type.connect(_on_change_pending_signal_type)
 		signal_setter_container.add_child(btn)
 	SignalBus.level_success.connect(_on_level_completed)
+	SignalBus.min_score_achieved.connect(_on_min_score_achieved)
 	
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -55,8 +57,15 @@ func _on_new_control_requested(new_page: Page) -> void:
 func _on_change_pending_signal_type(new_signal_type: SignalType):
 	queued_signal_type = new_signal_type
 
-func _on_level_completed():
+func _on_level_completed(perfect_score_passed: bool):
+	print("perfect_score_passed == %s" % perfect_score_passed)
 	_on_new_control_requested(Page.GAME_END)
 
 func _on_reset_button_pressed() -> void:
 	get_tree().reload_current_scene()
+
+func _on_end_level_button_pressed() -> void:
+	SignalBus.end_level_button_pressed.emit()
+
+func _on_min_score_achieved():
+	end_level_button.disabled = false

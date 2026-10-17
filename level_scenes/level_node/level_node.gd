@@ -15,7 +15,7 @@ enum Stage{ MOVE, FALL, PLACE, CLEANUP }
 @onready var stage_pass_timer: Timer = %StagePassTimer
 
 @export var passing_score: int = 8
-@export var perfect_score: int = 12	#TODO holdout game end until this is hit or all frogs spawned
+@export var perfect_score: int = 12
 @export var next_level_scene: PackedScene
 @export_category("Editor")
 @export_tool_button("Spawn Pipe") var spawn = _generate_spawn
@@ -27,7 +27,7 @@ var current_score: int = 0:
 	set(value):
 		current_score = value
 		if current_score >= passing_score:
-			SignalBus.level_success.emit()
+			SignalBus.min_score_achieved.emit()
 
 var stage: Stage = Stage.CLEANUP:
 	set(value):
@@ -46,6 +46,7 @@ func _ready() -> void:
 	if next_level_scene:
 		SignalBus.set_next_level.emit(next_level_scene)
 	start_level()
+	SignalBus.end_level_button_pressed.connect(score_check)
 
 
 # PUBLIC
@@ -73,6 +74,20 @@ func _gen_scene(scene: PackedScene):
 	var new_scene := scene.instantiate()
 	add_child(new_scene)
 	new_scene.owner = self
+
+func _check_game_ended():
+	for node in nodes:
+		if node is FrogNode:
+			return
+		if node is SpawnNode and node.charges > 0:
+			return
+	score_check()
+
+func score_check():
+	if current_score >= passing_score:
+		stage_pass_timer.stop()
+		SignalBus.level_success.emit(current_score >= perfect_score)
+	
 
 
 # SIGNALS
@@ -106,3 +121,7 @@ func _on_child_exiting_tree(node: Node) -> void:
 		return
 	if node is GridNode3D:
 		nodes.erase(node)
+
+func _on_stage_changed(new_stage: LevelNode.Stage) -> void:
+	if new_stage == LevelNode.Stage.CLEANUP:
+		_check_game_ended()
