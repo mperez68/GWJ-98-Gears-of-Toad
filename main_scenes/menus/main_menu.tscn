@@ -62,7 +62,7 @@ script = ExtResource("2_g8byo")
 hide_for_mobile = [NodePath("MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer/BodyContainer/VBoxContainer/HBoxContainer2/QuitButton")]
 
 [node name="MenuBgRect" parent="." unique_id=1389212552 instance=ExtResource("3_38vm8")]
-visible = false
+self_modulate = Color(1, 1, 1, 0.627451)
 layout_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=465557249]
@@ -108,9 +108,9 @@ icon_alignment = 0
 scene_link = SubResource("Resource_clqb2")
 
 [node name="SceneChangeButton2" parent="MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer/BodyContainer/VBoxContainer/HBoxContainer" unique_id=722404897 instance=ExtResource("4_vb3i7")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
-disabled = true
 text = "Tutorial"
 icon_alignment = 0
 scene_link = SubResource("Resource_q43x7")

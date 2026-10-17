@@ -1,6 +1,8 @@
 @tool
 class_name SignalButton extends SfxButton
 
+const DEFAULT_ICON: Texture2D = preload("res://assets/icons/signal_icons/default.jpg")
+
 signal change_pending_signal_type(new_signal_type: SignalType)
 
 @export var signal_type: SignalType:
@@ -20,7 +22,7 @@ func _ready() -> void:
 
 # PRIVATE
 func _update():
-	icon = signal_type.sprite if signal_type else null
+	icon = signal_type.sprite if signal_type else DEFAULT_ICON
 
 
 # SIGNALS

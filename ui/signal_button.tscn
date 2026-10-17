@@ -5,11 +5,11 @@
 [ext_resource type="Script" uid="uid://dqd73qhyv5ooi" path="res://ui/scripts/signal_button.gd" id="2_nebo5"]
 [ext_resource type="Resource" uid="uid://b00xnhcxfv8og" path="res://game_objects/signal_node/presets/right_turn.tres" id="4_5j4ys"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_t5der"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_5plua"]
 
 [node name="SignalButton" unique_id=674043170 instance=ExtResource("1_kpxai")]
 toggle_mode = true
-button_group = SubResource("ButtonGroup_t5der")
+button_group = SubResource("ButtonGroup_5plua")
 icon = ExtResource("2_5plua")
 icon_alignment = 1
 expand_icon = true

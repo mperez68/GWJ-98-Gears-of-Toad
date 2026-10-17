@@ -3,7 +3,7 @@ class_name Footer extends Label
 
 
 # ENGINE
-const PREFIX: String = "GEIST_COMM_GAMES"
+const PREFIX: String = "GWJ #98"
 
 
 # ENGINE
