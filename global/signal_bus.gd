@@ -14,3 +14,5 @@ signal set_invisible_tile(pos: Vector3i)
 signal end_level_button_pressed
 @warning_ignore("unused_signal")
 signal min_score_achieved
+@warning_ignore("unused_signal")
+signal start_spawns

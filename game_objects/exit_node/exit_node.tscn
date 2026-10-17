@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d0n6mshkfqay3" path="res://assets/models/EXIT_NODE.FBX" id="2_7ud4h"]
 [ext_resource type="Script" uid="uid://s11o8af8r60r" path="res://game_objects/exit_node/exit_node.gd" id="2_skleo"]
 [ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_4ko7c"]
-[ext_resource type="Script" uid="uid://c5bh44i8ljdkd" path="res://game_objects/frog_node/color_mesh.gd" id="5_03t48"]
+[ext_resource type="Script" uid="uid://6aruaphkvgde" path="res://game_objects/exit_node/exit_node_model.gd" id="5_03t48"]
 
 [node name="ExitNode" unique_id=1462055501 groups=["exit_nodes"] instance=ExtResource("1_m4wlq")]
 script = ExtResource("2_skleo")
@@ -21,4 +21,6 @@ light_color = Color(0.98039216, 0.92156863, 0.84313726, 1)
 light_energy = 2.352
 light_size = 0.218
 
+[connection signal="chute_closed" from="." to="EXIT_NODE" method="_on_chute_closed"]
+[connection signal="chute_opened" from="." to="EXIT_NODE" method="_on_chute_opened"]
 [connection signal="color_changed" from="." to="EXIT_NODE" method="_on_node_color_changed"]

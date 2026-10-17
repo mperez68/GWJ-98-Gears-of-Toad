@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b4jy0dhl1u7ls" path="res://resources/scripts/packed_scene_link.gd" id="8_38vm8"]
 [ext_resource type="PackedScene" uid="uid://c3njtoyv7xfje" path="res://main_scenes/menus/credits_menu.tscn" id="9_38vm8"]
 [ext_resource type="PackedScene" uid="uid://c18qfne8f4xr5" path="res://ui/footer_container.tscn" id="9_yy0sh"]
+[ext_resource type="PackedScene" uid="uid://yca2h2262iie" path="res://level_scenes/menu_level.tscn" id="12_wcnxn"]
 
 [sub_resource type="Resource" id="Resource_clqb2"]
 script = ExtResource("8_38vm8")
@@ -61,6 +62,7 @@ script = ExtResource("2_g8byo")
 hide_for_mobile = [NodePath("MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer/BodyContainer/VBoxContainer/HBoxContainer2/QuitButton")]
 
 [node name="MenuBgRect" parent="." unique_id=1389212552 instance=ExtResource("3_38vm8")]
+visible = false
 layout_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=465557249]
@@ -146,3 +148,5 @@ icon_side = 2
 
 [node name="FooterContainer" parent="MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer" unique_id=636837887 instance=ExtResource("9_yy0sh")]
 layout_mode = 2
+
+[node name="MenuLevel" parent="." unique_id=410290877 instance=ExtResource("12_wcnxn")]

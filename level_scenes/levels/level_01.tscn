@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://da5uishuvnw26" path="res://level_scenes/levels/level_02.tscn" id="2_p7jyx"]
 [ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="2_wfde1"]
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="3_p7jyx"]
+[ext_resource type="Theme" uid="uid://dxyu51du6xt8k" path="res://resources/ui/menu_theme.tres" id="3_q5x24"]
 [ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="4_ikh20"]
 [ext_resource type="Resource" uid="uid://ba4ojteioap41" path="res://game_objects/signal_node/presets/left_turn.tres" id="5_ikh20"]
 [ext_resource type="PackedScene" uid="uid://d0lwj6v2uxt4k" path="res://game_objects/obstacle_node/obstacle_node.tscn" id="6_ikh20"]
@@ -12,6 +13,50 @@
 passing_score = 3
 perfect_score = 6
 next_level_scene = ExtResource("2_p7jyx")
+
+[node name="MarginContainer" type="MarginContainer" parent="PlayerController" parent_id_path=PackedInt32Array(1791836392) index="0" unique_id=1636306876]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("3_q5x24")
+
+[node name="Control" type="Control" parent="PlayerController/MarginContainer" index="0" unique_id=1417696407]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="PlayerController/MarginContainer/Control" index="0" unique_id=204323890]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -448.0
+offset_right = 448.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "WASD to move the camera
+Q and R rotate the camera"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerController/MarginContainer/Control" index="1" unique_id=1176398396]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -113.0
+offset_right = 448.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Select a Signal type below and click on a disabled signal to set it to the selected type."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CameraHolderNode" parent="." index="1" unique_id=2113383026]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -1.9797363, 0, -0.1171875)
@@ -22,30 +67,30 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
-[node name="ExitNode" parent="." index="9" unique_id=1462055501 instance=ExtResource("2_wfde1")]
+[node name="ExitNode" parent="." index="6" unique_id=369474487 instance=ExtResource("2_wfde1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.75, -2.5)
 grid_position = Vector3i(-1, 1, -3)
 
-[node name="SignalNode" parent="." index="10" unique_id=1522478757 instance=ExtResource("4_ikh20")]
+[node name="SignalNode" parent="." index="7" unique_id=1522478757 instance=ExtResource("4_ikh20")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, 1.5)
 signal_type = ExtResource("5_ikh20")
 player_settable = false
 grid_position = Vector3i(-3, 1, 1)
 
-[node name="SignalNode2" parent="." index="11" unique_id=439211986 instance=ExtResource("4_ikh20")]
+[node name="SignalNode2" parent="." index="8" unique_id=439211986 instance=ExtResource("4_ikh20")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, 1.5)
 player_settable = true
 grid_position = Vector3i(-1, 1, 1)
 
-[node name="ObstacleNode" parent="." index="13" unique_id=616989148 instance=ExtResource("6_ikh20")]
+[node name="ObstacleNode" parent="." index="9" unique_id=616989148 instance=ExtResource("6_ikh20")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.75, -1.5)
 grid_position = Vector3i(-2, 1, -2)
 
-[node name="ObstacleNode2" parent="." index="14" unique_id=2133518373 instance=ExtResource("6_ikh20")]
+[node name="ObstacleNode2" parent="." index="10" unique_id=2133518373 instance=ExtResource("6_ikh20")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.75, 0.5)
 grid_position = Vector3i(-2, 1, 0)
 
-[node name="SpawnNode" parent="." index="15" unique_id=837088574 instance=ExtResource("3_p7jyx")]
+[node name="SpawnNode" parent="." index="11" unique_id=837088574 instance=ExtResource("3_p7jyx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.5, 0.75, -2.5)
 charges = 8
 recharge = 2

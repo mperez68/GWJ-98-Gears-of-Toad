@@ -13,6 +13,8 @@ const FROG: PackedScene = preload("res://game_objects/frog_node/frog_node.tscn")
 @onready var recharge_count: int = recharge
 @onready var highlight: AreaLight3D = %Highlight
 
+var emerging_frog: FrogNode
+
 
 # ENGINE
 func _ready():
@@ -36,11 +38,17 @@ func place_stage(_game_board_node: GameBoardNode):
 		return
 	recharge_count = 0
 	var new_frog: FrogNode = FROG.instantiate()
-	new_frog.grid_position = grid_position
+	new_frog.grid_position = grid_position + Vector3i.DOWN * 3
 	new_frog.facing = facing
 	new_frog.frog_type = frog_type
+	emerging_frog = new_frog
 	add_sibling(new_frog)
 	charges -= 1
+
+func cleanup_stage(_game_board_node: GameBoardNode):
+	if emerging_frog:
+		emerging_frog.grid_position = grid_position
+		emerging_frog = null
 
 
 # PRIVATE

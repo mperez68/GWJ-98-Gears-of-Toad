@@ -10,13 +10,14 @@ signal stage_changed(new_stage: Stage)
 
 enum Stage{ MOVE, FALL, PLACE, CLEANUP }
 
-@onready var sfx: Array[AudioStreamPlayer] = [ %TickSfx0, %TickSfx1, %TickSfx2, %TickSfx3 ]
 @onready var game_board_node: GameBoardNode = %GameBoardNode
 @onready var stage_pass_timer: Timer = %StagePassTimer
 
 @export var passing_score: int = 8
 @export var perfect_score: int = 12
 @export var next_level_scene: PackedScene
+@export var autostart: bool = false
+@export var play_music: bool = true
 @export_category("Editor")
 @export_tool_button("Spawn Pipe") var spawn = _generate_spawn
 @export_tool_button("Exit Vent") var exit = _generate_exit
@@ -32,7 +33,6 @@ var current_score: int = 0:
 var stage: Stage = Stage.CLEANUP:
 	set(value):
 		stage = value
-		sfx[stage].play()
 		stage_changed.emit(stage)
 var nodes: Array[GridNode3D] = []
 
@@ -41,12 +41,15 @@ var nodes: Array[GridNode3D] = []
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
-	MusicManager.play("Game")
+	if play_music:
+		MusicManager.play("Game")
 	SignalBus.frog_scored.connect(_on_frog_scored)
 	if next_level_scene:
 		SignalBus.set_next_level.emit(next_level_scene)
-	start_level()
+	SignalBus.start_spawns.connect(start_level)
 	SignalBus.end_level_button_pressed.connect(score_check)
+	if autostart:
+		start_level()
 
 
 # PUBLIC
