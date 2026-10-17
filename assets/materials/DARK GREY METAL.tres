@@ -4,6 +4,6 @@
 resource_name = "DARK GREY METAL"
 albedo_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
 metallic = 0.29
-metallic_specular = 0.67
+metallic_specular = 0.0
 roughness = 0.31
 emission_energy_multiplier = 0.0

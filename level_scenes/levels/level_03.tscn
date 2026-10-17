@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b06fhm7xo2n1h" path="res://level_scenes/level_node/level_node.tscn" id="1_q4l4l"]
 [ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="2_10p4f"]
-[ext_resource type="PackedScene" uid="uid://dddo0qx7uwxl4" path="res://level_scenes/levels/level_04.tscn" id="2_g2yky"]
+[ext_resource type="PackedScene" uid="uid://cucbjl7pggfkp" path="res://level_scenes/levels/level_04.tscn" id="2_g2yky"]
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="5_c1lmo"]
 [ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="7_p4q7t"]
 
@@ -16,14 +16,11 @@ transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70
 [node name="Camera3D" parent="CameraHolderNode" index="0" unique_id=2010985528]
 transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 6, 6)
 
-[node name="DirectionalLight3D" parent="." index="2" unique_id=1870912355]
-light_energy = 0.25
-
-[node name="GameBoardNode" parent="." index="3" unique_id=1228068689]
+[node name="GameBoardNode" parent="." index="4" unique_id=1228068689]
 data = {
-"cells": PackedInt32Array(65535, 65535, 786434, 131070, 65535, 786434, 131071, 65534, 786434, 196607, 65533, 786434, 196605, 65535, 786434, 262140, 65535, 786434, 262143, 65532, 786434, 327673, 65533, 786434, 327677, 65529, 786434, 262138, 65531, 786434, 262139, 65530, 786434, 262138, 65533, 786434, 262139, 65534, 786434, 262139, 65532, 786434, 262140, 65533, 786434, 262141, 65532, 786434, 262140, 65531, 786434, 262141, 65530, 786434, 262142, 65531, 786434, 196602, 65534, 786434, 262139, 65535, 786434, 262141, 65533, 786434, 262139, 65531, 786434, 262143, 65531, 786434, 262141, 65531, 786434, 262139, 65533, 786434)
+"cells": PackedInt32Array(65535, 65535, 786432, 131070, 65535, 786432, 131071, 65534, 786432, 196607, 65533, 786432, 196605, 65535, 786432, 262140, 65535, 786432, 262143, 65532, 786432, 327673, 65533, 786432, 327677, 65529, 786432, 262138, 65531, 786434, 262139, 65530, 786434, 262139, 65534, 786432, 262139, 65532, 786432, 262140, 65533, 786432, 262141, 65532, 786432, 262140, 65531, 786432, 262141, 65530, 786434, 262142, 65531, 786432, 196602, 65534, 786434, 262139, 65535, 786432, 262141, 65533, 786432, 262139, 65531, 786432, 262143, 65531, 786432, 262141, 65531, 786432, 262139, 65533, 786432, 327675, 65530, 786432, 327677, 65530, 786432, 327674, 65531, 786432, 327674, 65533, 786432)
 }
-metadata/_editor_floor_ = Vector3(0, 3, 0)
+metadata/_editor_floor_ = Vector3(0, 4, 0)
 
 [node name="ExitNode" parent="." index="10" unique_id=1462055501 instance=ExtResource("2_10p4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.25, -0.5)

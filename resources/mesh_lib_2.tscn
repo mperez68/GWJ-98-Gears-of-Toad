@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://efc56y3l4vx4"]
 
-[ext_resource type="PackedScene" uid="uid://baxysc4vcehax" path="res://assets/models/TILE_EMPTY.FBX" id="1_ha00c"]
 [ext_resource type="Material" uid="uid://c8mfsb3303a70" path="res://assets/materials/COPPER.tres" id="2_474r4"]
 [ext_resource type="Material" uid="uid://bairw26ldpn70" path="res://assets/materials/BRASS.tres" id="3_3n5ft"]
 [ext_resource type="Material" uid="uid://ctni1epesoalc" path="res://assets/materials/DARK GREY METAL.tres" id="4_7swxe"]
@@ -91,9 +90,6 @@ outer_radius = 0.02
 albedo_color = Color(0, 0, 0, 1)
 
 [node name="mesh_lib_2" type="Node3D" unique_id=325082470]
-
-[node name="TILE_EMPTY" parent="." unique_id=137375854 instance=ExtResource("1_ha00c")]
-transform = Transform3D(1, 0, 0, 0, 1, -4.371139e-08, 0, 4.371139e-08, 1, 0, 0, 0)
 
 [node name="Tile" type="MeshInstance3D" parent="." unique_id=217844063]
 transform = Transform3D(1, 0, 0, 0, 4.371139e-08, 1, 0, -1, 4.371139e-08, 7.6293944e-08, 3.8146972e-08, 1.6674571e-15)
