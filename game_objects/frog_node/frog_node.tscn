@@ -33,7 +33,7 @@ shape = SubResource("SphereShape3D_1by8w")
 
 [node name="DeathTimer" type="Timer" parent="." index="2" unique_id=1646112072]
 unique_name_in_owner = true
-wait_time = 0.5
+wait_time = 0.75
 one_shot = true
 
 [connection signal="color_changed" from="." to="FROG_JUMP" method="_on_node_color_changed"]

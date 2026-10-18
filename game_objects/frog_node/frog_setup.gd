@@ -2,6 +2,8 @@
 class_name FrogSetup extends ColorMesh
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var death_sfx: AudioStreamPlayer3D = %DeathSfx
+@onready var jump_sfx: AudioStreamPlayer3D = %JumpSfx
 
 
 # ENGINE
@@ -18,12 +20,14 @@ func _on_frog_node_start_idle() -> void:
 	_on_animation_player_animation_finished("IDLE_A")
 
 func _on_frog_node_start_move() -> void:
+	jump_sfx.play()
 	animation_player.play("Leap")
 
 func _on_frog_node_start_fall() -> void:
 	animation_player.play("Landing")
 
 func _on_frog_node_died() -> void:
+	death_sfx.play()
 	animation_player.stop()
 	animation_player.play_section("DEATH", 0.15)
 
