@@ -38,7 +38,7 @@ func place_stage(_game_board_node: GameBoardNode):
 		return
 	recharge_count = 0
 	var new_frog: FrogNode = FROG.instantiate()
-	new_frog.grid_position = grid_position + Vector3i.DOWN * 3
+	new_frog.grid_position = grid_position + Vector3i.DOWN
 	new_frog.facing = facing
 	new_frog.frog_type = frog_type
 	emerging_frog = new_frog

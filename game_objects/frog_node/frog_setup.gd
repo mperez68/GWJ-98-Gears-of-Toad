@@ -2,6 +2,8 @@
 class_name FrogSetup extends ColorMesh
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var death_sfx: AudioStreamPlayer3D = %DeathSfx
+@onready var jump_sfx: AudioStreamPlayer3D = %JumpSfx
 
 
 # ENGINE
@@ -15,12 +17,25 @@ class_name FrogSetup extends ColorMesh
 
 # SIGNALS
 func _on_frog_node_start_idle() -> void:
-	pass
-	#animation_player.play_section("Take 001", 0.4, -1, -1, 3.0)
+	_on_animation_player_animation_finished("IDLE_A")
 
 func _on_frog_node_start_move() -> void:
-	animation_player.play_section("Take 001", 0.15)
+	jump_sfx.play()
+	animation_player.play("Leap")
 
 func _on_frog_node_start_fall() -> void:
-	animation_player.play_section("Take 001", 0.4, -1, -1, 3.0)
-	#animation_player.play_section("Take 001", 0.3, 0.4)
+	animation_player.play("Landing")
+
+func _on_frog_node_died() -> void:
+	death_sfx.play()
+	animation_player.stop()
+	animation_player.play_section("DEATH", 0.15)
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name.contains("IDLE"):
+		var idles: Array[String] = ["IDLE_A", "IDLE_B", "IDLE_C"]
+		idles.erase(anim_name)
+		animation_player.play(idles.pick_random())
+
+func _on_frog_node_start_windup() -> void:
+	animation_player.play("Windup")
