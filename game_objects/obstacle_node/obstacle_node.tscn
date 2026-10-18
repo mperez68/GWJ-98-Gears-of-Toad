@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_eu7ne"]
 [ext_resource type="Script" uid="uid://b1yj4dfph2oar" path="res://game_objects/obstacle_node/obstacle_node.gd" id="2_0yd0r"]
-[ext_resource type="PackedScene" uid="uid://cntkefuoyua3r" path="res://assets/models/OBSTACLE_GEAR.FBX" id="3_p6lli"]
+[ext_resource type="PackedScene" uid="uid://tas6wfhi7qcd" path="res://game_objects/obstacle_node/obstacle_gear.tscn" id="3_p6lli"]
 
 [node name="ObstacleNode" unique_id=1462055501 instance=ExtResource("1_eu7ne")]
 script = ExtResource("2_0yd0r")
 
-[node name="OBSTACLE_GEAR" parent="." index="0" unique_id=1822235019 instance=ExtResource("3_p6lli")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+[node name="OBSTACLE_GEAR2" parent="." index="0" unique_id=1916382832 instance=ExtResource("3_p6lli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.45699167)

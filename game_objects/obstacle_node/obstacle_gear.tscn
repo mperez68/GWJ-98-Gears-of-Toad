@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://tas6wfhi7qcd"]
+
+[ext_resource type="PackedScene" uid="uid://cntkefuoyua3r" path="res://assets/models/OBSTACLE_GEAR.FBX" id="1_wwpnd"]
+
+[node name="OBSTACLE_GEAR" unique_id=1916382832 instance=ExtResource("1_wwpnd")]
+
+[node name="GEAR" parent=" OBSTACLE BASE GEAR" parent_id_path=PackedInt32Array(826819299) index="0" unique_id=1133147620]
+transform = Transform3D(1, 0, 0, 0, -0.99525756, -0.09727512, 0, 0.09727512, -0.99525756, 0.070419766, -0.009852486, 0.10676501)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1116649537]
+autoplay = &"Take 001"

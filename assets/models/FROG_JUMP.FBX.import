@@ -1479,7 +1479,7 @@ _subresources={
 "slice_29/save_to_file/keep_custom_tracks": false,
 "slice_29/save_to_file/path": "",
 "slice_29/start_frame": 0,
-"slice_3/end_frame": 24,
+"slice_3/end_frame": 22,
 "slice_3/loop_mode": 0,
 "slice_3/name": "Landing",
 "slice_3/save_to_file/enabled": true,
