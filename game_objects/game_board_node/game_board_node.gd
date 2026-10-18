@@ -61,11 +61,11 @@ func get_fall_position(frog: FrogNode) -> Vector3i:
 	while !can_stand(ret):
 		ret += Vector3i.DOWN
 		if ret.y <= get_y_floor():
-			return ret
+			return ret + (Vector3i.DOWN * 8)
 	return ret
 
 func kills_frog(pos: Vector3i) -> bool:
-	return pos.y == get_y_floor()
+	return pos.y <= get_y_floor()
 
 
 # PRIVATE

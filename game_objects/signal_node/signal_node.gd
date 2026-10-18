@@ -7,7 +7,7 @@ signal signal_type_changed(new_type: SignalType)
 
 @onready var sprite_3d: Sprite3D = %Sprite3D
 @onready var highlight: AreaLight3D = %Highlight
-@onready var model: ColorMesh = %CSGTorus3D
+@onready var model: MeshInstance3D = %GRID_TILE_SIGNAL_NODE
 
 @export var signal_type: SignalType:
 	set(value):
@@ -17,7 +17,9 @@ signal signal_type_changed(new_type: SignalType)
 	set(value):
 		player_settable = value
 		if model:
-			model.material = null if player_settable else DISABLED_MATERIAL
+			model.set_surface_override_material(0, null if player_settable else DISABLED_MATERIAL)
+			model.set_surface_override_material(1, null if player_settable else DISABLED_MATERIAL)
+			model.set_surface_override_material(2, null if player_settable else DISABLED_MATERIAL)
 
 var hovering: bool = false:
 	set(value):
