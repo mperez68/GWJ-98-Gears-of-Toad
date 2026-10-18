@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://5uvjaireuwqm" path="res://game_objects/frog_node/frog_node.gd" id="1_kyjp0"]
 [ext_resource type="PackedScene" uid="uid://hpkviwfo1fga" path="res://game_objects/abstract_grid_node/grid_node_3d.tscn" id="1_yhxja"]
-[ext_resource type="PackedScene" uid="uid://dumrwu5ga2s18" path="res://game_objects/frog_node/frog_setup.tscn" id="3_2s3if"]
 [ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="3_qtudw"]
+[ext_resource type="PackedScene" uid="uid://bp6bsmwljykm8" path="res://game_objects/frog_node/frog_setup_2.tscn" id="4_b1p2o"]
 [ext_resource type="Script" uid="uid://17a5q0yuvl45" path="res://game_objects/frog_node/frog_collider.gd" id="5_b1p2o"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1by8w"]
@@ -15,12 +15,12 @@ leap_distance = 1
 color = Color(0.98039216, 0.92156863, 0.84313726, 1)
 frog_type = ExtResource("3_qtudw")
 
-[node name="Node3D" parent="." index="0" unique_id=2129936302 instance=ExtResource("3_2s3if")]
+[node name="FROG_JUMP" parent="." index="0" unique_id=104874381 instance=ExtResource("4_b1p2o")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Node3D" index="2" unique_id=38221582]
+[node name="OmniLight3D" type="OmniLight3D" parent="FROG_JUMP" index="2" unique_id=38221582]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7213961, 0.03871411)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.7213961, -0.03871411)
 light_color = Color(0.98039216, 0.92156863, 0.84313726, 1)
 omni_range = 0.8
 
@@ -31,9 +31,17 @@ script = ExtResource("5_b1p2o")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FrogCollider" index="0" unique_id=20886794]
 shape = SubResource("SphereShape3D_1by8w")
 
-[connection signal="color_changed" from="." to="Node3D" method="_on_node_color_changed"]
-[connection signal="start_fall" from="." to="Node3D" method="_on_frog_node_start_fall"]
-[connection signal="start_idle" from="." to="Node3D" method="_on_frog_node_start_idle"]
-[connection signal="start_move" from="." to="Node3D" method="_on_frog_node_start_move"]
+[node name="DeathTimer" type="Timer" parent="." index="2" unique_id=1646112072]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
+
+[connection signal="color_changed" from="." to="FROG_JUMP" method="_on_node_color_changed"]
+[connection signal="died" from="." to="FROG_JUMP" method="_on_frog_node_died"]
+[connection signal="start_fall" from="." to="FROG_JUMP" method="_on_frog_node_start_fall"]
+[connection signal="start_idle" from="." to="FROG_JUMP" method="_on_frog_node_start_idle"]
+[connection signal="start_move" from="." to="FROG_JUMP" method="_on_frog_node_start_move"]
+[connection signal="start_windup" from="." to="FROG_JUMP" method="_on_frog_node_start_windup"]
 [connection signal="area_entered" from="FrogCollider" to="FrogCollider" method="_on_area_entered"]
 [connection signal="collision_occurred" from="FrogCollider" to="." method="_on_frog_collider_collision_occurred"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

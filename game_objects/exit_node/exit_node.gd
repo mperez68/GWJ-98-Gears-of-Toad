@@ -24,7 +24,7 @@ func cleanup_stage(_game_board_node: GameBoardNode):
 		if node.grid_position == grid_position + (Vector3i.DOWN * 3) and is_frog_compatible(node):
 			chute_closed.emit()
 			SignalBus.frog_scored.emit(node.frog_type)
-			node.kill()
+			node.queue_free()
 
 
 # PRIVATE
