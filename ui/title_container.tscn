@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://peucu42da8pc"]
 
-[ext_resource type="Texture2D" uid="uid://ddtsygwpmxle0" path="res://assets/icons/logo_bg.png" id="1_7b302"]
+[ext_resource type="Texture2D" uid="uid://c40p2b1bih1u3" path="res://assets/textures/gearsprite.png" id="1_7b302"]
 [ext_resource type="LabelSettings" uid="uid://x6yphufd1ppd" path="res://resources/ui/header_settings.tres" id="2_ecsbo"]
 [ext_resource type="Script" uid="uid://dkfgbvo05f8o2" path="res://ui/scripts/title_label.gd" id="3_x4mtl"]
 
@@ -10,12 +10,77 @@ offset_bottom = 179.0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=352804097]
 layout_mode = 2
+
+[node name="GEAR2" type="TextureRect" parent="TextureRect" unique_id=69179642]
+modulate = Color(0.11119685, 0.11119684, 0.11119684, 1)
+layout_mode = 0
+offset_left = 89.0
+offset_top = 21.0
+offset_right = 215.0
+offset_bottom = 151.86694
+offset_transform_enabled = true
 texture = ExtResource("1_7b302")
+expand_mode = 1
+
+[node name="GEAR" type="TextureRect" parent="TextureRect" unique_id=2085528948]
+modulate = Color(0.24477637, 0.2447764, 0.24477637, 1)
+layout_mode = 0
+offset_left = -3.0
+offset_top = 69.0
+offset_right = 123.0
+offset_bottom = 199.86694
+offset_transform_enabled = true
+texture = ExtResource("1_7b302")
+expand_mode = 1
+
+[node name="GEAR3" type="TextureRect" parent="TextureRect" unique_id=1307282364]
+modulate = Color(0.19076231, 0.19076234, 0.19076231, 1)
+layout_mode = 0
+offset_left = 160.0
+offset_top = 95.0
+offset_right = 286.0
+offset_bottom = 225.86694
+offset_transform_enabled = true
+texture = ExtResource("1_7b302")
+expand_mode = 1
+
+[node name="GEAR4" type="TextureRect" parent="TextureRect" unique_id=2006313270]
+modulate = Color(0.11119685, 0.11119684, 0.11119684, 1)
+layout_mode = 0
+offset_left = 261.0
+offset_top = 90.0
+offset_right = 387.0
+offset_bottom = 220.86694
+offset_transform_enabled = true
+texture = ExtResource("1_7b302")
+expand_mode = 1
+
+[node name="GEAR5" type="TextureRect" parent="TextureRect" unique_id=1499464030]
+modulate = Color(0.3291585, 0.32915834, 0.3291584, 1)
+layout_mode = 0
+offset_left = 324.0
+offset_top = 9.0
+offset_right = 450.0
+offset_bottom = 139.86694
+offset_transform_enabled = true
+texture = ExtResource("1_7b302")
+expand_mode = 1
+
+[node name="GEAR6" type="TextureRect" parent="TextureRect" unique_id=644707920]
+modulate = Color(0.19076231, 0.19076234, 0.19076231, 1)
+layout_mode = 0
+offset_left = 396.0
+offset_top = 83.0
+offset_right = 522.0
+offset_bottom = 213.86694
+offset_transform_enabled = true
+texture = ExtResource("1_7b302")
+expand_mode = 1
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1552058132]
 custom_minimum_size = Vector2(512, 256)
 layout_mode = 2
-text = "Boilerplate Template"
+text = "Gears of Toad"
 label_settings = ExtResource("2_ecsbo")
 horizontal_alignment = 1
 vertical_alignment = 1

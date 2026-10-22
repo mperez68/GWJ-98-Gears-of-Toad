@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cs6oek27utpgh" path="res://assets/menu/slider.png" id="1_1cp1y"]
 [ext_resource type="Texture2D" uid="uid://dniwg8glvqcje" path="res://assets/menu/button.png" id="1_glb6i"]
-[ext_resource type="Texture2D" uid="uid://dy6wuhqt3vw5n" path="res://assets/menu/panel.png" id="3_4bj61"]
+[ext_resource type="Texture2D" uid="uid://cso8qa00p2uqw" path="res://assets/textures/nine-slice-pipes.png" id="3_glb6i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_spcu4"]
 atlas = ExtResource("1_glb6i")
@@ -173,22 +173,13 @@ expand_margin_bottom = 7.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ljax6"]
-atlas = ExtResource("3_4bj61")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pscy7"]
-content_margin_left = 6.0
-content_margin_top = 8.0
-content_margin_right = 6.0
-content_margin_bottom = 8.0
-texture = SubResource("AtlasTexture_ljax6")
-texture_margin_left = 4.0
-texture_margin_top = 6.0
-texture_margin_right = 4.0
-texture_margin_bottom = 6.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ss0x"]
+texture = ExtResource("3_glb6i")
+texture_margin_left = 64.0
+texture_margin_top = 64.0
+texture_margin_right = 64.0
+texture_margin_bottom = 64.0
+region_rect = Rect2(0, 0, 512, 512)
 
 [resource]
 Button/font_sizes/font_size = 32
@@ -210,5 +201,5 @@ MarginContainer/constants/margin_bottom = 32
 MarginContainer/constants/margin_left = 64
 MarginContainer/constants/margin_right = 64
 MarginContainer/constants/margin_top = 32
-PanelContainer/styles/panel = SubResource("StyleBoxTexture_pscy7")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_8ss0x")
 VBoxContainer/constants/separation = 4

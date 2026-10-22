@@ -1,4 +1,7 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://vgt8qx0a0bxr"]
 
+[ext_resource type="FontFile" uid="uid://cew2trv24n12c" path="res://assets/fonts/Oldenburg/Oldenburg-Regular.ttf" id="1_5sfep"]
+
 [resource]
+font = ExtResource("1_5sfep")
 font_size = 12

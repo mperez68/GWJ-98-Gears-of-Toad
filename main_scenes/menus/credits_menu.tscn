@@ -61,7 +61,9 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(192, 0)
 layout_mode = 2
 bbcode_enabled = true
-text = "[center]Made by Marc Perez ([url=https://linktr.ee/GEIST_COMM]GEIST_COMM_GAMES[/url])[/center]"
+text = "[center]Made by [url=https://linktr.ee/GEIST_COMM]GEIST_COMM_GAMES[/url]
+and 
+Robocognito[/center] "
 fit_content = true
 
 [node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/CreditsPanel/OptionsContainer" unique_id=598500742]

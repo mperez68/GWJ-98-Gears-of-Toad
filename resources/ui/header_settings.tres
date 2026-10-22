@@ -1,4 +1,10 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://x6yphufd1ppd"]
 
+[ext_resource type="FontFile" uid="uid://cew2trv24n12c" path="res://assets/fonts/Oldenburg/Oldenburg-Regular.ttf" id="1_iwxya"]
+
 [resource]
+font = ExtResource("1_iwxya")
 font_size = 64
+font_color = Color(0.99215686, 0.627451, 0, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
