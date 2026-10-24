@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c18qfne8f4xr5"]
 
 [ext_resource type="Texture2D" uid="uid://bbn7851yqyxwf" path="res://assets/icons/icon_64.png" id="1_r4s2q"]
+[ext_resource type="Theme" uid="uid://dxyu51du6xt8k" path="res://resources/ui/menu_theme.tres" id="2_2x6vq"]
 [ext_resource type="LabelSettings" uid="uid://vgt8qx0a0bxr" path="res://resources/ui/footer_settings.tres" id="2_q0yho"]
 [ext_resource type="Script" uid="uid://ccvt4jcjtvtea" path="res://ui/scripts/footer.gd" id="2_r4s2q"]
 
@@ -20,6 +21,7 @@ stretch_mode = 3
 [node name="FooterLabel" type="Label" parent="VBoxContainer" unique_id=1898864554]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Godot Wild Jam #98, 2026"
+theme = ExtResource("2_2x6vq")
+text = "GWJ #98, 2026"
 label_settings = ExtResource("2_q0yho")
 script = ExtResource("2_r4s2q")

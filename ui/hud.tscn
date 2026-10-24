@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cclwhjjeyy50w" path="res://ui/options_panel.tscn" id="3_1v5rv"]
 [ext_resource type="LabelSettings" uid="uid://bgghdhgj1v8uh" path="res://resources/ui/sub_header_settings.tres" id="3_q43x7"]
 [ext_resource type="PackedScene" uid="uid://c1iwfo7rduuxg" path="res://ui/quit_button.tscn" id="5_q43x7"]
-[ext_resource type="Texture2D" uid="uid://cyhyuaxj0px8e" path="res://assets/menu/material-icons.png" id="7_q43x7"]
+[ext_resource type="Texture2D" uid="uid://bick5lodu0dhs" path="res://assets/icons/signal_icons/hamburger.jpg" id="7_m0eg6"]
+[ext_resource type="Texture2D" uid="uid://bkwiqhofe2kcw" path="res://assets/icons/signal_icons/exit.jpg" id="8_b00kl"]
 [ext_resource type="PackedScene" uid="uid://csa1hrk3xdr26" path="res://ui/game_end_control.tscn" id="8_srpbi"]
+[ext_resource type="Texture2D" uid="uid://bm5tfp11n1jb7" path="res://assets/icons/signal_icons/play.jpg" id="9_so1yu"]
+[ext_resource type="Texture2D" uid="uid://ry85s1xwjj01" path="res://assets/icons/signal_icons/restart.jpg" id="10_65xic"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q43x7"]
 load_path = "res://.godot/imported/material-icons.png-d2af55576610f08f8e6fde4f65db10db.ctex"
@@ -15,28 +18,6 @@ load_path = "res://.godot/imported/material-icons.png-d2af55576610f08f8e6fde4f65
 [sub_resource type="AtlasTexture" id="AtlasTexture_srpbi"]
 atlas = SubResource("CompressedTexture2D_q43x7")
 region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1cp1y"]
-atlas = ExtResource("7_q43x7")
-region = Rect2(32, 48, 16, 16)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_srpbi"]
-load_path = "res://.godot/imported/material-icons.png-d2af55576610f08f8e6fde4f65db10db.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_spcu4"]
-atlas = SubResource("CompressedTexture2D_srpbi")
-region = Rect2(48, 32, 16, 16)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_spcu4"]
-load_path = "res://.godot/imported/material-icons.png-d2af55576610f08f8e6fde4f65db10db.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ff8ar"]
-atlas = SubResource("CompressedTexture2D_spcu4")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tvoxt"]
-atlas = ExtResource("7_q43x7")
-region = Rect2(16, 16, 16, 16)
 
 [node name="HUD" type="Control" unique_id=27375061]
 layout_mode = 3
@@ -104,10 +85,12 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="MenuButton" parent="MarginContainer/InGameControl" unique_id=1352353119 instance=ExtResource("2_276te")]
+custom_minimum_size = Vector2(32, 64)
 layout_mode = 1
-offset_right = 24.0
-offset_bottom = 24.0
-icon = SubResource("AtlasTexture_1cp1y")
+offset_right = 136.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("7_m0eg6")
 icon_alignment = 1
 
 [node name="SignalSetterContainer" type="HBoxContainer" parent="MarginContainer/InGameControl" unique_id=1582494723]
@@ -136,7 +119,7 @@ offset_bottom = 0.0
 grow_horizontal = 0
 grow_vertical = 0
 disabled = true
-icon = SubResource("AtlasTexture_spcu4")
+icon = ExtResource("8_b00kl")
 icon_alignment = 1
 expand_icon = true
 
@@ -153,13 +136,13 @@ alignment = 2
 [node name="StartButton" parent="MarginContainer/InGameControl/VBoxContainer" unique_id=674043170 instance=ExtResource("2_276te")]
 unique_name_in_owner = true
 layout_mode = 2
-icon = SubResource("AtlasTexture_ff8ar")
+icon = ExtResource("9_so1yu")
 icon_alignment = 1
 expand_icon = true
 
 [node name="ResetButton" parent="MarginContainer/InGameControl/VBoxContainer" unique_id=1656368853 instance=ExtResource("2_276te")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_tvoxt")
+icon = ExtResource("10_65xic")
 icon_alignment = 1
 expand_icon = true
 

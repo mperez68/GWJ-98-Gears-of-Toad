@@ -7,10 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://dhn5bb6wsu3fv" path="res://ui/scene_change_button.tscn" id="4_vb3i7"]
 [ext_resource type="PackedScene" uid="uid://c1iwfo7rduuxg" path="res://ui/quit_button.tscn" id="5_vb3i7"]
 [ext_resource type="PackedScene" uid="uid://dlkkvovpsyg3e" path="res://level_scenes/levels/level_01.tscn" id="6_38vm8"]
+[ext_resource type="Texture2D" uid="uid://bm5tfp11n1jb7" path="res://assets/icons/signal_icons/play.jpg" id="6_624g0"]
 [ext_resource type="PackedScene" uid="uid://b27xpmt51ajfg" path="res://main_scenes/menus/options_menu.tscn" id="7_g8byo"]
 [ext_resource type="Script" uid="uid://b4jy0dhl1u7ls" path="res://resources/scripts/packed_scene_link.gd" id="8_38vm8"]
+[ext_resource type="Texture2D" uid="uid://secfa3t8jc8y" path="res://assets/icons/signal_icons/settings-icon.png" id="8_clqb2"]
 [ext_resource type="PackedScene" uid="uid://c3njtoyv7xfje" path="res://main_scenes/menus/credits_menu.tscn" id="9_38vm8"]
 [ext_resource type="PackedScene" uid="uid://c18qfne8f4xr5" path="res://ui/footer_container.tscn" id="9_yy0sh"]
+[ext_resource type="Texture2D" uid="uid://bqtvp70ntm35r" path="res://assets/icons/signal_icons/credits-icon.png" id="10_osr0g"]
+[ext_resource type="Texture2D" uid="uid://bkwiqhofe2kcw" path="res://assets/icons/signal_icons/exit.jpg" id="12_osr0g"]
 [ext_resource type="PackedScene" uid="uid://yca2h2262iie" path="res://level_scenes/menu_level.tscn" id="12_wcnxn"]
 
 [sub_resource type="Resource" id="Resource_clqb2"]
@@ -24,25 +28,11 @@ script = ExtResource("8_38vm8")
 button_text = "Tutorial"
 metadata/_custom_type_script = "uid://b4jy0dhl1u7ls"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g8byo"]
-load_path = "res://.godot/imported/material-icons.png-d2af55576610f08f8e6fde4f65db10db.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_38vm8"]
-atlas = SubResource("CompressedTexture2D_g8byo")
-region = Rect2(16, 48, 16, 16)
-
 [sub_resource type="Resource" id="Resource_wcnxn"]
 script = ExtResource("8_38vm8")
 packed_scene = ExtResource("7_g8byo")
 button_text = "Options"
 metadata/_custom_type_script = "uid://b4jy0dhl1u7ls"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_38vm8"]
-load_path = "res://.godot/imported/material-icons.png-d2af55576610f08f8e6fde4f65db10db.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wcnxn"]
-atlas = SubResource("CompressedTexture2D_38vm8")
-region = Rect2(48, 64, 16, 16)
 
 [sub_resource type="Resource" id="Resource_fagh0"]
 script = ExtResource("8_38vm8")
@@ -104,6 +94,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Play"
+icon = ExtResource("6_624g0")
 icon_alignment = 0
 scene_link = SubResource("Resource_clqb2")
 
@@ -118,7 +109,7 @@ scene_link = SubResource("Resource_q43x7")
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Options"
-icon = SubResource("AtlasTexture_38vm8")
+icon = ExtResource("8_clqb2")
 icon_alignment = 2
 scene_link = SubResource("Resource_wcnxn")
 to_back_stack = true
@@ -132,7 +123,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Credits"
-icon = SubResource("AtlasTexture_wcnxn")
+icon = ExtResource("10_osr0g")
 icon_alignment = 0
 scene_link = SubResource("Resource_fagh0")
 to_back_stack = true
@@ -140,7 +131,9 @@ to_back_stack = true
 [node name="QuitButton" parent="MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer/BodyContainer/VBoxContainer/HBoxContainer2" unique_id=1890902989 instance=ExtResource("5_vb3i7")]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_do6qc")
 text = "Quit to Desktop"
+icon = ExtResource("12_osr0g")
 icon_alignment = 2
 type = 2
 icon_side = 2
