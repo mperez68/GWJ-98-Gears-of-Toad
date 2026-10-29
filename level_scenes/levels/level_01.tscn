@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="3_p7jyx"]
 [ext_resource type="Theme" uid="uid://dxyu51du6xt8k" path="res://resources/ui/menu_theme.tres" id="3_q5x24"]
 [ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="4_ikh20"]
+[ext_resource type="LabelSettings" uid="uid://vgt8qx0a0bxr" path="res://resources/ui/footer_settings.tres" id="4_qqsep"]
 [ext_resource type="Resource" uid="uid://ba4ojteioap41" path="res://game_objects/signal_node/presets/left_turn.tres" id="5_ikh20"]
 [ext_resource type="PackedScene" uid="uid://d0lwj6v2uxt4k" path="res://game_objects/obstacle_node/obstacle_node.tscn" id="6_ikh20"]
 
@@ -37,7 +38,8 @@ offset_right = 448.0
 offset_bottom = 23.0
 grow_horizontal = 2
 text = "WASD to move the camera
-Q and R rotate the camera"
+Q and E rotate the camera"
+label_settings = ExtResource("4_qqsep")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -54,7 +56,9 @@ offset_right = 448.0
 offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Select a Signal type below and click on a disabled signal to set it to the selected type."
+text = "Select a Signal below (none, rotate right, rotate left, or turn aorund).
+Then, click on a signal on the board to apply it."
+label_settings = ExtResource("4_qqsep")
 horizontal_alignment = 1
 vertical_alignment = 1
 
