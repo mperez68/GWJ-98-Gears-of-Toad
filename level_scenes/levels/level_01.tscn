@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dlkkvovpsyg3e"]
 
 [ext_resource type="PackedScene" uid="uid://b06fhm7xo2n1h" path="res://level_scenes/level_node/level_node.tscn" id="1_mqm3w"]
-[ext_resource type="PackedScene" uid="uid://da5uishuvnw26" path="res://level_scenes/levels/level_02.tscn" id="2_p7jyx"]
+[ext_resource type="PackedScene" uid="uid://blp3bhh5wih86" path="res://level_scenes/levels/level_02.tscn" id="2_q5x24"]
 [ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="2_wfde1"]
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="3_p7jyx"]
 [ext_resource type="Theme" uid="uid://dxyu51du6xt8k" path="res://resources/ui/menu_theme.tres" id="3_q5x24"]
@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://d0lwj6v2uxt4k" path="res://game_objects/obstacle_node/obstacle_node.tscn" id="6_ikh20"]
 
 [node name="Level_01" unique_id=410290877 instance=ExtResource("1_mqm3w")]
-passing_score = 3
-perfect_score = 6
-next_level_scene = ExtResource("2_p7jyx")
+passing_score = 1
+perfect_score = 2
+next_level_scene = ExtResource("2_q5x24")
 
 [node name="MarginContainer" type="MarginContainer" parent="PlayerController" parent_id_path=PackedInt32Array(1791836392) index="0" unique_id=1636306876]
 anchors_preset = 15
@@ -79,7 +79,6 @@ grid_position = Vector3i(-3, 1, 1)
 
 [node name="SignalNode2" parent="." index="8" unique_id=439211986 instance=ExtResource("4_ikh20")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, 1.5)
-player_settable = true
 grid_position = Vector3i(-1, 1, 1)
 
 [node name="ObstacleNode" parent="." index="9" unique_id=616989148 instance=ExtResource("6_ikh20")]
@@ -92,7 +91,8 @@ grid_position = Vector3i(-2, 1, 0)
 
 [node name="SpawnNode" parent="." index="11" unique_id=837088574 instance=ExtResource("3_p7jyx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.5, 0.75, -2.5)
-charges = 8
+charges = 2
 recharge = 2
+sfx_active = true
 grid_position = Vector3i(-3, 1, -3)
 facing = 2

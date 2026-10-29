@@ -46,20 +46,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="InnerMarginsContainer" type="Control" parent="MarginContainer" unique_id=989431201]
-layout_mode = 2
-
-[node name="QuitButton" parent="MarginContainer/InnerMarginsContainer" unique_id=1180821417 instance=ExtResource("5_p5o37")]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -64.0
-offset_right = 102.0
-offset_bottom = 0.0
-grow_vertical = 0
-size_flags_horizontal = 0
-
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=174712066]
 layout_mode = 2
 
@@ -138,5 +124,19 @@ script = ExtResource("4_not5v")
 
 [node name="FooterContainer" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=636837887 instance=ExtResource("6_o7a4m")]
 layout_mode = 2
+
+[node name="InnerMarginsContainer" type="Control" parent="MarginContainer" unique_id=989431201]
+layout_mode = 2
+
+[node name="QuitButton" parent="MarginContainer/InnerMarginsContainer" unique_id=1180821417 instance=ExtResource("5_p5o37")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+offset_right = 102.0
+offset_bottom = 0.0
+grow_vertical = 0
+size_flags_horizontal = 0
 
 [connection signal="meta_clicked" from="MarginContainer/CenterContainer/VBoxContainer/CreditsPanel/OptionsContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

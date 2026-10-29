@@ -1,76 +1,68 @@
-[gd_scene format=3 uid="uid://da5uishuvnw26"]
+[gd_scene format=3 uid="uid://blp3bhh5wih86"]
 
 [ext_resource type="PackedScene" uid="uid://b06fhm7xo2n1h" path="res://level_scenes/level_node/level_node.tscn" id="1_1orxg"]
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="2_1idg0"]
-[ext_resource type="PackedScene" uid="uid://dwqjr5qw6cqkp" path="res://level_scenes/levels/level_03.tscn" id="2_h2h6a"]
+[ext_resource type="PackedScene" uid="uid://da5uishuvnw26" path="res://level_scenes/levels/level_03.tscn" id="2_h2h6a"]
 [ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="3_h2h6a"]
-[ext_resource type="PackedScene" uid="uid://d0lwj6v2uxt4k" path="res://game_objects/obstacle_node/obstacle_node.tscn" id="5_dtewa"]
+[ext_resource type="Script" uid="uid://s11o8af8r60r" path="res://game_objects/exit_node/exit_node.gd" id="4_8y7up"]
+[ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="5_clu70"]
 [ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="6_8y7up"]
+[ext_resource type="Script" uid="uid://tkbkx8pvncbv" path="res://game_objects/spawn_node/spawn_node.gd" id="7_mnj4e"]
+[ext_resource type="Script" uid="uid://de6l7c4e3na08" path="res://game_objects/signal_node/signal_node.gd" id="9_u22km"]
 
-[node name="Level_02" unique_id=410290877 instance=ExtResource("1_1orxg")]
-passing_score = 10
+[node name="Level02" unique_id=410290877 instance=ExtResource("1_1orxg")]
+passing_score = 3
+perfect_score = 4
 next_level_scene = ExtResource("2_h2h6a")
 
 [node name="GameBoardNode" parent="." index="4" unique_id=1228068689]
 data = {
-"cells": PackedInt32Array(65535, 65533, 786432, 65535, 65534, 786432, 65535, 65532, 786432, 65534, 65535, 786432, 65533, 65535, 786432, 65532, 65535, 786432, 65534, 0, 786432, 65534, 1, 786432, 0, 1, 786432, 1, 1, 786432, 1, 0, 786432, 0, 0, 786432, 1, 65534, 786432, 0, 65534, 786432, 65534, 2, 786432, 65534, 3, 786432, 65535, 3, 786432, 0, 3, 786432, 1, 3, 786432, 2, 3, 786432, 3, 3, 786432, 3, 2, 786432, 3, 1, 786432, 3, 0, 786432, 3, 65535, 786432, 2, 0, 786432, 2, 1, 786432, 2, 2, 786432, 1, 2, 786432, 0, 2, 786432, 3, 65534, 786432, 2, 65534, 786432, 65531, 65535, 786432, 65535, 65531, 786432, 65536, 0, 786434, 65536, 1, 786434, 65537, 1, 786434, 65537, 0, 786434)
+"cells": PackedInt32Array(0, 65535, 786432, 65535, 65535, 786432, 65535, 0, 786432, 0, 0, 786432, 0, 65534, 786432, 65535, 65534, 786432, 65534, 65534, 786432, 65534, 65535, 786432, 65534, 0, 786432, 65535, 1, 786432, 65533, 65534, 786432, 65533, 65535, 786432, 65533, 0, 786432, 65532, 65534, 786432, 65532, 0, 786432, 65534, 1, 786432, 0, 1, 786432, 0, 2, 786432, 65534, 2, 786432, 65534, 3, 786432, 65535, 3, 786432, 0, 3, 786432, 65531, 65534, 786432, 65531, 65535, 786432, 65531, 0, 786432, 1, 65534, 786432, 2, 65534, 786432, 3, 65534, 786432, 3, 65535, 786432, 3, 0, 786432, 2, 0, 786432, 1, 0, 786432, 1, 65535, 786432)
 }
 
-[node name="SpawnNode" parent="." index="6" unique_id=1462055501 instance=ExtResource("2_1idg0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 0.75, -0.5)
-charges = 8
-recharge = 2
-grid_position = Vector3i(-6, 1, -1)
-facing = 1
-
-[node name="@Node3D@70959" parent="." index="7" unique_id=1248905522 instance=ExtResource("2_1idg0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, 0.75, -5.5)
-charges = 8
-recharge = 2
-delay = 7
-grid_position = Vector3i(-1, 1, -6)
-facing = 2
-
-[node name="ExitNode" parent="." index="8" unique_id=1920147080 instance=ExtResource("3_h2h6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.75, -0.5)
-grid_position = Vector3i(2, 1, -1)
-
-[node name="@Node3D@73185" parent="." index="9" unique_id=1140612370 instance=ExtResource("3_h2h6a")]
+[node name="ExitNode" type="Node3D" parent="." index="6" unique_id=1462055501 groups=["exit_nodes"] instance=ExtResource("3_h2h6a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.75, 2.5)
+script = ExtResource("4_8y7up")
+color = Color(0.98039216, 0.92156863, 0.84313726, 1)
+frog_type = ExtResource("5_clu70")
 grid_position = Vector3i(-1, 1, 2)
+grid_size = Vector3(1, 0.5, 1)
 
-[node name="SignalNode2" parent="." index="10" unique_id=476413623 instance=ExtResource("6_8y7up")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0.75, -0.5)
-grid_position = Vector3i(-2, 1, -1)
+[node name="SpawnNode" type="Node3D" parent="." index="7" unique_id=50724860 instance=ExtResource("2_1idg0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5, 0.75, -0.5)
+script = ExtResource("7_mnj4e")
+charges = 2
+recharge = 2
+delay = 8
+color = Color(0.98039216, 0.92156863, 0.84313726, 1)
+frog_type = ExtResource("5_clu70")
+grid_position = Vector3i(2, 1, -1)
+facing = 3
+grid_size = Vector3(1, 0.5, 1)
 
-[node name="SignalNode3" parent="." index="11" unique_id=1636474806 instance=ExtResource("6_8y7up")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -1.5)
-grid_position = Vector3i(-1, 1, -2)
+[node name="@Node3D@100232" type="Node3D" parent="." index="8" unique_id=24386901 instance=ExtResource("2_1idg0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5, 0.75, -0.5)
+script = ExtResource("7_mnj4e")
+charges = 2
+recharge = 2
+color = Color(0.98039216, 0.92156863, 0.84313726, 1)
+frog_type = ExtResource("5_clu70")
+grid_position = Vector3i(-4, 1, -1)
+facing = 1
+grid_size = Vector3(1, 0.5, 1)
 
-[node name="SignalNode4" parent="." index="12" unique_id=1603091709 instance=ExtResource("6_8y7up")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0.75, 3.5)
-grid_position = Vector3i(-2, 1, 3)
+[node name="SignalNode" type="Node3D" parent="." index="9" unique_id=414165408 instance=ExtResource("6_8y7up")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -0.5)
+script = ExtResource("9_u22km")
+color = Color(0.98039216, 0.92156863, 0.84313726, 1)
+frog_type = ExtResource("5_clu70")
+grid_position = Vector3i(-1, 1, -1)
+grid_size = Vector3(1, 0.5, 1)
 
-[node name="SignalNode5" parent="." index="13" unique_id=1602158181 instance=ExtResource("6_8y7up")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, -1.5)
-grid_position = Vector3i(3, 1, -2)
-
-[node name="SignalNode6" parent="." index="14" unique_id=890866901 instance=ExtResource("6_8y7up")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, 3.5)
-grid_position = Vector3i(3, 1, 3)
-
-[node name="SignalNode7" parent="." index="15" unique_id=922910544 instance=ExtResource("6_8y7up")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, 2.5)
-grid_position = Vector3i(3, 1, 2)
-
-[node name="SignalNode8" parent="." index="16" unique_id=1188347492 instance=ExtResource("6_8y7up")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0.75, 3.5)
-grid_position = Vector3i(2, 1, 3)
-
-[node name="ObstacleNode" parent="." index="17" unique_id=2071017237 instance=ExtResource("5_dtewa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.75, 1.5)
-grid_position = Vector3i(1, 1, 1)
-
-[node name="_Node3D_106780" parent="." index="18" unique_id=2114964416 instance=ExtResource("5_dtewa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.75, 1.5)
-grid_position = Vector3i(0, 1, 1)
+[connection signal="chute_closed" from="ExitNode" to="ExitNode/EXIT_NODE" method="_on_chute_closed"]
+[connection signal="chute_opened" from="ExitNode" to="ExitNode/EXIT_NODE" method="_on_chute_opened"]
+[connection signal="color_changed" from="ExitNode" to="ExitNode/EXIT_NODE" method="_on_node_color_changed"]
+[connection signal="color_changed" from="SpawnNode" to="SpawnNode/ENTRANCE_NODE" method="_on_node_color_changed"]
+[connection signal="color_changed" from="@Node3D@100232" to="@Node3D@100232/ENTRANCE_NODE" method="_on_node_color_changed"]
+[connection signal="color_changed" from="SignalNode" to="SignalNode/CSGTorus3D" method="_on_node_color_changed"]
+[connection signal="signal_type_changed" from="SignalNode" to="SignalNode" method="_on_signal_type_changed"]

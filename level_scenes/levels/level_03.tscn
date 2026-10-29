@@ -1,103 +1,79 @@
-[gd_scene format=3 uid="uid://dwqjr5qw6cqkp"]
+[gd_scene format=3 uid="uid://da5uishuvnw26"]
 
 [ext_resource type="PackedScene" uid="uid://b06fhm7xo2n1h" path="res://level_scenes/level_node/level_node.tscn" id="1_q4l4l"]
 [ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="2_10p4f"]
-[ext_resource type="PackedScene" uid="uid://cucbjl7pggfkp" path="res://level_scenes/levels/level_04.tscn" id="2_g2yky"]
+[ext_resource type="PackedScene" uid="uid://dwqjr5qw6cqkp" path="res://level_scenes/levels/level_04.tscn" id="2_g2yky"]
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="5_c1lmo"]
+[ext_resource type="PackedScene" uid="uid://d0lwj6v2uxt4k" path="res://game_objects/obstacle_node/obstacle_node.tscn" id="5_g2yky"]
 [ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="7_p4q7t"]
 
-[node name="Level_03" unique_id=410290877 instance=ExtResource("1_q4l4l")]
-passing_score = 6
+[node name="Level03" unique_id=410290877 instance=ExtResource("1_q4l4l")]
+passing_score = 2
+perfect_score = 4
 next_level_scene = ExtResource("2_g2yky")
-
-[node name="CameraHolderNode" parent="." index="1" unique_id=2113383026]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -2.5, 0, -2.5)
-
-[node name="Camera3D" parent="CameraHolderNode" index="0" unique_id=2010985528]
-transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 6, 6)
-
-[node name="ReflectionProbe" parent="WorldEnvironment" parent_id_path=PackedInt32Array(1698499869) index="0" unique_id=102011247]
-visible = false
 
 [node name="GameBoardNode" parent="." index="4" unique_id=1228068689]
 data = {
-"cells": PackedInt32Array(65535, 65535, 786432, 131070, 65535, 786432, 131071, 65534, 786432, 196607, 65533, 786432, 196605, 65535, 786432, 262140, 65535, 786432, 262143, 65532, 786432, 327673, 65533, 786432, 327677, 65529, 786432, 262138, 65531, 786434, 262139, 65530, 786434, 262139, 65534, 786432, 262139, 65532, 786432, 262140, 65533, 786432, 262141, 65532, 786432, 262140, 65531, 786432, 262141, 65530, 786434, 262142, 65531, 786432, 196602, 65534, 786434, 262139, 65535, 786432, 262141, 65533, 786432, 262139, 65531, 786432, 262143, 65531, 786432, 262141, 65531, 786432, 262139, 65533, 786432, 327675, 65530, 786432, 327677, 65530, 786432, 327674, 65531, 786432, 327674, 65533, 786432)
+"cells": PackedInt32Array(65535, 65533, 786432, 65535, 65534, 786432, 65535, 65532, 786432, 65534, 65535, 786432, 65533, 65535, 786432, 65532, 65535, 786432, 65534, 0, 786432, 65534, 1, 786432, 0, 1, 786432, 1, 1, 786432, 1, 0, 786432, 0, 0, 786432, 1, 65534, 786432, 0, 65534, 786432, 65534, 2, 786432, 65534, 3, 786432, 65535, 3, 786432, 0, 3, 786432, 1, 3, 786432, 2, 3, 786432, 3, 3, 786432, 3, 2, 786432, 3, 1, 786432, 3, 0, 786432, 3, 65535, 786432, 2, 0, 786432, 2, 1, 786432, 2, 2, 786432, 1, 2, 786432, 0, 2, 786432, 3, 65534, 786432, 2, 65534, 786432, 65531, 65535, 786432, 65535, 65531, 786432, 65536, 0, 786434, 65536, 1, 786434, 65537, 1, 786434, 65537, 0, 786434)
 }
-metadata/_editor_floor_ = Vector3(0, 4, 0)
 
-[node name="ExitNode" parent="." index="6" unique_id=1462055501 instance=ExtResource("2_10p4f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.25, -0.5)
-grid_position = Vector3i(0, 0, -1)
-
-[node name="ExitNode2" parent="." index="7" unique_id=1195073747 instance=ExtResource("2_10p4f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.25, 0.5)
-grid_position = Vector3i(-1, 0, 0)
-
-[node name="SpawnNode" parent="." index="8" unique_id=1631524526 instance=ExtResource("5_c1lmo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5, 3.25, -2.5)
-charges = 3
-recharge = 3
-delay = 9
-grid_position = Vector3i(-8, 6, -3)
+[node name="SpawnNode" parent="." index="6" unique_id=1462055501 instance=ExtResource("5_c1lmo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 0.75, -0.5)
+charges = 2
+recharge = 2
+sfx_active = true
+grid_position = Vector3i(-6, 1, -1)
 facing = 1
 
-[node name="SpawnNode2" parent="." index="9" unique_id=476700276 instance=ExtResource("5_c1lmo")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5, 2.75, -4.5)
-charges = 3
-recharge = 3
-delay = 18
-grid_position = Vector3i(-7, 5, -5)
-facing = 1
-
-[node name="SpawnNode3" parent="." index="10" unique_id=615508319 instance=ExtResource("5_c1lmo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.5, 2.75, -6.5)
-charges = 3
-recharge = 3
-grid_position = Vector3i(-5, 5, -7)
+[node name="@Node3D@70959" parent="." index="7" unique_id=1248905522 instance=ExtResource("5_c1lmo")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, 0.75, -5.5)
+charges = 2
+recharge = 2
+delay = 2
+sfx_active = true
+grid_position = Vector3i(-1, 1, -6)
 facing = 2
 
-[node name="SpawnNode4" parent="." index="11" unique_id=1758861884 instance=ExtResource("5_c1lmo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.5, 3.25, -7.5)
-charges = 3
-recharge = 3
-delay = 27
-grid_position = Vector3i(-3, 6, -8)
-facing = 2
+[node name="ExitNode" parent="." index="8" unique_id=1920147080 instance=ExtResource("2_10p4f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.75, -0.5)
+grid_position = Vector3i(2, 1, -1)
 
-[node name="SignalNode" parent="." index="12" unique_id=791433872 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.5, 2.25, -0.5)
-grid_position = Vector3i(-5, 4, -1)
+[node name="@Node3D@73185" parent="." index="9" unique_id=1140612370 instance=ExtResource("2_10p4f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.75, 2.5)
+grid_position = Vector3i(-1, 1, 2)
 
-[node name="SignalNode2" parent="." index="13" unique_id=1767097901 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 2.25, -2.5)
-grid_position = Vector3i(-3, 4, -3)
+[node name="SignalNode2" parent="." index="10" unique_id=476413623 instance=ExtResource("7_p4q7t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0.75, -0.5)
+grid_position = Vector3i(-2, 1, -1)
 
-[node name="SignalNode3" parent="." index="14" unique_id=1219888930 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 2.25, -4.5)
-grid_position = Vector3i(-1, 4, -5)
+[node name="SignalNode3" parent="." index="11" unique_id=1636474806 instance=ExtResource("7_p4q7t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -1.5)
+grid_position = Vector3i(-1, 1, -2)
 
-[node name="SignalNode4" parent="." index="15" unique_id=12193253 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -0.5)
-grid_position = Vector3i(-1, 1, -1)
+[node name="SignalNode4" parent="." index="12" unique_id=1603091709 instance=ExtResource("7_p4q7t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0.75, 3.5)
+grid_position = Vector3i(-2, 1, 3)
 
-[node name="SignalNode5" parent="." index="16" unique_id=41910903 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.5, 2.25, -4.5)
-grid_position = Vector3i(-5, 4, -5)
+[node name="SignalNode5" parent="." index="13" unique_id=1602158181 instance=ExtResource("7_p4q7t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, -1.5)
+grid_position = Vector3i(3, 1, -2)
 
-[node name="SignalNode6" parent="." index="17" unique_id=267756851 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.5, 2.25, -2.5)
-grid_position = Vector3i(-5, 4, -3)
+[node name="SignalNode6" parent="." index="14" unique_id=890866901 instance=ExtResource("7_p4q7t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, 3.5)
+grid_position = Vector3i(3, 1, 3)
 
-[node name="SignalNode7" parent="." index="18" unique_id=1601333294 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 2.25, -4.5)
-grid_position = Vector3i(-3, 4, -5)
+[node name="SignalNode7" parent="." index="15" unique_id=922910544 instance=ExtResource("7_p4q7t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.75, 2.5)
+grid_position = Vector3i(3, 1, 2)
 
-[node name="SignalNode8" parent="." index="19" unique_id=464662842 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 1.75, -2.5)
-grid_position = Vector3i(-1, 3, -3)
+[node name="SignalNode8" parent="." index="16" unique_id=1188347492 instance=ExtResource("7_p4q7t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0.75, 3.5)
+grid_position = Vector3i(2, 1, 3)
 
-[node name="SignalNode9" parent="." index="20" unique_id=652710865 instance=ExtResource("7_p4q7t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 1.75, -0.5)
-grid_position = Vector3i(-3, 3, -1)
+[node name="ObstacleNode" parent="." index="17" unique_id=2071017237 instance=ExtResource("5_g2yky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.75, 1.5)
+grid_position = Vector3i(1, 1, 1)
 
-[editable path="CameraHolderNode"]
+[node name="_Node3D_106780" parent="." index="18" unique_id=2114964416 instance=ExtResource("5_g2yky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.75, 1.5)
+grid_position = Vector3i(0, 1, 1)

@@ -1,123 +1,107 @@
-[gd_scene format=3 uid="uid://cucbjl7pggfkp"]
+[gd_scene format=3 uid="uid://dwqjr5qw6cqkp"]
 
 [ext_resource type="PackedScene" uid="uid://b06fhm7xo2n1h" path="res://level_scenes/level_node/level_node.tscn" id="1_xy38u"]
 [ext_resource type="PackedScene" uid="uid://blv31j1jlmjbn" path="res://game_objects/spawn_node/spawn_node.tscn" id="2_f7nb8"]
-[ext_resource type="PackedScene" uid="uid://dddo0qx7uwxl4" path="res://level_scenes/levels/level_05.tscn" id="2_jcu14"]
-[ext_resource type="Resource" uid="uid://b2iu3d6kd575q" path="res://game_objects/frog_node/presets/red_frog.tres" id="4_8ua0b"]
-[ext_resource type="Resource" uid="uid://dh580adg7wrr6" path="res://game_objects/frog_node/presets/blue_frog.tres" id="5_kfdac"]
+[ext_resource type="PackedScene" uid="uid://cucbjl7pggfkp" path="res://level_scenes/levels/level_05.tscn" id="2_jcu14"]
 [ext_resource type="PackedScene" uid="uid://vt11thqacf13" path="res://game_objects/signal_node/signal_node.tscn" id="6_5n4is"]
-[ext_resource type="Resource" uid="uid://ba4ojteioap41" path="res://game_objects/signal_node/presets/left_turn.tres" id="7_pgt2k"]
-[ext_resource type="Script" uid="uid://de6l7c4e3na08" path="res://game_objects/signal_node/signal_node.gd" id="7_xg0ro"]
-[ext_resource type="Resource" uid="uid://c7wvod42nbi6b" path="res://game_objects/frog_node/presets/generic_frog.tres" id="8_0m0ob"]
 [ext_resource type="PackedScene" uid="uid://csuy1bjgotcmg" path="res://game_objects/exit_node/exit_node.tscn" id="12_x5uy6"]
-[ext_resource type="Script" uid="uid://s11o8af8r60r" path="res://game_objects/exit_node/exit_node.gd" id="13_qlvgo"]
 
 [node name="Level_04" unique_id=410290877 instance=ExtResource("1_xy38u")]
-passing_score = 4
-perfect_score = 8
+passing_score = 6
 next_level_scene = ExtResource("2_jcu14")
+
+[node name="CameraHolderNode" parent="." index="1" unique_id=2113383026]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -2.5, 0, -2.5)
+
+[node name="Camera3D" parent="CameraHolderNode" index="0" unique_id=2010985528]
+transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 6, 6)
+
+[node name="ReflectionProbe" parent="WorldEnvironment" parent_id_path=PackedInt32Array(1698499869) index="0" unique_id=102011247]
+visible = false
 
 [node name="GameBoardNode" parent="." index="4" unique_id=1228068689]
 data = {
-"cells": PackedInt32Array(65536, 0, 786434, 65536, 1, 786434, 65537, 1, 786434, 65537, 0, 786434, 65531, 65532, 786432, 65532, 65532, 786432, 65533, 65532, 786432, 65532, 65531, 786432, 65532, 65533, 786432, 65532, 65534, 786432, 65534, 65532, 786432, 65533, 65534, 786432, 65534, 65534, 786432, 65534, 65533, 786432, 65535, 65534, 786432, 0, 65534, 786432, -327680, 65532, 786432, -327680, 65533, 786432, -327680, 65534, 786432, -327680, 0, 786432, -327679, 0, 786432, -327678, 0, 786432, -327677, 0, 786432, -327676, 0, 786432, -327676, 65535, 786432, -327676, 65534, 786432, -327676, 65533, 786432, -327676, 65532, 786432, -327677, 65532, 786432, -327678, 65532, 786432, -327679, 65532, 786432, -327680, 65535, 786432, -327678, 65533, 786432, -327678, 65535, 786432)
+"cells": PackedInt32Array(65535, 65535, 786432, 131070, 65535, 786432, 131071, 65534, 786432, 196607, 65533, 786432, 196605, 65535, 786432, 262140, 65535, 786432, 262143, 65532, 786432, 327673, 65533, 786432, 327677, 65529, 786432, 262138, 65531, 786434, 262139, 65530, 786434, 262139, 65534, 786432, 262139, 65532, 786432, 262140, 65533, 786432, 262141, 65532, 786432, 262140, 65531, 786432, 262141, 65530, 786432, 262142, 65531, 786432, 196602, 65534, 786434, 262139, 65535, 786432, 262141, 65533, 786432, 262139, 65531, 786432, 262143, 65531, 786432, 262141, 65531, 786432, 262139, 65533, 786432, 327675, 65530, 786432, 327674, 65531, 786432, 262142, 65533, 786432, 262141, 65534, 786432, 262138, 65533, 786432)
 }
-metadata/_editor_floor_ = Vector3(0, -5, 0)
+metadata/_editor_floor_ = Vector3(0, 4, 0)
 
-[node name="SpawnNode" parent="." index="10" unique_id=1462055501 instance=ExtResource("2_f7nb8")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 0.75, -3.5)
-charges = 4
+[node name="ExitNode" parent="." index="6" unique_id=1462055501 instance=ExtResource("12_x5uy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.25, -0.5)
+grid_position = Vector3i(0, 0, -1)
+
+[node name="ExitNode2" parent="." index="7" unique_id=1195073747 instance=ExtResource("12_x5uy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.25, 0.5)
+grid_position = Vector3i(-1, 0, 0)
+
+[node name="SpawnNode" parent="." index="8" unique_id=1631524526 instance=ExtResource("2_f7nb8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5, 3.25, -2.5)
+charges = 2
 recharge = 3
-color = Color(0.8039216, 0.36078432, 0.36078432, 1)
-frog_type = ExtResource("4_8ua0b")
-grid_position = Vector3i(-6, 1, -4)
+sfx_active = true
+grid_position = Vector3i(-8, 6, -3)
 facing = 1
 
-[node name="@Node3D@70959" parent="." index="11" unique_id=1248905522 instance=ExtResource("2_f7nb8")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.5, 0.75, -5.5)
-charges = 4
+[node name="SpawnNode2" parent="." index="9" unique_id=476700276 instance=ExtResource("2_f7nb8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5, 2.75, -4.5)
+charges = 2
 recharge = 3
-delay = 2
-color = Color(0, 0, 0.54509807, 1)
-frog_type = ExtResource("5_kfdac")
-grid_position = Vector3i(-4, 1, -6)
+delay = 9
+sfx_active = true
+grid_position = Vector3i(-7, 5, -5)
+facing = 1
+
+[node name="SpawnNode3" parent="." index="10" unique_id=615508319 instance=ExtResource("2_f7nb8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.5, 2.75, -6.5)
+charges = 2
+recharge = 3
+delay = 18
+sfx_active = true
+grid_position = Vector3i(-5, 5, -7)
 facing = 2
 
-[node name="SignalNode" type="Node3D" parent="." index="12" unique_id=1522664281 instance=ExtResource("6_5n4is")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.5, 0.75, -3.5)
-script = ExtResource("7_xg0ro")
-color = Color(0.98039216, 0.92156863, 0.84313726, 1)
-frog_type = ExtResource("8_0m0ob")
-grid_position = Vector3i(-4, 1, -4)
-grid_size = Vector3(1, 0.5, 1)
+[node name="SpawnNode4" parent="." index="11" unique_id=1758861884 instance=ExtResource("2_f7nb8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.5, 3.25, -7.5)
+charges = 2
+recharge = 3
+delay = 27
+sfx_active = true
+grid_position = Vector3i(-3, 6, -8)
+facing = 2
 
-[node name="SignalNode2" parent="." index="13" unique_id=1479931298 instance=ExtResource("6_5n4is")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0.75, -1.5)
-player_settable = true
-color = Color(0.8039216, 0.36078432, 0.36078432, 1)
-frog_type = ExtResource("4_8ua0b")
-grid_position = Vector3i(-2, 1, -2)
+[node name="SignalNode" parent="." index="12" unique_id=791433872 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.5, 2.25, -0.5)
+grid_position = Vector3i(-5, 4, -1)
 
-[node name="SignalNode8" parent="." index="14" unique_id=801906343 instance=ExtResource("6_5n4is")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0.75, -1.5)
-player_settable = true
-grid_position = Vector3i(0, 1, -2)
+[node name="SignalNode2" parent="." index="13" unique_id=1767097901 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 2.25, -2.5)
+grid_position = Vector3i(-3, 4, -3)
 
-[node name="SignalNode10" parent="." index="15" unique_id=1037688989 instance=ExtResource("6_5n4is")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -1.75, -3.5)
-signal_type = ExtResource("7_pgt2k")
-player_settable = false
-grid_position = Vector3i(4, -4, -4)
+[node name="SignalNode3" parent="." index="14" unique_id=1219888930 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 2.25, -4.5)
+grid_position = Vector3i(-1, 4, -5)
 
-[node name="SignalNode11" parent="." index="16" unique_id=1143543905 instance=ExtResource("6_5n4is")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -1.75, -3.5)
-signal_type = ExtResource("7_pgt2k")
-player_settable = false
-grid_position = Vector3i(0, -4, -4)
+[node name="SignalNode4" parent="." index="15" unique_id=12193253 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.75, -0.5)
+grid_position = Vector3i(-1, 1, -1)
 
-[node name="SignalNode12" parent="." index="17" unique_id=2041733889 instance=ExtResource("6_5n4is")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -1.75, 0.5)
-signal_type = ExtResource("7_pgt2k")
-player_settable = false
-grid_position = Vector3i(0, -4, 0)
+[node name="SignalNode5" parent="." index="16" unique_id=41910903 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.5, 2.25, -4.5)
+grid_position = Vector3i(-5, 4, -5)
 
-[node name="SignalNode14" parent="." index="18" unique_id=93117994 instance=ExtResource("6_5n4is")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, -1.75, 0.5)
-player_settable = true
-color = Color(0.8039216, 0.36078432, 0.36078432, 1)
-frog_type = ExtResource("4_8ua0b")
-grid_position = Vector3i(2, -4, 0)
+[node name="SignalNode6" parent="." index="17" unique_id=267756851 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.5, 2.25, -2.5)
+grid_position = Vector3i(-5, 4, -3)
 
-[node name="SignalNode15" parent="." index="19" unique_id=698148338 instance=ExtResource("6_5n4is")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, -1.75, -3.5)
-player_settable = true
-color = Color(0, 0, 0.54509807, 1)
-frog_type = ExtResource("5_kfdac")
-grid_position = Vector3i(2, -4, -4)
+[node name="SignalNode7" parent="." index="18" unique_id=1601333294 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 2.25, -4.5)
+grid_position = Vector3i(-3, 4, -5)
 
-[node name="SignalNode13" parent="." index="20" unique_id=1550278291 instance=ExtResource("6_5n4is")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -1.75, 0.5)
-signal_type = ExtResource("7_pgt2k")
-player_settable = false
-grid_position = Vector3i(4, -4, 0)
+[node name="SignalNode8" parent="." index="19" unique_id=464662842 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 1.75, -2.5)
+grid_position = Vector3i(-1, 3, -3)
 
-[node name="SignalNode4" parent="." index="21" unique_id=1437828810 instance=ExtResource("6_5n4is")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0.75, -3.5)
-player_settable = true
-grid_position = Vector3i(-2, 1, -4)
+[node name="SignalNode9" parent="." index="20" unique_id=652710865 instance=ExtResource("6_5n4is")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 1.75, -0.5)
+grid_position = Vector3i(-3, 3, -1)
 
-[node name="SignalNode5" parent="." index="22" unique_id=1116505547 instance=ExtResource("6_5n4is")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.5, 0.75, -1.5)
-player_settable = true
-grid_position = Vector3i(-4, 1, -2)
-
-[node name="ExitNode" type="Node3D" parent="." index="23" unique_id=1560888123 groups=["exit_nodes"] instance=ExtResource("12_x5uy6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1.75, -1.5)
-script = ExtResource("13_qlvgo")
-color = Color(0.98039216, 0.92156863, 0.84313726, 1)
-frog_type = ExtResource("8_0m0ob")
-grid_position = Vector3i(2, -4, -2)
-grid_size = Vector3(1, 0.5, 1)
-
-[connection signal="color_changed" from="SignalNode" to="SignalNode/CSGTorus3D" method="_on_node_color_changed"]
-[connection signal="signal_type_changed" from="SignalNode" to="SignalNode" method="_on_signal_type_changed"]
-[connection signal="color_changed" from="ExitNode" to="ExitNode/EXIT_NODE" method="_on_node_color_changed"]
+[editable path="CameraHolderNode"]
