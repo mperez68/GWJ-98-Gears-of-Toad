@@ -8,73 +8,73 @@
 [node name="FROG_JUMP" unique_id=104874381 instance=ExtResource("1_rasxp")]
 script = ExtResource("2_qcjxe")
 
-[node name="BODY" parent="." index="0" unique_id=1407928483]
+[node name="BODY" parent="." index="0" unique_id=848681073]
 transform = Transform3D(1, 0, 0, 0, 0.6331079, 0.7740635, 0, -0.7740635, 0.6331079, -2.889558e-09, 0.72292465, -0.22505921)
 
-[node name="GEAR_BACK_RIGHT" parent="BODY" index="0" unique_id=842658431]
+[node name="GEAR_BACK_RIGHT" parent="BODY" index="0" unique_id=2097593433]
 transform = Transform3D(-1.7881393e-07, 7.5497894e-08, -1, -1, -4.371139e-08, 1.7881393e-07, -4.3711374e-08, 1, 7.54979e-08, -0.010250841, -0.02756485, 0.1800587)
 
-[node name="GEAR_BACK_LEFT" parent="BODY" index="1" unique_id=566533407]
+[node name="GEAR_BACK_LEFT" parent="BODY" index="1" unique_id=427261854]
 transform = Transform3D(-1.3247752e-07, -3.066292e-07, -1.0000001, -0.9876884, -0.1564347, 1.7881396e-07, -0.1564347, 0.9876884, -2.8213e-07, 0.04771352, -0.02756485, 0.1800587)
 
-[node name="BOWTIE" parent="BODY" index="2" unique_id=410590028]
+[node name="BOWTIE" parent="BODY" index="2" unique_id=41551698]
 transform = Transform3D(1, 3.5527135e-15, -1.5529403e-22, 0, -4.3711385e-08, -0.99999994, -3.5527137e-15, 0.99999994, -4.3711385e-08, -0.0005291755, -0.34737396, 0.11869625)
 
-[node name="RIGHT_UPPER_ARM" parent="BODY" index="3" unique_id=17262488]
+[node name="RIGHT_UPPER_ARM" parent="BODY" index="3" unique_id=906435818]
 transform = Transform3D(0.78159636, -0.39601496, 0.4819534, -0.4758602, 0.12101945, 0.87115514, -0.40331626, -0.9102341, -0.09385942, -0.16825739, -0.21904273, 0.19656433)
 
-[node name="RIGHT_LOWER_ARM" parent="BODY/RIGHT_UPPER_ARM" index="0" unique_id=185565114]
+[node name="RIGHT_LOWER_ARM" parent="BODY/RIGHT_UPPER_ARM" index="0" unique_id=35867194]
 transform = Transform3D(0.979421, -0.19580773, 0.048927534, 0.18774314, 0.97286737, 0.1352088, -0.07407493, -0.12324049, 0.98960847, 0.025863742, 0.00640563, -0.2061654)
 
-[node name="RIGHT_HAND" parent="BODY/RIGHT_UPPER_ARM/RIGHT_LOWER_ARM" index="0" unique_id=479647577]
+[node name="RIGHT_HAND" parent="BODY/RIGHT_UPPER_ARM/RIGHT_LOWER_ARM" index="0" unique_id=930455743]
 transform = Transform3D(0.9939141, -0.0857748, -0.069118544, -0.013051025, 0.5313419, -0.8470568, 0.10938171, 0.84280384, 0.52698874, 0.042193376, -0.022851935, -0.14228123)
 
-[node name="RIGHT_UPPER LEG" parent="BODY" index="4" unique_id=680257192]
+[node name="RIGHT_UPPER LEG" parent="BODY" index="4" unique_id=928043604]
 transform = Transform3D(-0.0004420227, -0.9474643, -0.3198612, -0.0013083812, 0.31986153, -0.94746333, 0.9999991, -2.9988587e-07, -0.0013810303, -0.1745212, 0.030145608, -0.024198495)
 
-[node name="RIGHT_LOWER_LEG" parent="BODY/RIGHT_UPPER LEG" index="0" unique_id=940427334]
+[node name="RIGHT_LOWER_LEG" parent="BODY/RIGHT_UPPER LEG" index="0" unique_id=944266187]
 transform = Transform3D(0.01559255, 0.5916084, 0.80607474, -0.99974966, 0.022160351, 0.0030746465, -0.016043913, -0.80592066, 0.591806, -0.20766285, 0.063668385, 0.10563528)
 
-[node name="RIGHT_FOOT" parent="BODY/RIGHT_UPPER LEG/RIGHT_LOWER_LEG" index="0" unique_id=593851610]
+[node name="RIGHT_FOOT" parent="BODY/RIGHT_UPPER LEG/RIGHT_LOWER_LEG" index="0" unique_id=1530274499]
 transform = Transform3D(0.8323585, -0.45465082, 0.31697327, 0.55421656, 0.687761, -0.46885896, -0.004834771, 0.5659306, 0.82443863, -0.0011515999, 0.061947852, -0.21096848)
 
-[node name="HEAD" parent="BODY" index="5" unique_id=1616470386]
+[node name="HEAD" parent="BODY" index="5" unique_id=1511988389]
 transform = Transform3D(0.9994216, 1.3783574e-05, 0.03400677, -0.01591417, 0.8839336, 0.46734163, -0.030053282, -0.4676125, 0.8834225, -1.49086e-08, -0.23790783, 0.31469396)
 
-[node name="EYE_RIGHT" parent="BODY/HEAD" index="0" unique_id=207071534]
+[node name="EYE_RIGHT" parent="BODY/HEAD" index="0" unique_id=863889483]
 transform = Transform3D(0.17264538, 0.5144784, 0.8399437, -0.1779766, 0.8550064, -0.48712248, -0.96877134, -0.065390885, 0.23917802, -0.1318358, -0.13210516, 0.027971191)
 
-[node name="MOUTH" parent="BODY/HEAD" index="1" unique_id=2104902061]
+[node name="MOUTH" parent="BODY/HEAD" index="1" unique_id=1145296917]
 transform = Transform3D(1, 0, 0, 0, 0.4430892, -0.8964775, 0, 0.8964775, 0.4430892, -1.030839e-09, -0.04116644, -0.022488747)
 
-[node name="EYE_LEFT" parent="BODY/HEAD" index="2" unique_id=1620207200]
+[node name="EYE_LEFT" parent="BODY/HEAD" index="2" unique_id=1846457914]
 transform = Transform3D(1, 0, 0, 0, 0.9690773, 0.24675742, 0, -0.24675742, 0.9690773, 0.13219923, -0.13210516, 0.027971191)
 
-[node name="HAT" parent="BODY/HEAD" index="3" unique_id=1480669212]
+[node name="HAT" parent="BODY/HEAD" index="3" unique_id=607490911]
 transform = Transform3D(1, -3.3688724e-15, 4.599803e-16, 3.40013e-15, 0.990807, -0.13528314, 0, 0.13528314, 0.990807, -0.00048889295, -0.08067454, 0.11223776)
 
-[node name="HAT LID" parent="BODY/HEAD/HAT" index="0" unique_id=1568578109]
+[node name="HAT LID" parent="BODY/HEAD/HAT" index="0" unique_id=2074679855]
 transform = Transform3D(1, 0, 0, 0, 0.85885257, 0.5122226, 0, -0.5122226, 0.85885257, -3.8146972e-08, 0.116096586, 0.222131)
 
-[node name="RIGHT_UPPER_ARM001" parent="BODY" index="6" unique_id=1159676484]
+[node name="RIGHT_UPPER_ARM001" parent="BODY" index="6" unique_id=552469420]
 transform = Transform3D(0.7146711, 0.5419794, -0.44215792, 0.48339123, 0.07418876, 0.872255, 0.50554734, -0.83711076, -0.20896749, 0.16839498, -0.21904273, 0.19656433)
 
-[node name="RIGHT_LOWER_ARM001" parent="BODY/RIGHT_UPPER_ARM001" index="0" unique_id=84362429]
+[node name="RIGHT_LOWER_ARM001" parent="BODY/RIGHT_UPPER_ARM001" index="0" unique_id=903195820]
 transform = Transform3D(0.78595996, 0.14069222, 0.6020571, -0.18294771, 0.9830805, 0.009098434, -0.5905905, -0.11729595, 0.7984014, -0.034827996, 0.022962274, -0.21253872)
 
-[node name="RIGHT_HAND001" parent="BODY/RIGHT_UPPER_ARM001/RIGHT_LOWER_ARM001" index="0" unique_id=1595778780]
+[node name="RIGHT_HAND001" parent="BODY/RIGHT_UPPER_ARM001/RIGHT_LOWER_ARM001" index="0" unique_id=1331752452]
 transform = Transform3D(0.9702409, -0.15426654, -0.18663938, 0.040225025, 0.86276263, -0.50400645, 0.23877679, 0.48150015, 0.84329313, 0.042193297, -0.02285192, -0.14228126)
 
-[node name="RIGHT_UPPER LEG001" parent="BODY" index="7" unique_id=1973718091]
+[node name="RIGHT_UPPER LEG001" parent="BODY" index="7" unique_id=313094697]
 transform = Transform3D(0.17785634, -0.96210897, 0.20667265, -0.6275715, -0.27266547, -0.7292514, 0.7579717, 1.1920929e-07, -0.6522874, 0.17465876, 0.030145608, -0.024198495)
 
-[node name="RIGHT_LOWER_LEG001" parent="BODY/RIGHT_UPPER LEG001" index="0" unique_id=1476447425]
+[node name="RIGHT_LOWER_LEG001" parent="BODY/RIGHT_UPPER LEG001" index="0" unique_id=363422274]
 transform = Transform3D(0.061882257, 0.3888782, 0.91920835, -0.99808335, 0.024110869, 0.056991924, 1.8626449e-09, -0.92097354, 0.38962492, -0.17974657, -0.09088454, 0.14735861)
 
-[node name="RIGHT_FOOT001" parent="BODY/RIGHT_UPPER LEG001/RIGHT_LOWER_LEG001" index="0" unique_id=1982199440]
+[node name="RIGHT_FOOT001" parent="BODY/RIGHT_UPPER LEG001/RIGHT_LOWER_LEG001" index="0" unique_id=1891900288]
 transform = Transform3D(0.997947, 0.04833691, 0.042018976, -0.012473524, 0.7901809, -0.6127467, -0.062820874, 0.6109645, 0.7891615, -0.0073825456, 0.080254786, -0.2090562)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=835319761]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1942283617]
 unique_name_in_owner = true
 autoplay = &"IDLE_A"
 

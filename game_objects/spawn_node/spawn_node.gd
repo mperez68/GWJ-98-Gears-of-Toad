@@ -10,6 +10,8 @@ const FROG: PackedScene = preload("res://game_objects/frog_node/frog_node.tscn")
 ## Turns waited before launching first frog
 @export var delay: int = 0
 
+@export var sfx_active: bool = true
+
 @onready var recharge_count: int = recharge
 @onready var highlight: AreaLight3D = %Highlight
 
@@ -41,6 +43,7 @@ func place_stage(_game_board_node: GameBoardNode):
 	new_frog.grid_position = grid_position + Vector3i.DOWN
 	new_frog.facing = facing
 	new_frog.frog_type = frog_type
+	new_frog.sfx_active = sfx_active
 	emerging_frog = new_frog
 	add_sibling(new_frog)
 	charges -= 1

@@ -14,9 +14,9 @@ layout_mode = 2
 [node name="GEAR" type="TextureRect" parent="TextureRect" unique_id=2085528948]
 modulate = Color(0.24477637, 0.2447764, 0.24477637, 1)
 layout_mode = 0
-offset_left = -26.0
+offset_left = -9.0
 offset_top = 83.0
-offset_right = 100.0
+offset_right = 117.0
 offset_bottom = 213.86694
 offset_transform_enabled = true
 texture = ExtResource("1_7b302")
@@ -25,9 +25,9 @@ expand_mode = 1
 [node name="GEAR2" type="TextureRect" parent="TextureRect" unique_id=69179642]
 modulate = Color(0.11119685, 0.11119684, 0.11119684, 1)
 layout_mode = 0
-offset_left = 69.0
+offset_left = 86.0
 offset_top = 47.0
-offset_right = 195.0
+offset_right = 212.0
 offset_bottom = 177.86694
 offset_transform_enabled = true
 texture = ExtResource("1_7b302")
@@ -36,9 +36,9 @@ expand_mode = 1
 [node name="GEAR3" type="TextureRect" parent="TextureRect" unique_id=1307282364]
 modulate = Color(0.19076231, 0.19076234, 0.19076231, 1)
 layout_mode = 0
-offset_left = 167.0
+offset_left = 184.0
 offset_top = 74.0
-offset_right = 293.0
+offset_right = 310.0
 offset_bottom = 204.86694
 offset_transform_enabled = true
 texture = ExtResource("1_7b302")
@@ -47,9 +47,9 @@ expand_mode = 1
 [node name="GEAR4" type="TextureRect" parent="TextureRect" unique_id=2006313270]
 modulate = Color(0.11119685, 0.11119684, 0.11119684, 1)
 layout_mode = 0
-offset_left = 267.0
+offset_left = 284.0
 offset_top = 91.0
-offset_right = 393.0
+offset_right = 410.0
 offset_bottom = 221.86694
 offset_transform_enabled = true
 texture = ExtResource("1_7b302")
@@ -58,9 +58,9 @@ expand_mode = 1
 [node name="GEAR5" type="TextureRect" parent="TextureRect" unique_id=1499464030]
 modulate = Color(0.3291585, 0.32915834, 0.3291584, 1)
 layout_mode = 0
-offset_left = 339.0
+offset_left = 356.0
 offset_top = 17.0
-offset_right = 465.0
+offset_right = 482.0
 offset_bottom = 147.86694
 offset_transform_enabled = true
 texture = ExtResource("1_7b302")
@@ -69,16 +69,16 @@ expand_mode = 1
 [node name="GEAR6" type="TextureRect" parent="TextureRect" unique_id=644707920]
 modulate = Color(0.19076231, 0.19076234, 0.19076231, 1)
 layout_mode = 0
-offset_left = 411.0
+offset_left = 428.0
 offset_top = 91.0
-offset_right = 537.0
+offset_right = 554.0
 offset_bottom = 221.86694
 offset_transform_enabled = true
 texture = ExtResource("1_7b302")
 expand_mode = 1
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1552058132]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(544, 272)
 layout_mode = 2
 text = "Gears of Toad"
 label_settings = ExtResource("2_ecsbo")
@@ -86,4 +86,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 script = ExtResource("3_x4mtl")
-min_width = 512.0
+min_width = 544.0

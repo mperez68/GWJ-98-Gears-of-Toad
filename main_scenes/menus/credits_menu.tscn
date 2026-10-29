@@ -6,9 +6,24 @@
 [ext_resource type="Script" uid="uid://cvv7h4qtri4g8" path="res://main_scenes/menus/scripts/menu_control.gd" id="2_not5v"]
 [ext_resource type="PackedScene" uid="uid://bmjhjsstxqdyg" path="res://ui/menu_bg_rect.tscn" id="3_p5o37"]
 [ext_resource type="Script" uid="uid://bdimxwm4psorj" path="res://ui/scripts/credits_footer.gd" id="4_not5v"]
+[ext_resource type="Texture2D" uid="uid://cso8qa00p2uqw" path="res://assets/textures/nine-slice-pipes.png" id="4_v2oko"]
 [ext_resource type="LabelSettings" uid="uid://bgghdhgj1v8uh" path="res://resources/ui/sub_header_settings.tres" id="5_not5v"]
 [ext_resource type="PackedScene" uid="uid://c1iwfo7rduuxg" path="res://ui/quit_button.tscn" id="5_p5o37"]
 [ext_resource type="PackedScene" uid="uid://c18qfne8f4xr5" path="res://ui/footer_container.tscn" id="6_o7a4m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cky3h"]
+content_margin_left = 32.0
+content_margin_top = 25.0
+content_margin_right = 32.0
+content_margin_bottom = 25.0
+texture = ExtResource("4_v2oko")
+texture_margin_left = 69.0
+texture_margin_top = 67.0
+texture_margin_right = 66.0
+texture_margin_bottom = 64.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 512, 512)
 
 [node name="CreditsMenu" type="Control" unique_id=94607635]
 layout_mode = 3
@@ -34,6 +49,17 @@ grow_vertical = 2
 [node name="InnerMarginsContainer" type="Control" parent="MarginContainer" unique_id=989431201]
 layout_mode = 2
 
+[node name="QuitButton" parent="MarginContainer/InnerMarginsContainer" unique_id=1180821417 instance=ExtResource("5_p5o37")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+offset_right = 102.0
+offset_bottom = 0.0
+grow_vertical = 0
+size_flags_horizontal = 0
+
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=174712066]
 layout_mode = 2
 
@@ -42,6 +68,7 @@ layout_mode = 2
 
 [node name="HeaderPanel" type="PanelContainer" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1458201375]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cky3h")
 
 [node name="HeaderLabel" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/HeaderPanel" unique_id=1288688810]
 layout_mode = 2
@@ -77,18 +104,6 @@ vertical_alignment = 1
 layout_mode = 2
 columns = 2
 
-[node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/CreditsPanel/OptionsContainer/GridContainer" unique_id=857332929]
-layout_mode = 2
-size_flags_horizontal = 7
-text = "Aseprite"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/CreditsPanel/OptionsContainer/GridContainer" unique_id=876771703]
-layout_mode = 2
-size_flags_horizontal = 7
-text = "Tilesetter"
-horizontal_alignment = 1
-
 [node name="Label3" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/CreditsPanel/OptionsContainer/GridContainer" unique_id=878265606]
 layout_mode = 2
 size_flags_horizontal = 7
@@ -107,6 +122,12 @@ size_flags_horizontal = 7
 text = "EastWest Sound Library"
 horizontal_alignment = 1
 
+[node name="Label6" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/CreditsPanel/OptionsContainer/GridContainer" unique_id=1633999915]
+layout_mode = 2
+size_flags_horizontal = 7
+text = "Blender"
+horizontal_alignment = 1
+
 [node name="GodotVersionLabel" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/CreditsPanel/OptionsContainer" unique_id=1581874423]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -117,9 +138,5 @@ script = ExtResource("4_not5v")
 
 [node name="FooterContainer" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=636837887 instance=ExtResource("6_o7a4m")]
 layout_mode = 2
-
-[node name="QuitButton" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1180821417 instance=ExtResource("5_p5o37")]
-layout_mode = 2
-size_flags_horizontal = 0
 
 [connection signal="meta_clicked" from="MarginContainer/CenterContainer/VBoxContainer/CreditsPanel/OptionsContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

@@ -31,6 +31,7 @@ data = {
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5, 0.75, -0.5)
 charges = 8
 recharge = 3
+sfx_active = false
 color = Color(0.8039216, 0.36078432, 0.36078432, 1)
 frog_type = ExtResource("3_mqdff")
 grid_position = Vector3i(-2, 1, -1)
@@ -41,6 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.75, -1.5)
 charges = 4
 recharge = 3
 delay = 1
+sfx_active = false
 color = Color(0.18039216, 0.54509807, 0.34117648, 1)
 frog_type = ExtResource("4_thi6q")
 grid_position = Vector3i(-1, 1, -2)
@@ -50,6 +52,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5,
 charges = 4
 recharge = 3
 delay = 2
+sfx_active = false
 color = Color(0, 0, 0.54509807, 1)
 frog_type = ExtResource("5_xmeot")
 grid_position = Vector3i(0, 1, -1)
@@ -59,13 +62,13 @@ facing = 1
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 0.75, 1.5)
 charges = 4
 recharge = 3
+sfx_active = false
 grid_position = Vector3i(-1, 1, 1)
 facing = 1
 
 [node name="SignalNode" parent="." index="10" unique_id=957423070 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0.75, -0.5)
 signal_type = ExtResource("7_thi6q")
-player_settable = true
 color = Color(0.8039216, 0.36078432, 0.36078432, 1)
 frog_type = ExtResource("3_mqdff")
 grid_position = Vector3i(-5, 1, -1)
@@ -73,7 +76,6 @@ grid_position = Vector3i(-5, 1, -1)
 [node name="SignalNode2" parent="." index="11" unique_id=507419881 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.75, -0.5)
 signal_type = ExtResource("7_thi6q")
-player_settable = true
 color = Color(0, 0, 0.54509807, 1)
 frog_type = ExtResource("5_xmeot")
 grid_position = Vector3i(3, 1, -1)
@@ -81,7 +83,6 @@ grid_position = Vector3i(3, 1, -1)
 [node name="SignalNode3" parent="." index="12" unique_id=1777075397 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.75, -4.5)
 signal_type = ExtResource("7_thi6q")
-player_settable = true
 color = Color(0.18039216, 0.54509807, 0.34117648, 1)
 frog_type = ExtResource("4_thi6q")
 grid_position = Vector3i(-1, 1, -5)
@@ -89,53 +90,44 @@ grid_position = Vector3i(-1, 1, -5)
 [node name="SignalNode4" parent="." index="13" unique_id=39838736 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0.75, -4.5)
 signal_type = ExtResource("7_thi6q")
-player_settable = true
 grid_position = Vector3i(-5, 1, -5)
 
 [node name="SignalNode5" parent="." index="14" unique_id=865755264 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.75, -4.5)
 signal_type = ExtResource("7_thi6q")
-player_settable = true
 grid_position = Vector3i(3, 1, -5)
 
 [node name="SignalNode6" parent="." index="15" unique_id=798599105 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.75, 3.5)
 signal_type = ExtResource("7_thi6q")
-player_settable = true
 grid_position = Vector3i(3, 1, 3)
 
 [node name="SignalNode7" parent="." index="16" unique_id=408708387 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0.75, 3.5)
 signal_type = ExtResource("7_thi6q")
-player_settable = true
 grid_position = Vector3i(-5, 1, 3)
 
 [node name="SignalNode9" parent="." index="17" unique_id=978236136 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.75, 1.5)
 signal_type = ExtResource("8_xmeot")
-player_settable = true
 grid_position = Vector3i(1, 1, 1)
 
 [node name="SignalNode10" parent="." index="18" unique_id=717609970 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.75, -2.5)
 signal_type = ExtResource("8_xmeot")
-player_settable = true
 grid_position = Vector3i(1, 1, -3)
 
 [node name="SignalNode11" parent="." index="19" unique_id=132120987 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, -2.5)
 signal_type = ExtResource("8_xmeot")
-player_settable = true
 grid_position = Vector3i(-3, 1, -3)
 
 [node name="SignalNode12" parent="." index="20" unique_id=2012929898 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.75, 1.5)
 signal_type = ExtResource("8_xmeot")
-player_settable = true
 grid_position = Vector3i(-3, 1, 1)
 
 [node name="SignalNode13" parent="." index="21" unique_id=806209771 instance=ExtResource("6_mqdff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.75, -0.5)
 signal_type = ExtResource("9_w7xx5")
-player_settable = true
 grid_position = Vector3i(-1, 1, -1)

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bmjhjsstxqdyg" path="res://ui/menu_bg_rect.tscn" id="3_38vm8"]
 [ext_resource type="PackedScene" uid="uid://peucu42da8pc" path="res://ui/title_container.tscn" id="3_g8byo"]
 [ext_resource type="PackedScene" uid="uid://dhn5bb6wsu3fv" path="res://ui/scene_change_button.tscn" id="4_vb3i7"]
+[ext_resource type="Texture2D" uid="uid://cso8qa00p2uqw" path="res://assets/textures/nine-slice-pipes.png" id="5_d66i4"]
 [ext_resource type="PackedScene" uid="uid://c1iwfo7rduuxg" path="res://ui/quit_button.tscn" id="5_vb3i7"]
 [ext_resource type="PackedScene" uid="uid://dlkkvovpsyg3e" path="res://level_scenes/levels/level_01.tscn" id="6_38vm8"]
 [ext_resource type="Texture2D" uid="uid://bm5tfp11n1jb7" path="res://assets/icons/signal_icons/play.jpg" id="6_624g0"]
@@ -16,6 +17,18 @@
 [ext_resource type="Texture2D" uid="uid://bqtvp70ntm35r" path="res://assets/icons/signal_icons/credits-icon.png" id="10_osr0g"]
 [ext_resource type="Texture2D" uid="uid://bkwiqhofe2kcw" path="res://assets/icons/signal_icons/exit.jpg" id="12_osr0g"]
 [ext_resource type="PackedScene" uid="uid://yca2h2262iie" path="res://level_scenes/menu_level.tscn" id="12_wcnxn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i714h"]
+content_margin_left = 32.0
+content_margin_top = 0.0
+content_margin_right = 32.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_d66i4")
+texture_margin_left = 73.0
+texture_margin_top = 63.0
+texture_margin_right = 70.0
+texture_margin_bottom = 64.0
+region_rect = Rect2(0, 0, 512, 512)
 
 [sub_resource type="Resource" id="Resource_clqb2"]
 script = ExtResource("8_38vm8")
@@ -51,6 +64,21 @@ theme = ExtResource("1_do6qc")
 script = ExtResource("2_g8byo")
 hide_for_mobile = [NodePath("MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer/BodyContainer/VBoxContainer/HBoxContainer2/QuitButton")]
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=341946262]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=2040752134]
+handle_input_locally = false
+size = Vector2i(1024, 768)
+render_target_update_mode = 4
+
+[node name="MenuLevel" parent="SubViewportContainer/SubViewport" unique_id=410290877 instance=ExtResource("12_wcnxn")]
+
 [node name="MenuBgRect" parent="." unique_id=1389212552 instance=ExtResource("3_38vm8")]
 self_modulate = Color(1, 1, 1, 0.8509804)
 layout_mode = 1
@@ -79,6 +107,7 @@ layout_mode = 2
 
 [node name="TitleContainer" parent="MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer" unique_id=495309048 instance=ExtResource("3_g8byo")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i714h")
 
 [node name="BodyContainer" type="PanelContainer" parent="MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer" unique_id=829041760]
 layout_mode = 2
@@ -99,6 +128,7 @@ icon_alignment = 0
 scene_link = SubResource("Resource_clqb2")
 
 [node name="SceneChangeButton2" parent="MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer/BodyContainer/VBoxContainer/HBoxContainer" unique_id=722404897 instance=ExtResource("4_vb3i7")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Tutorial"
@@ -140,5 +170,3 @@ icon_side = 2
 
 [node name="FooterContainer" parent="MarginContainer/InnerMarginsContainer/CenterContainer/VBoxContainer" unique_id=636837887 instance=ExtResource("9_yy0sh")]
 layout_mode = 2
-
-[node name="MenuLevel" parent="." unique_id=410290877 instance=ExtResource("12_wcnxn")]

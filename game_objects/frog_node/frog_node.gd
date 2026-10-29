@@ -6,10 +6,16 @@ signal start_move
 signal start_fall
 signal start_idle
 signal died
+signal sfx_active_changed(new_value: bool)
 
 @onready var death_timer: Timer = %DeathTimer
 
 @export var leap_distance: int = 1
+@export var sfx_active: bool = true:
+	set(value):
+		sfx_active = value
+		if !Engine.is_editor_hint():
+			sfx_active_changed.emit(sfx_active)
 
 var dead: bool = false
 
