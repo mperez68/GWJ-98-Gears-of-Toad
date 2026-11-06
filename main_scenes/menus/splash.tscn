@@ -4,7 +4,18 @@
 [ext_resource type="Script" uid="uid://b3y54ybh7go0i" path="res://main_scenes/menus/scripts/splash.gd" id="1_sgpox"]
 [ext_resource type="PackedScene" uid="uid://peucu42da8pc" path="res://ui/title_container.tscn" id="3_e3ffy"]
 [ext_resource type="PackedScene" uid="uid://bmjhjsstxqdyg" path="res://ui/menu_bg_rect.tscn" id="3_ljax6"]
+[ext_resource type="Texture2D" uid="uid://cso8qa00p2uqw" path="res://assets/textures/nine-slice-pipes.png" id="6_ljax6"]
 [ext_resource type="PackedScene" uid="uid://c18qfne8f4xr5" path="res://ui/footer_container.tscn" id="6_pscy7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7wpyh"]
+content_margin_left = 32.0
+content_margin_right = 32.0
+texture = ExtResource("6_ljax6")
+texture_margin_left = 73.0
+texture_margin_top = 85.0
+texture_margin_right = 70.0
+texture_margin_bottom = 72.0
+region_rect = Rect2(0, 0, 512, 512)
 
 [node name="Splash" type="Control" unique_id=1964828285 node_paths=PackedStringArray("hide_for_mobile")]
 layout_mode = 3
@@ -32,6 +43,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -11.0
+offset_right = 1.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -43,5 +58,6 @@ layout_mode = 2
 
 [node name="FooterContainer" parent="CenterContainer/VBoxContainer" unique_id=636837887 instance=ExtResource("6_pscy7")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7wpyh")
 
 [connection signal="timeout" from="PauseTimer" to="." method="_on_pause_timer_timeout"]
