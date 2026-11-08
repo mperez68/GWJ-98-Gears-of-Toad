@@ -21,7 +21,8 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="FROG_JUMP" index="2" unique_id=38221582]
 unique_name_in_owner = true
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.7213961, -0.03871411)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9802322e-08, 0.7213961, -0.03871411)
+visible = false
 light_color = Color(0.98039216, 0.92156863, 0.84313726, 1)
 omni_range = 0.8
 

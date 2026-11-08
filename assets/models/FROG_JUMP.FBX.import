@@ -2097,6 +2097,48 @@ _subresources={
 "slice_99/start_frame": 0,
 "slices/amount": 7
 }
+},
+"materials": {
+"BRASS": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/BRASS.tres",
+"use_external/path": "uid://bairw26ldpn70"
+},
+"BRASS_ncl1_1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/BRASS.tres",
+"use_external/path": "uid://bairw26ldpn70"
+},
+"BRONZE": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/BRONZE.tres",
+"use_external/path": "uid://dg5x1dyppbhjd"
+},
+"BRONZE_ncl1_1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/BRONZE.tres",
+"use_external/path": "uid://dg5x1dyppbhjd"
+},
+"COPPER": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/COPPER.tres",
+"use_external/path": "uid://c8mfsb3303a70"
+},
+"COPPER_ncl1_1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/COPPER.tres",
+"use_external/path": "uid://c8mfsb3303a70"
+},
+"DARK GREY METAL": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/DARK GREY METAL.tres",
+"use_external/path": "uid://ctni1epesoalc"
+},
+"DARK GREY METAL_ncl1_1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/DARK GREY METAL.tres",
+"use_external/path": "uid://ctni1epesoalc"
+}
 }
 }
 fbx/importer=0
