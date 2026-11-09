@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://c3njtoyv7xfje" path="res://main_scenes/menus/credits_menu.tscn" id="9_38vm8"]
 [ext_resource type="PackedScene" uid="uid://c18qfne8f4xr5" path="res://ui/footer_container.tscn" id="9_yy0sh"]
 [ext_resource type="Texture2D" uid="uid://bqtvp70ntm35r" path="res://assets/icons/signal_icons/credits-icon.png" id="10_osr0g"]
-[ext_resource type="Texture2D" uid="uid://bkwiqhofe2kcw" path="res://assets/icons/signal_icons/exit.jpg" id="12_osr0g"]
 [ext_resource type="PackedScene" uid="uid://yca2h2262iie" path="res://level_scenes/menu_level.tscn" id="12_wcnxn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i714h"]
@@ -163,7 +162,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_do6qc")
 text = "Quit to Desktop"
-icon = ExtResource("12_osr0g")
 icon_alignment = 2
 type = 2
 icon_side = 2
